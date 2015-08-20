@@ -1,6 +1,6 @@
 <?php $quality_pro_options=theme_data_setup(); 
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
-<div class="container">
+<div class="container container-blog">
 	<div class="row">
 		<?php if($current_options['blog_heading']) { ?>
 		<div class="qua_heading_title">

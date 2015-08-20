@@ -1,98 +1,58 @@
-<?php $quality_pro_options=theme_data_setup(); 
-$current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options );  ?>
-<div class="qua_portfolio_carusel">
+<div class="profile-background">
 	<div class="container">
-		<div class="qua_port_title">
-		<?php if($current_options['project_heading_one']) { ?>
-			<h1><?php echo $current_options['project_heading_one']; ?></h1>
-			<?php } ?>
-		<?php if($current_options['project_tagline']) { ?>
-		<p><?php echo $current_options['project_tagline']; ?></p>
-		<?php } ?>	
-		<div class="qua-separator" id=""></div>
-		</div>
-		<div class="row home_portfolio_row">
-			<div class="col-md-3 col-sm-6 qua_col_padding">
-				<?php if($current_options['project_one_thumb']) { ?>
-				<div class="qua_portfolio_image">
-					<img  src="<?php echo $current_options['project_one_thumb']; ?>" class="img-responsive" alt="thumb one">
-					<div class="qua_home_portfolio_showcase_overlay">
-						<div class="qua_home_portfolio_showcase_overlay_inner">
-							<div class="qua_home_portfolio_showcase_icons">
-								<a href="<?php echo $current_options['project_one_thumb']; ?>" data-lightbox="image" title="Time to raise your voice" class="hover_thumb"><i class="fa fa-plus"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<?php }
-				if($current_options['project_one_title']) { ?>
-				<div class="qua_home_portfolio_caption">
-					<a href="#"><?php echo $current_options['project_one_title']; ?></a>			
-				</div>
-				<?php } ?>
+		<?php
+		the_post();
+
+		// Get 'team' posts
+		$team_posts = get_posts( array(
+		'post_type' => 'team_profile',
+		'posts_per_page' => -1, // Unlimited posts
+		) );
+
+		if ( $team_posts ):
+		?>
+		<section class="row profiles">
+			<div class="intro">
+				<h2>Meet The Team</h2>
+				<p class="lead">&ldquo;Individuals can and do make a difference, but it takes a team<br>to really mess things up.&rdquo;</p>
 			</div>
-			<div class="col-md-3 col-sm-6 qua_col_padding">
-				<?php if($current_options['project_two_thumb']) { ?>
-				<div class="qua_portfolio_image">
-					<img  src="<?php echo $current_options['project_two_thumb']; ?>" class="img-responsive" alt="thumb one">
-					<div class="qua_home_portfolio_showcase_overlay">
-						<div class="qua_home_portfolio_showcase_overlay_inner">
-							<div class="qua_home_portfolio_showcase_icons">
-								<a href="<?php echo $current_options['project_two_thumb']; ?>" data-lightbox="image" title="Time to raise your voice" class="hover_thumb"><i class="fa fa-plus"></i></a>
-							</div>
-						</div>
+
+			<?php
+			foreach ( $team_posts as $post ):
+				setup_postdata($post);
+				$position = get_post_meta($post->ID, 'position')[0];
+
+				// Resize and CDNize thumbnails using Automattic Photon service
+				$thumb_src = null;
+				if ( get_post_meta($post->ID, 'profile_picture')) {
+					$src = wp_get_attachment_image_src(get_post_meta($post->ID, 'profile_picture')[0]['ID']);
+					$thumb_src = $src[0];
+				}
+
+				?>
+				<article class="col-sm-6 profile">
+					<div class="profile-header">
+						<?php if ( $thumb_src ): ?>
+							<img src="<?php echo $thumb_src; ?>" alt="<?php the_title(); ?>, <?php echo $position ?>" class="img-circle">
+						<?php endif; ?>
 					</div>
-				</div>
-				<?php }
-				if($current_options['project_two_title']) { ?>
-				<div class="qua_home_portfolio_caption">
-					<a href="#"><?php echo $current_options['project_two_title']; ?></a>			
-				</div>
-				<?php } ?>
-			</div>
-			<div class="col-md-3 col-sm-6 qua_col_padding">
-				<?php if($current_options['project_three_thumb']) { ?>
-				<div class="qua_portfolio_image">
-					<img  src="<?php echo $current_options['project_three_thumb']; ?>" class="img-responsive" alt="thumb one">
-					<div class="qua_home_portfolio_showcase_overlay">
-						<div class="qua_home_portfolio_showcase_overlay_inner">
-							<div class="qua_home_portfolio_showcase_icons">
-								<a href="<?php echo $current_options['project_three_thumb']; ?>" data-lightbox="image" title="Time to raise your voice" class="hover_thumb"><i class="fa fa-plus"></i></a>
-							</div>
-						</div>
+
+					<div class="profile-content">
+						<h3><?php the_title(); ?></h3>
+						<p class="lead position"><?php echo $position ?></p>
+						<?php the_content(); ?>
 					</div>
-				</div>
-				<?php }
-				if($current_options['project_three_title']) { ?>
-				<div class="qua_home_portfolio_caption">
-					<a href="#"><?php echo $current_options['project_three_title']; ?></a>			
-				</div>
-				<?php } ?>
-			</div>
-			<div class="col-md-3 col-sm-6 qua_col_padding">
-				<?php if($current_options['project_four_thumb']) { ?>
-				<div class="qua_portfolio_image">
-					<img  src="<?php echo $current_options['project_four_thumb']; ?>" class="img-responsive" alt="thumb one">
-					<div class="qua_home_portfolio_showcase_overlay">
-						<div class="qua_home_portfolio_showcase_overlay_inner">
-							<div class="qua_home_portfolio_showcase_icons">
-								<a href="<?php echo $current_options['project_four_thumb']; ?>" data-lightbox="image" title="Time to raise your voice" class="hover_thumb"><i class="fa fa-plus"></i></a>
-							</div>
-						</div>
+
+					<div class="profile-footer">
+						<a href="tel:<?php get_post_meta($post->ID, 'phone_number')[0] ?>"><i class="icon-mobile-phone"></i></a>
+						<a href="mailto:<?php echo antispambot(get_post_meta($post->ID, 'email')[0] ); ?>"><i class="icon-envelope"></i></a>
+						<?php if ( $linkedin = get_post_meta($post->ID, 'linkedin')[0] ): ?>
+							<a href="<?php echo $linkedin; ?>"><i class="icon-linkedin"></i></a>
+						<?php endif; ?>
 					</div>
-				</div>
-				<?php }
-				if($current_options['project_four_title']) { ?>
-				<div class="qua_home_portfolio_caption">
-					<a href="#"><?php echo $current_options['project_four_title']; ?></a>			
-				</div>
-				<?php } ?>
-			</div>
-			<div class="clearfix"></div>
-			
-			<div class="qua_proejct_button">
-			<a href=""> View All Projects </a>
-			</div>			
-		</div>
+				</article><!-- /.profile -->
+			<?php endforeach; ?>
+		</section><!-- /.row -->
+		<?php endif; ?>
 	</div>
 </div>
