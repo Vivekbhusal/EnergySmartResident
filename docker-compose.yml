@@ -2,7 +2,6 @@ data:
   image: busybox
   volumes:
    - /var/lib/mysql
-   - db/mysql/:/temp/mysql/
    - .:/var/www/html/
 web:
   build: Dockerfiles/php-apache/
@@ -26,4 +25,4 @@ db:
   environment:
     MYSQL_DATABASE: titanium_db
     MYSQL_ROOT_PASSWORD: root
-    STARTUP_SQL: /temp/mysql/dumb.sql
+    # STARTUP_SQL: /temp/mysql/dumb.sql

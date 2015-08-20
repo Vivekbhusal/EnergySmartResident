@@ -1,16 +1,14 @@
 FROM php:5.5-apache
 
-RUN sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\/src\/htdocs/g' /etc/apache2/apache2.conf
+RUN sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\/src/g' /etc/apache2/apache2.conf
 RUN a2enmod rewrite
 
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install libgcrypt11-dev zlib1g-dev libpng12-0-dev libjpeg62-turbo-dev php5-gd
+# RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install libgcrypt11-dev zlib1g-dev libpng12-0-dev libjpeg62-turbo-# dev php5-gd
 RUN docker-php-ext-install mysql
-RUN docker-php-ext-install zip
-RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install mbstring
-RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/include/
-RUN docker-php-ext-install gd
+# RUN docker-php-ext-configure gd --with-jpeg-dir=/usr/include/
+# RUN docker-php-ext-install gd
 RUN docker-php-ext-install mysqli
 RUN yes "" | pecl install memcache
 RUN yes "" | pecl install xdebug
