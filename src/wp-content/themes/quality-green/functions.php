@@ -14,6 +14,4 @@ function qualitygreen_enqueue_styles() {
     wp_enqueue_script('font-awesome', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', ['jQuery']);
 
 }
-
 ?>
-

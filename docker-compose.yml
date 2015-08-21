@@ -3,6 +3,7 @@ data:
   volumes:
    - /var/lib/mysql
    - .:/var/www/html/
+   - ./db/mysql/:/temp/mysql/
 web:
   build: Dockerfiles/php-apache/
   environment:
@@ -23,6 +24,6 @@ db:
   volumes_from:
    - data
   environment:
-    MYSQL_DATABASE: titanium_db
+    MYSQL_DATABASE: titanium_wp_db
     MYSQL_ROOT_PASSWORD: root
-    # STARTUP_SQL: /temp/mysql/dumb.sql
+    STARTUP_SQL: /temp/mysql/titanium_wp_db.sql
