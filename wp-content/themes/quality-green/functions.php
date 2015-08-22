@@ -9,6 +9,7 @@ function qualitygreen_enqueue_styles() {
 	wp_enqueue_style('theme-menu', QUALITY_TEMPLATE_DIR_URI . '/css/theme-menu.css');
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'));
     wp_enqueue_style( 'team-template', get_stylesheet_directory_uri() . '/assets/css/team.css' );
+    wp_enqueue_style( 'team-template', get_stylesheet_directory_uri() . '/assets/css/titanium.css' );
 
     wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
     wp_enqueue_script('font-awesome', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', ['jQuery']);

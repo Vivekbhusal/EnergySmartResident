@@ -304,11 +304,6 @@ a:focus {
 figure {
   margin: 0;
 }
-.logo.pull-left > a > img{
-  width: auto;
-  height: 100px;
-  margin-right: 150px;
-}
 img {
   vertical-align: middle;
 }
@@ -5420,11 +5415,6 @@ button.close {
 }
 .carousel {
   position: relative;
-}
-img.img-responsive {
-  margin-left: 70px;
-  heigh: 400px;
-  width: 1138px;
 }
 .carousel-inner {
   position: relative;

@@ -12,8 +12,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 	<?php } ?>
 	<div class="flex-slider-center">
 		<div class="input-group center-block search-suburb">
-			<input type="text" class="form-control" placeholder="Search this site"/>
-
+			<input type="text" class="form-control" placeholder="Please enter a suburb name to get neighbourhood information"/>
 		</div>
 	</div>
 
