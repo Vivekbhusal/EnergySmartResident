@@ -304,6 +304,11 @@ a:focus {
 figure {
   margin: 0;
 }
+.logo.pull-left > a > img{
+  width: auto;
+  height: 100px;
+  margin-right: 150px;
+}
 img {
   vertical-align: middle;
 }
@@ -734,8 +739,6 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1687,6 +1690,10 @@ output {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
+}
+input.form-control {
+  height: 55px;
+  width: 800px;
 }
 .form-control {
   display: block;
@@ -5413,6 +5420,11 @@ button.close {
 }
 .carousel {
   position: relative;
+}
+img.img-responsive {
+  margin-left: 70px;
+  heigh: 400px;
+  width: 1138px;
 }
 .carousel-inner {
   position: relative;

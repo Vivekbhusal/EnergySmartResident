@@ -42,6 +42,10 @@ class TitaniumCommunityClass
 
     public static function enqueueScripts()
     {
+        wp_enqueue_style(
+            'jquery-autocomplete',
+            plugins_url('titanium-community/public/css/public.css')
+        );
         wp_enqueue_script(
             'jQuery-autocomplete',
             plugins_url('titanium-community/public/js/jquery.autocomplete.min.js'),

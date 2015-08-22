@@ -88,7 +88,9 @@
 }
 
 .profile-background {
-    background-color: #C5CEA6;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: #CCEBD6;
     padding: 41px;
 }
 
@@ -97,5 +99,5 @@
 }
 
 .search-suburb{
-    width: 600px;
+    width: 800px;
 }
