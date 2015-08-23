@@ -85,3 +85,8 @@ input[placeholder] {
     width: 133px;
     height: auto;
 }
+@media (min-width: 768px) {
+    .titnium-menu-nav{
+        float: right !important;
+    }
+}
