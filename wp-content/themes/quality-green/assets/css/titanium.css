@@ -76,3 +76,12 @@ input[placeholder] {
     min-height: 280px;
     background: transparent;
 }
+
+.titanium-nav{
+    border: 0px !important;
+}
+
+.logo > img {
+    width: 133px;
+    height: auto;
+}
