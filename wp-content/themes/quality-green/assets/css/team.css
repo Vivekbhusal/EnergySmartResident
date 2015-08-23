@@ -88,7 +88,9 @@
 }
 
 .profile-background {
-    background-color: #C5CEA6;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: #CCEBD6;
     padding: 41px;
 }
 
@@ -97,5 +99,77 @@
 }
 
 .search-suburb{
-    width: 600px;
+    width: 800px;
+}
+
+
+/*Titanium.css*/
+.col-md-3.col-sm-6.qua-service-area{
+    width: 33.33333333%;
+}
+img.img-responsive {
+    opacity:0.7;
+    filter:alpha(opacity=40);
+    margin-left: 70px;
+    heigh: 400px;
+    width: 1138px;
+}
+.logo.pull-left > a > img{
+    width: auto;
+    height: 100px;
+    margin-right: 150px;
+}
+.hospital-icon {
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100px;
+    display:block;
+    background: url(http://localhost:8888/wp-content/themes/quality/images/Hospital.png) 28px 25px no-repeat;
+}
+.GPO-icon {
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100px;
+    display:block;
+    background: url(http://localhost:8888/wp-content/themes/quality/images/GPO.png) 28px 25px no-repeat;
+}
+.school-icon {
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100px;
+    display:block;
+    background: url(http://localhost:8888/wp-content/themes/quality/images/School.png) 28px 25px no-repeat;
+}
+.crime-rate-icon {
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100px;
+    display:block;
+    background: url(http://localhost:8888/wp-content/themes/quality/images/Crime.png) 28px 25px no-repeat;
+}
+.aged-care-icon {
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100px;
+    display:block;
+    background: url(http://localhost:8888/wp-content/themes/quality/images/AgedCare.png) 28px 25px no-repeat;
+}
+.health-care-icon {
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100px;
+    display:block;
+    background: url(http://localhost:8888/wp-content/themes/quality/images/HealthCare.png) 28px 25px no-repeat;
+}
+input[placeholder] {
+    color: green;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: large;
+}
+
+.content-area > p {
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: large;
 }

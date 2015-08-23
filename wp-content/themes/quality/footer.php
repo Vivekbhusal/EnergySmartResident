@@ -5,7 +5,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
     <div class="col-md-12">
 			<?php if($current_options['footer_copyright_text']!='') { ?>
 			<?php echo $current_options['footer_copyright_text']; } ?>
-		</div>	
+    </div>
   </div>
 </div>
 <!-- /Footer Widget Secton -->
