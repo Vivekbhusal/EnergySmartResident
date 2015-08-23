@@ -1,4 +1,4 @@
-<div class="profile-background">
+<div id="team" class="profile-background">
 	<div class="container">
 		<?php
 		the_post();
