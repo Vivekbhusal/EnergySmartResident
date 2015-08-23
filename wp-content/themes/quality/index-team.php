@@ -1,5 +1,11 @@
+<div class="team-title qua_heading_title">
+	<h1>Team</h1>
+	<div class="qua-separator" id=""></div>
+</div>
+
 <div id="team" class="profile-background">
 	<div class="container">
+
 		<?php
 		the_post();
 

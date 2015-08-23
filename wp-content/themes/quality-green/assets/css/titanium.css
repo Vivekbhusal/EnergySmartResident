@@ -67,3 +67,12 @@ input[placeholder] {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
 }
+
+.team-title{
+    margin: 0px auto 25px !important;
+}
+
+.parallax-window {
+    min-height: 280px;
+    background: transparent;
+}

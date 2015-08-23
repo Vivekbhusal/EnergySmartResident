@@ -1,69 +1,48 @@
 <!-- Quality Service Section ---->
-<?php $quality_pro_options=theme_data_setup(); 
-		  $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
-<div class="about-us">
-	<div class="row">
-		<div class="qua_heading_title">
-			<h1>About Us</h1>
-		</div>
-	</div>
-	<div class="content-area">
-		<p>Engergy Smart Resident is a website ...</p>
-	</div>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="qua_heading_title">
-		<?php if($current_options['service_title']) { ?>
-			<h1><?php echo $current_options['service_title']; ?></h1>
-		<?php } ?>
-		<?php if($current_options['service_description']) { ?>
-			<p><?php echo $current_options['service_description']; ?></p>
-		<?php } ?>
-			<div class="qua-separator" id=""></div>
-		</div>
-	</div>	
+<?php $quality_pro_options=theme_data_setup();
+$current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
+<div class="container" style="display: none">
 	<div class="row">
 		<div class="col-md-3 col-sm-6 qua-service-area">
 			<?php if($current_options['service_two_icon']) { ?>
-			<div class="hexagon-box">
-				<a href=""><span class="hospital-icon"/></a>
-			</div>
+				<div class="hexagon-box">
+					<a href=""><span class="hospital-icon"/></a>
+				</div>
 			<?php } ?>
 			<?php if($current_options['service_two_title']) { ?>
-			<h2><?php echo $current_options['service_two_title']; ?></h2>
+				<h2><?php echo $current_options['service_two_title']; ?></h2>
 			<?php } ?>
 			<?php if($current_options['service_two_text']) { ?>
-			<p><?php echo $current_options['service_two_text'];?></p>
-			<?php } ?>			
+				<p><?php echo $current_options['service_two_text'];?></p>
+			<?php } ?>
 		</div>
 		<div class="col-md-3 col-sm-6 qua-service-area">
 			<?php if($current_options['service_three_icon']) { ?>
-			<div class="hexagon-box">
-				<a href=""><span class="GPO-icon"/></a>
-			</div>
+				<div class="hexagon-box">
+					<a href=""><span class="GPO-icon"/></a>
+				</div>
 			<?php } ?>
 			<?php if($current_options['service_three_title']) { ?>
-			<h2><?php echo $current_options['service_three_title']; ?></h2>
+				<h2><?php echo $current_options['service_three_title']; ?></h2>
 			<?php } ?>
 			<?php if($current_options['service_three_text']) { ?>
-			<p><?php echo $current_options['service_three_text'];?></p>
-			<?php } ?>			
+				<p><?php echo $current_options['service_three_text'];?></p>
+			<?php } ?>
 		</div>
 		<div class="col-md-3 col-sm-6 qua-service-area">
 			<?php if($current_options['service_four_icon']) { ?>
-			<div class="hexagon-box">
-				<a href=""><span class="school-icon"/></a>
-			</div>
+				<div class="hexagon-box">
+					<a href=""><span class="school-icon"/></a>
+				</div>
 			<?php } ?>
 			<?php if($current_options['service_four_title']) { ?>
-			<h2><?php echo $current_options['service_four_title']; ?></h2>
+				<h2><?php echo $current_options['service_four_title']; ?></h2>
 			<?php } ?>
 			<?php if($current_options['service_four_text']) { ?>
-			<p><?php echo $current_options['service_four_text'];?></p>
-			<?php } ?>			
+				<p><?php echo $current_options['service_four_text'];?></p>
+			<?php } ?>
 		</div>
-				
+
 	</div>
 	<div class="row">
 		<div class="col-md-3 col-sm-6 qua-service-area">
@@ -107,5 +86,21 @@
 		</div>
 
 	</div>
+</div>
+<div class="container">
+
+	<div class="row">
+		<div class="qua_heading_title">
+			<?php if($current_options['service_title']) { ?>
+				<h1><?php echo $current_options['service_title']; ?></h1>
+				<div class="qua-separator" id=""></div>
+			<?php } ?>
+
+			<?php if($current_options['service_description']) { ?>
+				<p><?php echo $current_options['service_description']; ?></p>
+			<?php } ?>
+		</div>
+	</div>
+
 </div>
 <!-- /Quality Service Section ---->
