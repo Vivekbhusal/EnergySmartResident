@@ -54,7 +54,7 @@
         </div>
         <div class="clear"></div>
         <div class="qua_blog_post_content">
-          <?php the_content( __( 'Read More' , 'quality' ) ); ?>
+          <?php the_excerpt(); ?>
 		<?php wp_link_pages( ); ?>
 	   </div>
       </div>

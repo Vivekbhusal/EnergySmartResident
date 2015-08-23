@@ -15,4 +15,10 @@ function qualitygreen_enqueue_styles() {
     wp_enqueue_script('font-awesome', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', ['jQuery']);
 
 }
+
+function new_excerpt_more( $more ) {
+    return ' <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( '...Read More', 'your-text-domain' ) . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 ?>
