@@ -56,7 +56,7 @@ img.img-responsive {
     background: url(http://localhost:8888/wp-content/themes/quality/images/HealthCare.png) 28px 25px no-repeat;
 }
 input[placeholder] {
-    color: green;
+    color: #3c763d;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
 }

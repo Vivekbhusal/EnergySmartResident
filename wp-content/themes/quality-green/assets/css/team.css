@@ -50,7 +50,7 @@
     content: '';
     width: 36px;
     height: 3px;
-    background: #dededc;
+    background: #3c763d;
     position: absolute;
     top: 0;
 }
@@ -90,7 +90,7 @@
 .profile-background {
     margin-left: 70px;
     margin-right: 70px;
-    background-color: #CCEBD6;
+    background-color: #FFFFFF;
     padding: 41px;
 }
 
@@ -162,7 +162,7 @@ img.img-responsive {
     background: url(http://localhost:8888/wp-content/themes/quality/images/HealthCare.png) 28px 25px no-repeat;
 }
 input[placeholder] {
-    color: green;
+    color: #3c763d;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
 }
