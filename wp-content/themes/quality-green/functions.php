@@ -1,7 +1,4 @@
 <?php
-update_option('siteurl','http://104.236.107.128');
-update_option('home','http://104.236.107.128');
-
 add_action( 'wp_enqueue_scripts', 'qualitygreen_enqueue_styles' );
 function qualitygreen_enqueue_styles() {
     wp_enqueue_script('jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js');
