@@ -90,6 +90,7 @@ input[placeholder] {
         float: right !important;
     }
 }
+
 .slider-input {
     height: 300px;
 }
@@ -102,4 +103,3 @@ input[placeholder] {
 .slider-input > div.parallax-window {
     position: static;
 }
-
