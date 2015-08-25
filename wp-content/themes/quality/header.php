@@ -21,7 +21,7 @@
   <body <?php body_class(); ?>>
     <!--Header Logo & Menus-->
     <div class="container">
-      <nav class="navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-default titanium-nav" role="navigation">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -57,7 +57,7 @@
                 'container'         => 'div',
                 'container_class'   => 'collapse navbar-collapse',
 				'container_id'      => 'bs-example-navbar-collapse-1',
-                'menu_class'        => 'nav navbar-nav',
+                'menu_class'        => 'nav navbar-nav titnium-menu-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
             );

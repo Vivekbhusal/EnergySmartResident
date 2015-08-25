@@ -84,7 +84,6 @@ class TitaniumCommunityClass
                $suggestion[] = ['value'=> $result->suburb_name, 'data'=> $result->suburb_id ];
            }
         }
-
         wp_send_json(["suggestions"=>$suggestion]);
     }
 

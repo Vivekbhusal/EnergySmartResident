@@ -15,6 +15,7 @@ jQuery(document).ready(function($){
                 type: "post",
                 data: data,
                 success: function(response){
+                    console.log(response);
                     done(response);
                 }
             });
