@@ -25,4 +25,5 @@ function new_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
+
 ?>
