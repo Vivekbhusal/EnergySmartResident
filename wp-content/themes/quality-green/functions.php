@@ -1,6 +1,6 @@
 <?php
-update_option('siteurl','http://104.236.107.128');
-update_option('home','http://104.236.107.128');
+update_option('siteurl','http://localhost:9005');
+update_option('home','http://localhost:9005');
 
 add_action( 'wp_enqueue_scripts', 'qualitygreen_enqueue_styles' );
 function qualitygreen_enqueue_styles() {
