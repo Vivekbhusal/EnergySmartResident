@@ -50,7 +50,7 @@
     content: '';
     width: 36px;
     height: 3px;
-    background: #449d44;
+    background: #19A347;
     position: absolute;
     top: 0;
 }
@@ -62,6 +62,7 @@
     top: 121px;
     width: 100px;
     text-align: center;
+    margin-left: 1.5%;
 }
 .profile-footer a {
     line-height: 18px;
@@ -91,7 +92,8 @@
     margin-left: 70px;
     margin-right: 70px;
     background-color: #FFFFFF;
-    padding: 41px;
+    padding: 20px;
+    border: 20px solid #70B870;
 }
 
 .container-blog {
