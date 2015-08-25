@@ -37,7 +37,7 @@ class TitaniumCommunityClass
     private function __construct()
     {
         add_action('wp_enqueue_scripts', array(__CLASS__, 'enqueueScripts'));
-        add_action('wp_ajax_titanium_lookup_suburb', array($this, 'lookupSuburbs'));
+        add_action('wp_ajax_titanium_lookup_suburb', array($this, 'ajaxLookupSuburbs'));
     }
 
     public static function enqueueScripts()
@@ -67,7 +67,10 @@ class TitaniumCommunityClass
         );
     }
 
-    public function lookupSuburbs()
+    /**
+     * Ajax function to lookup surburb for auto complete
+     */
+    public function ajaxLookupSuburbs()
     {
         if (!isset($_POST['query']))
             wp_send_json_error();
