@@ -56,7 +56,7 @@ img.img-responsive {
     background: url(http://localhost:8888/wp-content/themes/quality/images/HealthCare.png) 28px 25px no-repeat;
 }
 input[placeholder] {
-    color: #3c763d;
+    color: #19A347;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
 }
@@ -90,3 +90,16 @@ input[placeholder] {
         float: right !important;
     }
 }
+.slider-input {
+    height: 300px;
+}
+
+.flex-slider-center {
+    margin-top: 280px;
+    top: 0px;
+    position: absolute;
+}
+.slider-input > div.parallax-window {
+    position: static;
+}
+
