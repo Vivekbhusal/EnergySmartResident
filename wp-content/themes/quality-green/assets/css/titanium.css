@@ -103,3 +103,7 @@ input[placeholder] {
 .slider-input > div.parallax-window {
     position: static;
 }
+
+#community-container .details {
+    display: none;
+}

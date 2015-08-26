@@ -1,7 +1,7 @@
 <!-- Quality Service Section ---->
 <?php $quality_pro_options=theme_data_setup();
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
-<div id="community-container" class="container">
+<div id="community-container" class="container" style="display: none">
 	<div class="row">
 		<div class="qua_heading_title">
 			<h1 id="suburb-name">Hughesdale</h1>
@@ -14,32 +14,16 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				<a href=""><span class="hospital-icon"/></a>
 			</div>
 			<h2 id="hospital-head" title="Hospital">1 KM Hospitals</h2>
-			<div class="details" id="hospital-details" style="display: none;">
-				<p>
-					<b>Hospital Type :</b>Public</br>
-					<b>Name :</b>Monash Health Center</br>
-					<b>Distance :</b>2 KM</br>
-				</p>
-				<p>
-					<b>Hospital Type :</b>Emergency</br>
-					<b>Name :</b>Monash Health Center</br>
-					<b>Distance :</b>2 KM</br>
-				</p>
-				<p>
-					<b>Hospital Type :</b>Maternatiy</br>
-					<b>Name :</b>Monash Health Center</br>
-					<b>Distance :</b>2 KM</br>
-				</p>
+			<div data-my-position="center left" data-at-position="top right" class="details" id="hospital-details">
 			</div>
-
-
 		</div>
 		<div class="col-md-3 col-sm-6 qua-service-area">
 			<div class="hexagon-box">
 				<a href=""><span class="GPO-icon"/></a>
 			</div>
 			<h2 id="gpo-head"  title="General Post Office">GPO</h2>
-			<p id="gpo-details"></p>
+			<div class="details" id="gpo-details">
+			</div>
 
 		</div>
 		<div class="col-md-3 col-sm-6 qua-service-area">
@@ -47,7 +31,15 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				<a href=""><span class="school-icon"/></a>
 			</div>
 			<h2 id="school-head"  title="Schools">School</h2>
-			<p id="school-details"></p>
+			<div class="details" id="school-details">
+				<p>
+					<b>No. of Child Care : </b><span class="no-of-child-care"></span></br>
+					<b>No. of Primary School : </b><span class="no-of-primary-school"></span></br>
+					<b>No. of Secondary School : </b><span class="no-of-secondary-school"></span></br>
+					<b>No. of P12 Schools : </b><span class="no-of-p12-school"></span></br>
+					<b>No. of Other Schools : </b><span class="no-of-other-school"></span></br>
+				</p>
+			</div>
 		</div>
 	</div>
 	<div class="row">
@@ -56,8 +48,10 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				<a href=""><span class="crime-rate-icon"/></a>
 			</div>
 			<h2 id="crime-head"  title="Crime rate">Crime</h2>
-			<div class="details" id="crime-details" style="display: none;">
-				Do not ever give rent to Mingda,, he is not good and is holding to passport and criminal.
+			<div class="details" id="crime-details">
+				<div id="crime-chart">
+
+				</div>
 			</div>
 
 		</div>
@@ -66,10 +60,12 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				<a href=""><span class="aged-care-icon"/></a>
 			</div>
 			<h2 id="age-care-head"  title="Aged Care">0 Aged Care</h2>
-			<div class="details" id="age-care-details" style="display: none">
-				<b>No of High Care :</b> 212</br>
-				<b>No of Low Care :</b> 212</br>
-				<b>No of SRS Care :</b> 212</br>
+			<div class="details" id="age-care-details">
+				<p>
+					<b>No. of High Care : </b><span class="no-of-high-care"></span></br>
+					<b>No. of Low care : </b><span class="no-of-low-care"></span></br>
+					<b>No. of SRS : </b><span class="no-of-srs"></span></br>
+				</p>
 			</div>
 
 		</div>
@@ -78,7 +74,19 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				<a href=""><span class="health-care-icon"/></a>
 			</div>
 			<h2 id="health-care-head"  title="Health Centers">Health Centers</h2>
-			<p id="health-care-details"></p>
+			<div class="details" id="health-care-details">
+				<p>
+					<b>No. of Pharmacies : </b><span class="no-of-pharmacies"></span></br>
+					<b>No. of Private Hospital : </b><span class="no-of-private-hospitals"></span></br>
+					<b>No. of Public Hospital : </b><span class="no-of-public-hospitals"></span></br>
+					<b>No. of Disability Health Centers : </b><span class="no-of-disable-centers"></span></br>
+					<b>No. of Dental Centers : </b><span class="no-of-dental-centers"></span></br>
+					<b>No. of Alternative Healths : </b><span class="no-of-alternative-centers"></span></br>
+					<b>No. of Community Health Centers : </b><span class="no-of-community-center"></span></br>
+					<b>No. of General Practitioners Centers : </b><span class="no-of-gp"></span></br>
+					<b>No. of Alliled Health Centers : </b><span class="no-of-alliled"></span></br>
+				</p>
+			</div>
 		</div>
 	</div>
 </div>

@@ -46,7 +46,8 @@ class TitaniumCommunityClass
         add_action('wp_enqueue_scripts', array(__CLASS__, 'enqueueScripts'));
         add_action('wp_ajax_titanium_lookup_suburb', array($this, 'ajaxLookupSuburbs'));
         add_action('wp_ajax_titanium_compute_community_details', array($this, 'ajaxComputeCommunityDetails'));
-//        $this->ajaxComputeCommunityDetails(71);
+        add_action('wp_ajax_nopriv_titanium_lookup_suburb', array($this, 'ajaxLookupSuburbs'));
+        add_action('wp_ajax_nopriv_titanium_compute_community_details', array($this, 'ajaxComputeCommunityDetails'));
     }
 
     /**
@@ -73,9 +74,22 @@ class TitaniumCommunityClass
         );
 
         wp_enqueue_style(
+            'chartist',
+            '//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css'
+        );
+
+        wp_enqueue_script(
+            'chartist',
+            '//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js',
+            [],
+            self::VERSION
+        );
+
+        wp_enqueue_style(
             'jQuery-qtip',
             'http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css'
         );
+
         wp_enqueue_script(
             'jquery-topics',
             plugins_url('titanium-community/public/js/jquery.topic.min.js'),
