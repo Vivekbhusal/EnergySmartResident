@@ -18,45 +18,45 @@ img.img-responsive {
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/Hospital.png) 28px 25px no-repeat;
+    background: url(../../images/Hospital.png) 28px 25px no-repeat;
 }
 .GPO-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/GPO.png) 28px 25px no-repeat;
+    background: url(../../images/GPO.png) 28px 25px no-repeat;
 }
 .school-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/School.png) 28px 25px no-repeat;
+    background: url(../../images/School.png) 28px 25px no-repeat;
 }
 .crime-rate-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/Crime.png) 28px 25px no-repeat;
+    background: url(../../images/Crime.png) 28px 25px no-repeat;
 }
 .aged-care-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/AgedCare.png) 28px 25px no-repeat;
+    background: url(../../images/AgedCare.png) 28px 25px no-repeat;
 }
 .health-care-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/HealthCare.png) 28px 25px no-repeat;
+    background: url(../../images/HealthCare.png) 28px 25px no-repeat;
 }
 input[placeholder] {
-    color: green;
+    color: #19A347;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: large;
 }
@@ -75,4 +75,35 @@ input[placeholder] {
 .parallax-window {
     min-height: 280px;
     background: transparent;
+}
+
+.titanium-nav{
+    border: 0px !important;
+}
+
+.logo > img {
+    width: 133px;
+    height: auto;
+}
+@media (min-width: 768px) {
+    .titnium-menu-nav{
+        float: right !important;
+    }
+}
+
+.slider-input {
+    height: 300px;
+}
+
+.flex-slider-center {
+    margin-top: 280px;
+    top: 0px;
+    position: absolute;
+}
+.slider-input > div.parallax-window {
+    position: static;
+}
+
+#community-container .details {
+    display: none;
 }
