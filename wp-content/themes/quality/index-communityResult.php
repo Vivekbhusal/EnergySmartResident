@@ -3,14 +3,47 @@
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
 <div class="property-info qua_heading_title">
 	<h1>22 Highland Ave, Clayton, VIC, 3168</h1>
-	<div class="qua-separator" id=""></div>
+	<div class="qua-separator"></div>
 	<div class="address">
-		<img src="http://localhost:8888/wp-content/themes/quality/images/house.jpg"/>
-		<p>
-			<img src="http://localhost:8888/wp-content/themes/quality/images/window.png"/>
-			<img src="http://localhost:8888/wp-content/themes/quality/images/water-tank.png"/>
-			<img src="http://localhost:8888/wp-content/themes/quality/images/air-conditioner.png"/>
-		</p>
+		<div class="property-photo">
+				<img src="http://localhost:8888/wp-content/themes/quality/images/house.png"/>
+			</div>
+			<div class="icon-row">
+					<div class="property-icon">
+						<img src="http://localhost:8888/wp-content/themes/quality/images/window.png"/>
+						<h3>Window</h3>
+					</div>
+					<div class="property-icon">
+						<img src="http://localhost:8888/wp-content/themes/quality/images/water-tank.png"/>
+						<h3>Water Tank</h3>
+					</div>
+					<div class="property-icon">
+						<img src="http://localhost:8888/wp-content/themes/quality/images/air-conditioner.png"/>
+						<h3>Air Conditioner</h3>
+					</div>
+					<div class="property-icon">
+						<img src="http://localhost:8888/wp-content/themes/quality/images/skylight.png"/>
+						<h3>Skylight</h3>
+					</div>
+			</div>
+		<div class="icon-row">
+			<div class="property-icon">
+				<img src="http://localhost:8888/wp-content/themes/quality/images/thermostats.png"/>
+				<h3>Thermostats</h3>
+			</div>
+			<div class="property-icon">
+				<img src="http://localhost:8888/wp-content/themes/quality/images/energy-saver-system.png"/>
+				<h3>Energy Saver System</h3>
+			</div>
+			<div class="property-icon">
+				<img src="http://localhost:8888/wp-content/themes/quality/images/external-shading.png"/>
+				<h3>External Shading</h3>
+			</div>
+			<div class="property-icon">
+				<img src="http://localhost:8888/wp-content/themes/quality/images/nathers.png"/>
+				<h3>Nathers</h3>
+			</div>
+		</div>
 	</div>
 </div>
 <div class="container" style="display: none">

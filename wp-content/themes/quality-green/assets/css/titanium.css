@@ -112,22 +112,37 @@ section.row.profiles {
 }
 .property-info {
     margin-left: 70px;
-    width: 1138px;
-    height: 600px;
+    width: inherit;
+    height: 500px;
 }
-.property-info > .address > img {
+.property-photo {
+    width: 30%;
+}
+.property-photo > img {
     float: left;
+    width: 250px;
+    heigh: auto;
+
+}
+.address {
+    width: inherit;
+}
+.address > .icon-row {
+    width: 75%;
+    height: 120px;
     margin-top: 50px;
+    margin-left: 25%;
 }
-.property-info > .address > p {
+.property-icon {
+    width: 25%;
+    height: 100%;
+    text-align: center;
     float: left;
-    width: 400px;
-    margin-left: 50px;
 }
-.property-info > .address > p > img {
+.property-icon > img {
     height: 80px;
     width: 80px;
-    margin-right: 50px;
-    margin-bottom: 20px;
-    float: left;
+}
+.property-icon > h3 {
+    font-size: medium;
 }
