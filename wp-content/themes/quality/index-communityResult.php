@@ -1,6 +1,18 @@
 <!-- Quality Service Section ---->
 <?php $quality_pro_options=theme_data_setup();
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
+<div class="property-info qua_heading_title">
+	<h1>22 Highland Ave, Clayton, VIC, 3168</h1>
+	<div class="qua-separator" id=""></div>
+	<div class="address">
+		<img src="http://localhost:8888/wp-content/themes/quality/images/house.jpg"/>
+		<p>
+			<img src="http://localhost:8888/wp-content/themes/quality/images/window.png"/>
+			<img src="http://localhost:8888/wp-content/themes/quality/images/water-tank.png"/>
+			<img src="http://localhost:8888/wp-content/themes/quality/images/air-conditioner.png"/>
+		</p>
+	</div>
+</div>
 <div class="container" style="display: none">
 	<div class="row">
 		<div class="col-md-3 col-sm-6 qua-service-area">

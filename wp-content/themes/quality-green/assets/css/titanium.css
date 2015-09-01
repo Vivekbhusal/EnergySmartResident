@@ -110,3 +110,24 @@ section.row.profiles {
 .col-sm-6.profile {
     width: 49%;
 }
+.property-info {
+    margin-left: 70px;
+    width: 1138px;
+    height: 600px;
+}
+.property-info > .address > img {
+    float: left;
+    margin-top: 50px;
+}
+.property-info > .address > p {
+    float: left;
+    width: 400px;
+    margin-left: 50px;
+}
+.property-info > .address > p > img {
+    height: 80px;
+    width: 80px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    float: left;
+}
