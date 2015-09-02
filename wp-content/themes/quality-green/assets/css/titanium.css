@@ -121,7 +121,7 @@ section.row.profiles {
 .property-photo > img {
     float: left;
     width: 250px;
-    heigh: auto;
+    height: auto;
 
 }
 .address {
@@ -145,4 +145,7 @@ section.row.profiles {
 }
 .property-icon > h3 {
     font-size: medium;
+}
+#community-container .details {
+    display: none;
 }
