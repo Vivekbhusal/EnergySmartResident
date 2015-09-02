@@ -18,42 +18,42 @@ img.img-responsive {
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/Hospital.png) 28px 25px no-repeat;
+    background: url('../../images/Hospital.png') 28px 25px no-repeat;
 }
 .GPO-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/GPO.png) 28px 25px no-repeat;
+    background: url(../../images/GPO.png) 28px 25px no-repeat;
 }
 .school-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/School.png) 28px 25px no-repeat;
+    background: url(../../images/School.png) 28px 25px no-repeat;
 }
 .crime-rate-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/Crime.png) 28px 25px no-repeat;
+    background: url(../../images/Crime.png) 28px 25px no-repeat;
 }
 .aged-care-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/AgedCare.png) 28px 25px no-repeat;
+    background: url(../../images/AgedCare.png) 28px 25px no-repeat;
 }
 .health-care-icon {
     background-size: 100% 100%;
     height: 100px;
     width: 100px;
     display:block;
-    background: url(http://localhost:8888/wp-content/themes/quality/images/HealthCare.png) 28px 25px no-repeat;
+    background: url(../../images/HealthCare.png) 28px 25px no-repeat;
 }
 input[placeholder] {
     color: #19A347;
