@@ -110,11 +110,6 @@ section.row.profiles {
 .col-sm-6.profile {
     width: 49%;
 }
-.property-info {
-    margin-left: 70px;
-    width: inherit;
-    height: auto;
-}
 .property-photo {
     width: 30%;
 }
@@ -122,10 +117,11 @@ section.row.profiles {
     float: left;
     width: auto;
     height: 200px;
-    margin-left:30px;
+    margin-left:40px;
 }
 .address {
     width: inherit;
+    margin-left: 70px;
 }
 .address > .icon-row {
     width: 75%;
@@ -139,10 +135,6 @@ section.row.profiles {
     text-align: center;
     float: left;
 }
-.property-icon > img {
-    height: 50px;
-    width: 50px;
-}
 .property-icon > h3 {
     font-size: medium;
 }
@@ -151,4 +143,11 @@ section.row.profiles {
 }
 .row {
     margin-top: 30px;
+}
+.line {
+    height: 2px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    background-color: grey;
 }
