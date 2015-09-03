@@ -46,7 +46,9 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 		</div>
 	</div>
 </div>
-<div id="community-container" class="container" style="display: block">
+<div id="community-container" class="container qua_heading_title" style="display: block">
+	<h1>Clayton 3168</h1>
+	<div class="qua-separator"></div>
 	<div class="row">
 		<div class="col-md-3 col-sm-6 qua-service-area">
 			<div class="hexagon-box">
@@ -80,8 +82,6 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				</p>
 			</div>
 		</div>
-	</div>
-	<div class="row">
 		<div class="col-md-3 col-sm-6 qua-service-area">
 			<div class="hexagon-box">
 				<a href=""><span class="crime-rate-icon"/></a>
