@@ -46,7 +46,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 		</div>
 	</div>
 </div>
-<div class="container details" style="display: block">
+<div id="community-container" class="container" style="display: block">
 	<div class="row">
 		<div class="col-md-3 col-sm-6 qua-service-area">
 			<div class="hexagon-box">
