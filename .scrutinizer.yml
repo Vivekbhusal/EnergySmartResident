@@ -73,8 +73,6 @@ tools:
             - wp-content/wp-admin/
             - wp-content/wp-includes/
     php_code_sniffer: true
-    external_code_coverage:
-        timeout: 3600
     php_loc: true
     js_hint:
         use_native_config: false
