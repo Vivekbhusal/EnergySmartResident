@@ -495,3 +495,392 @@
 [01-Sep-2015 09:33:46 UTC] PHP   5. WP_Automatic_Updater->run() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/update.php:498
 [01-Sep-2015 09:33:46 UTC] PHP   6. wp_update_plugins() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/includes/class-wp-upgrader.php:2915
 [01-Sep-2015 09:33:46 UTC] PHP   7. trigger_error() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/update.php:302
+[03-Sep-2015 03:37:48 UTC] PHP Notice:  Undefined index: page in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/login-page-designer/login-page-designer.php on line 156
+[03-Sep-2015 03:37:48 UTC] PHP Stack trace:
+[03-Sep-2015 03:37:48 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/index.php:0
+[03-Sep-2015 03:37:48 UTC] PHP   2. include() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/index.php:92
+[03-Sep-2015 03:37:48 UTC] PHP   3. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/admin-header.php:92
+[03-Sep-2015 03:37:48 UTC] PHP   4. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 03:37:48 UTC] PHP   5. wlpd_add_color_picker() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 03:38:10 UTC] PHP Notice:  Undefined index: page in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/login-page-designer/login-page-designer.php on line 156
+[03-Sep-2015 03:38:10 UTC] PHP Stack trace:
+[03-Sep-2015 03:38:10 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/index.php:0
+[03-Sep-2015 03:38:10 UTC] PHP   2. include() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/index.php:92
+[03-Sep-2015 03:38:10 UTC] PHP   3. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/admin-header.php:92
+[03-Sep-2015 03:38:10 UTC] PHP   4. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 03:38:10 UTC] PHP   5. wlpd_add_color_picker() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 03:38:23 UTC] PHP Notice:  Undefined index: page in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/login-page-designer/login-page-designer.php on line 156
+[03-Sep-2015 03:38:23 UTC] PHP Stack trace:
+[03-Sep-2015 03:38:23 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/options-general.php:0
+[03-Sep-2015 03:38:23 UTC] PHP   2. include() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/options-general.php:108
+[03-Sep-2015 03:38:23 UTC] PHP   3. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/admin-header.php:92
+[03-Sep-2015 03:38:23 UTC] PHP   4. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 03:38:23 UTC] PHP   5. wlpd_add_color_picker() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:03:22 UTC] PHP Notice:  Undefined index: page in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/login-page-designer/login-page-designer.php on line 156
+[03-Sep-2015 08:03:22 UTC] PHP Stack trace:
+[03-Sep-2015 08:03:22 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:0
+[03-Sep-2015 08:03:22 UTC] PHP   2. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:401
+[03-Sep-2015 08:03:22 UTC] PHP   3. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/admin-header.php:92
+[03-Sep-2015 08:03:22 UTC] PHP   4. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:03:22 UTC] PHP   5. wlpd_add_color_picker() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:03:27 UTC] PHP Notice:  Undefined index: page in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/login-page-designer/login-page-designer.php on line 156
+[03-Sep-2015 08:03:27 UTC] PHP Stack trace:
+[03-Sep-2015 08:03:27 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:0
+[03-Sep-2015 08:03:27 UTC] PHP   2. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:401
+[03-Sep-2015 08:03:27 UTC] PHP   3. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/admin-header.php:92
+[03-Sep-2015 08:03:27 UTC] PHP   4. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:03:27 UTC] PHP   5. wlpd_add_color_picker() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:03:31 UTC] PHP Notice:  Undefined index: page in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/login-page-designer/login-page-designer.php on line 156
+[03-Sep-2015 08:03:31 UTC] PHP Stack trace:
+[03-Sep-2015 08:03:31 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:0
+[03-Sep-2015 08:03:31 UTC] PHP   2. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:401
+[03-Sep-2015 08:03:31 UTC] PHP   3. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/admin-header.php:92
+[03-Sep-2015 08:03:31 UTC] PHP   4. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:03:31 UTC] PHP   5. wlpd_add_color_picker() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:27:56 UTC] PHP Notice:  Undefined index: apsl_user_role in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 318
+[03-Sep-2015 08:27:56 UTC] PHP Stack trace:
+[03-Sep-2015 08:27:56 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:27:56 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:27:56 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:27:56 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:27:56 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:27:56 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:27:56 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:27:56 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:27:56 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:27:56 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:29 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Property errors does not exist' in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:614
+Stack trace:
+#0 /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php(614): ReflectionClass->getProperty('errors')
+#1 /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php(380): APSL_Lite_Login_Check_Class->accessProtected(Object(Google_IO_Exception), 'errors')
+#2 /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php(304): APSL_Lite_Login_Check_Class->GoogleLogin()
+#3 /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php(39): APSL_Lite_Login_Check_Class->onGoogleLogin()
+#4 /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/a in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 614
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined index: openid_mode in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 410
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP  11. APSL_Lite_Login_Check_Class->GoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:304
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$email in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 306
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$username in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 309
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$email in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 309
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: WP_Error::$ID in /Users/vivekbhusal/www/EnergySmartResident/wp-includes/capabilities.php on line 560
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP  11. APSL_Lite_Login_Check_Class->creatUser() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:309
+[03-Sep-2015 08:35:36 UTC] PHP  12. wp_new_user_notification() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:517
+[03-Sep-2015 08:35:36 UTC] PHP  13. WP_User->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:57
+[03-Sep-2015 08:35:36 UTC] PHP  14. WP_User->init() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/capabilities.php:530
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$email in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 310
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Trying to get property of non-object in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 311
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$email in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 311
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Trying to get property of non-object in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 312
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$first_name in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 312
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Trying to get property of non-object in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 313
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$last_name in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 313
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Trying to get property of non-object in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 314
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$deuid in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 314
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Trying to get property of non-object in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 315
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$deutype in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 315
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Trying to get property of non-object in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 316
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$deuimage in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 316
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Trying to get property of non-object in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 317
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$about in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 317
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Trying to get property of non-object in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 318
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$first_name in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 318
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined index: apsl_user_role in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 318
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Undefined property: stdClass::$url in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 318
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:35:36 UTC] PHP Notice:  Trying to get property of non-object in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php on line 320
+[03-Sep-2015 08:35:36 UTC] PHP Stack trace:
+[03-Sep-2015 08:35:36 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:0
+[03-Sep-2015 08:35:36 UTC] PHP   2. require() /Users/vivekbhusal/www/EnergySmartResident/wp-login.php:12
+[03-Sep-2015 08:35:36 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:35:36 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104
+[03-Sep-2015 08:35:36 UTC] PHP   5. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-settings.php:353
+[03-Sep-2015 08:35:36 UTC] PHP   6. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   7. APSL_Lite_Class->login_check() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:35:36 UTC] PHP   8. include() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/accesspress-social-login-lite.php:278
+[03-Sep-2015 08:35:36 UTC] PHP   9. APSL_Lite_Login_Check_Class->__construct() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:623
+[03-Sep-2015 08:35:36 UTC] PHP  10. APSL_Lite_Login_Check_Class->onGoogleLogin() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/accesspress-social-login-lite/inc/frontend/login_check.php:39
+[03-Sep-2015 08:46:33 UTC] PHP Warning:  The URL https://www.role-editor.com/update?action=get_metadata&slug=user-role-editor-pro&checking_for_updates=1&installed_version=4.14.4 does not point to a valid plugin metadata file. WP HTTP error: SSLRead() return error -9806 in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/user-role-editor-pro/includes/pro/plugin-update-checker.php on line 231
+[03-Sep-2015 08:46:33 UTC] PHP Stack trace:
+[03-Sep-2015 08:46:33 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:0
+[03-Sep-2015 08:46:33 UTC] PHP   2. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:10
+[03-Sep-2015 08:46:33 UTC] PHP   3. do_action() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/admin.php:168
+[03-Sep-2015 08:46:33 UTC] PHP   4. call_user_func_array() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:46:33 UTC] PHP   5. PluginUpdateChecker_1_5->maybeCheckForUpdates() /Users/vivekbhusal/www/EnergySmartResident/wp-includes/plugin.php:503
+[03-Sep-2015 08:46:33 UTC] PHP   6. PluginUpdateChecker_1_5->checkForUpdates() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/user-role-editor-pro/includes/pro/plugin-update-checker.php:387
+[03-Sep-2015 08:46:33 UTC] PHP   7. PluginUpdateChecker_1_5->requestUpdate() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/user-role-editor-pro/includes/pro/plugin-update-checker.php:333
+[03-Sep-2015 08:46:33 UTC] PHP   8. PluginUpdateChecker_1_5->requestInfo() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/user-role-editor-pro/includes/pro/plugin-update-checker.php:248
+[03-Sep-2015 08:46:33 UTC] PHP   9. trigger_error() /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/user-role-editor-pro/includes/pro/plugin-update-checker.php:231
+[03-Sep-2015 08:52:07 UTC] PHP Notice:  Constant WP_UNINSTALL_PLUGIN already defined in /Users/vivekbhusal/www/EnergySmartResident/wp-admin/includes/plugin.php on line 964
+[03-Sep-2015 08:52:07 UTC] PHP Stack trace:
+[03-Sep-2015 08:52:07 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:0
+[03-Sep-2015 08:52:07 UTC] PHP   2. delete_plugins() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/plugins.php:357
+[03-Sep-2015 08:52:07 UTC] PHP   3. uninstall_plugin() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/includes/plugin.php:819
+[03-Sep-2015 08:52:07 UTC] PHP   4. define() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/includes/plugin.php:964
+[03-Sep-2015 08:53:52 UTC] PHP Parse error:  parse error in /Users/vivekbhusal/www/EnergySmartResident/wp-content/plugins/sweet-custom-dashboard/sweet-custom-dashboard.php on line 54
+[03-Sep-2015 08:53:52 UTC] PHP Stack trace:
+[03-Sep-2015 08:53:52 UTC] PHP   1. {main}() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/admin-ajax.php:0
+[03-Sep-2015 08:53:52 UTC] PHP   2. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-admin/admin-ajax.php:22
+[03-Sep-2015 08:53:52 UTC] PHP   3. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-load.php:37
+[03-Sep-2015 08:53:52 UTC] PHP   4. require_once() /Users/vivekbhusal/www/EnergySmartResident/wp-config.php:104

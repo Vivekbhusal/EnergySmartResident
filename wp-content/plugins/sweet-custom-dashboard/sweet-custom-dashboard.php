@@ -48,9 +48,9 @@ class rc_sweet_custom_dashboard {
 		if( is_admin() ) {
 			$screen = get_current_screen();
 			
-			if( $screen->base == 'dashboard' ) {
+			if( $screen->base == 'dashboard' && current_user_can('seller')) {
 
-				wp_redirect( admin_url( 'index.php?page=custom-dashboard' ) );
+				wp_redirect( admin_url( 'index.php?page=user-dashboard' ) );
 				
 			}
 		}
@@ -60,7 +60,7 @@ class rc_sweet_custom_dashboard {
 	
 	
 	function rc_scd_register_menu() {
-		add_dashboard_page( 'Custom Dashboard', 'Custom Dashboard', 'read', 'custom-dashboard', array( &$this,'rc_scd_create_dashboard') );
+		add_dashboard_page( 'Dashboard', 'Dashboard', 'read', 'user-dashboard', array( &$this,'rc_scd_create_dashboard') );
 	}
 	
 	function rc_scd_create_dashboard() {
