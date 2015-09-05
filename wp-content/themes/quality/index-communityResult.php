@@ -1,47 +1,71 @@
 <!-- Quality Service Section ---->
 <?php $quality_pro_options=theme_data_setup();
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
-<div class="property-info qua_heading_title" style="display: block">
+<div class="property-info qua_heading_title container" style="display: block">
 	<h1>22 Highland Ave, Clayton, VIC, 3168</h1>
 	<div class="qua-separator"></div>
 	<div class="address">
 		<div class="property-photo">
-				<img src="/wp-content/themes/quality/images/house.png"/>
-			</div>
-			<div class="icon-row">
-					<div class="property-icon">
-						<img src="/wp-content/themes/quality/images/window.png"/>
-						<h3>Window</h3>
-					</div>
-					<div class="property-icon">
-						<img src="/wp-content/themes/quality/images/water-tank.png"/>
-						<h3>Water Tank</h3>
-					</div>
-					<div class="property-icon">
-						<img src="/wp-content/themes/quality/images/air-conditioner.png"/>
-						<h3>Air Conditioner</h3>
-					</div>
-					<div class="property-icon">
-						<img src="/wp-content/themes/quality/images/skylight.png"/>
-						<h3>Skylight</h3>
-					</div>
-			</div>
+			<img src="/wp-content/themes/quality/images/house.png"/>
+		</div>
 		<div class="icon-row">
 			<div class="property-icon">
-				<img src="/wp-content/themes/quality/images/thermostats.png"/>
+				<div class="hexagon-box-small">
+					<a href=""><span class="window-icon"></span></a>
+				</div>
+				<h3>Window</h3>
+				<div class="details" id="window-details"></div>
+			</div>
+			<div class="property-icon">
+				<div class="hexagon-box-small">
+					<a href=""><span class="water-tank-icon"></span></a>
+				</div>
+				<h3>Water Tank</h3>
+				<div class="details" id="water-tank-details"></div>
+			</div>
+			<div class="property-icon">
+				<div class="hexagon-box-small">
+					<a href=""><span class="air-conditioner-icon"></span></a>
+				</div>
+				<h3>Air Conditioner</h3>
+				<div class="details" id="air-conditioner-details"></div>
+			</div>
+			<div class="property-icon">
+				<div class="hexagon-box-small">
+					<a href=""><span class="skylight-icon"></span></a>
+				</div>
+				<h3>Skylight</h3>
+				<div class="details" id="skylight-details"></div>
+			</div>
+		</div>
+		<div class="icon-row">
+			<div class="property-icon">
+				<div class="hexagon-box-small">
+					<a href=""><span class="thermostats-icon"></span></a>
+				</div>
 				<h3>Thermostats</h3>
+				<div class="details" id="thermostats-details"></div>
 			</div>
 			<div class="property-icon">
-				<img src="/wp-content/themes/quality/images/energy-saver-system.png"/>
+				<div class="hexagon-box-small">
+					<a href=""><span class="energy-saver-system-icon"></span></a>
+				</div>
 				<h3>Energy Saver System</h3>
+				<div class="details" id="energy-saver-system-details"></div>
 			</div>
 			<div class="property-icon">
-				<img src="/wp-content/themes/quality/images/external-shading.png"/>
+				<div class="hexagon-box-small">
+					<a href=""><span class="external-shading-icon"></span></a>
+				</div>
 				<h3>External Shading</h3>
+				<div class="details" id="external-shading-details"></div>
 			</div>
 			<div class="property-icon">
-				<img src="/wp-content/themes/quality/images/nathers.png"/>
+				<div class="hexagon-box-small">
+					<a href=""><span class="nathers-icon"></span></a>
+				</div>
 				<h3>Nathers</h3>
+				<div class="details" id="nathers-details"></div>
 			</div>
 		</div>
 	</div>
