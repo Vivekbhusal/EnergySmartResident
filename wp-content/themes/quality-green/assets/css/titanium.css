@@ -1,5 +1,6 @@
 .col-md-3.col-sm-6.qua-service-area{
     width: 16.666667%;
+    margin-bottom: 0;
 }
 img.img-responsive {
     opacity:0.7;
@@ -112,6 +113,7 @@ section.row.profiles {
 }
 .property-info {
     height: auto;
+    position: relative;
 }
 .property-photo {
     width: 30%;
@@ -130,13 +132,14 @@ section.row.profiles {
 }
 .address > .icon-row {
     width: 75%;
-    height: 100%;
+    height: 80px;
     margin-top: 30px;
     margin-left: 20%;
+    position: relative;
 }
 .property-icon {
     width: 25%;
-    height: 100%;
+    height: 80px;
     text-align: center;
     float: left;
 }
@@ -150,24 +153,24 @@ section.row.profiles {
     display: none;
 }
 .row {
-    margin-top: 30px;
-}
-.line {
-    height: 2px;
-    width: 80%;
-    margin-left: 10%;
-    position: absolute;
-    background-color: lightgrey;
+    margin-top: 1%;
 }
 
 .property-icon:hover {
     background: url(../../../quality/images/property-green.png) no-repeat center;
 }
 
-/**@media (max-width: 768px) {
-    .property-icon{
-        width:100% !important;
-        height: 100% !important;
-        float:left;
+.container.qua_heading_title {
+    border-top: solid lightgrey 2px;
+    padding-top: 2%;
+}
+
+@media (max-width: 768px) {
+    .icon-row {
+        margin-left: 10% !important;
+        float: left !important;
     }
+}
+.property-icon{
+
 }

@@ -46,7 +46,6 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 		</div>
 	</div>
 </div>
-<div class="line"></div>
 <div id="community-container" class="container qua_heading_title" style="display: block">
 	<h1>Clayton 3168</h1>
 	<div class="qua-separator"></div>
