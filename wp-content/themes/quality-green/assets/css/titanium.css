@@ -111,10 +111,6 @@ section.row.profiles {
 .col-sm-6.profile {
     width: 49%;
 }
-.property-info {
-    height: auto;
-    position: relative;
-}
 .property-photo {
     width: 30%;
     height: auto;
@@ -123,7 +119,7 @@ section.row.profiles {
     float: left;
     width: auto;
     height: 200px;
-    margin-left:10%;
+    margin-left: 10%;
 }
 .address {
     width: inherit;
@@ -143,9 +139,7 @@ section.row.profiles {
     text-align: center;
     float: left;
 }
-.property-icon > img {
-    margin-top: 14px;
-}
+
 .property-icon > h3 {
     font-size: medium;
     margin-top: 0;
@@ -229,9 +223,4 @@ section.row.profiles {
     padding-top: 2%;
 }
 
-@media (max-width: 768px) {
-    .icon-row {
-        margin-left: 10% !important;
-        float: left !important;
-    }
-}
+
