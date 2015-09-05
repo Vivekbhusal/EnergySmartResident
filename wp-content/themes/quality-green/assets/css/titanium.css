@@ -111,6 +111,7 @@ section.row.profiles {
 .col-sm-6.profile {
     width: 49%;
 }
+
 .property-photo {
     width: 30%;
     height: auto;
@@ -221,6 +222,34 @@ section.row.profiles {
 .container.qua_heading_title {
     border-top: solid lightgrey 2px;
     padding-top: 2%;
+    height: auto;
 }
 
+
+
+@media (max-width: 414px) {
+    .address{
+        width:100%;
+    }
+    .property-photo{
+        width:100%;
+        diaplay:block;
+        float:left;
+    }
+    .property-icon{
+        width:100%;
+        margin:10px 10px 50px -120px;
+        float:left;
+        background:left;
+    }
+    .property-info{
+        width:100%;
+        height: 1400px;
+    }
+    .icon-row{
+        width:100%;
+    }
+
+
+}
 
