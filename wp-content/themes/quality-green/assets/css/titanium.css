@@ -148,6 +148,8 @@ section.row.profiles {
 }
 .property-icon > h3 {
     font-size: medium;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 #community-container .details {
     display: none;
@@ -158,12 +160,69 @@ section.row.profiles {
 .hexagon-box-small:hover {
     background: url(../../../quality/images/property-green.png) no-repeat center;
 }
-span.window-icon {
+.window-icon {
     background-size: 100% 100%;
     height: 80px;
-    width: 80px;
+    width: 50%;
+    margin-left: 25%;
     display:block;
-    background: url(../../../quality/images/window.png) no-repeat;
+    background: url(../../../quality/images/window.png) no-repeat center;
+}
+.water-tank-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/water-tank.png) no-repeat center;
+}
+.air-conditioner-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/air-conditioner.png) no-repeat center;
+}
+.skylight-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/skylight.png) no-repeat center;
+}
+.thermostats-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/thermostats.png) no-repeat center;
+}
+.energy-saver-system-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/energy-saver-system.png) no-repeat center;
+}
+.external-shading-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/external-shading.png) no-repeat center;
+}
+.nathers-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/nathers.png) no-repeat center;
 }
 .container.qua_heading_title {
     border-top: solid lightgrey 2px;

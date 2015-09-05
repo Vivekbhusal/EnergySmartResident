@@ -14,37 +14,58 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 						<a href=""><span class="window-icon"></span></a>
 						</div>
 						<h3>Window</h3>
-						<div class="details" id="gpo-details">
+						<div class="details" id="window-details"></div>
 					</div>
 					<div class="property-icon">
-						<img src="/wp-content/themes/quality/images/water-tank.png"/>
+						<div class="hexagon-box-small">
+							<a href=""><span class="water-tank-icon"></span></a>
+						</div>
 						<h3>Water Tank</h3>
+						<div class="details" id="water-tank-details"></div>
 					</div>
 					<div class="property-icon">
-						<img src="/wp-content/themes/quality/images/air-conditioner.png"/>
+						<div class="hexagon-box-small">
+							<a href=""><span class="air-conditioner-icon"></span></a>
+						</div>
 						<h3>Air Conditioner</h3>
+						<div class="details" id="air-conditioner-details"></div>
 					</div>
 					<div class="property-icon">
-						<img src="/wp-content/themes/quality/images/skylight.png"/>
+						<div class="hexagon-box-small">
+							<a href=""><span class="skylight-icon"></span></a>
+						</div>
 						<h3>Skylight</h3>
+						<div class="details" id="skylight-details"></div>
 					</div>
 			</div>
 		<div class="icon-row">
 			<div class="property-icon">
-				<img src="/wp-content/themes/quality/images/thermostats.png"/>
+				<div class="hexagon-box-small">
+					<a href=""><span class="thermostats-icon"></span></a>
+				</div>
 				<h3>Thermostats</h3>
+				<div class="details" id="thermostats-details"></div>
 			</div>
 			<div class="property-icon">
-				<img src="/wp-content/themes/quality/images/energy-saver-system.png"/>
+				<div class="hexagon-box-small">
+					<a href=""><span class="energy-saver-system-icon"></span></a>
+				</div>
 				<h3>Energy Saver System</h3>
+				<div class="details" id="energy-saver-system-details"></div>
 			</div>
 			<div class="property-icon">
-				<img src="/wp-content/themes/quality/images/external-shading.png"/>
+				<div class="hexagon-box-small">
+					<a href=""><span class="external-shading-icon"></span></a>
+				</div>
 				<h3>External Shading</h3>
+				<div class="details" id="external-shading-details"></div>
 			</div>
 			<div class="property-icon">
-				<img src="/wp-content/themes/quality/images/nathers.png"/>
+				<div class="hexagon-box-small">
+					<a href=""><span class="nathers-icon"></span></a>
+				</div>
 				<h3>Nathers</h3>
+				<div class="details" id="nathers-details"></div>
 			</div>
 		</div>
 	</div>
