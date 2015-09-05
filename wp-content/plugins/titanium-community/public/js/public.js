@@ -63,10 +63,10 @@ jQuery(document).ready(function($){
                 /**Populate for pop ups **/
                 $.each(response.hospital, function(index, value){
                     var html = "<p>"+
-                            "<b>Hospital Type: </b>"+value.type+"</br>"+
-                            "<b>Name: </b>"+value.nearest_hospital+"</br>"+
-                            "<b>Distance: </b>"+value.distance+"</br>"+
-                            "</p>";
+                        "<b>Hospital Type: </b>"+value.type+"</br>"+
+                        "<b>Name: </b>"+value.nearest_hospital+"</br>"+
+                        "<b>Distance: </b>"+value.distance+"</br>"+
+                        "</p>";
                     $("#hospital-details").append(html);
                 });
 
@@ -144,13 +144,13 @@ jQuery(document).ready(function($){
      * Displays detailed information about the attributes
      */
     $(".qua-service-area").qtip({
-       content: {
-           title: function(){
-               return $(this).find('h2').attr('title');
-           },
-           text: function(event, api){
-               return $(this).find('.details').html();
-           }
+        content: {
+            title: function(){
+                return $(this).find('h2').attr('title');
+            },
+            text: function(event, api){
+                return $(this).find('.details').html();
+            }
         },
         style: {
             classes: 'qtip-green qtip-shadow qtip-rounded'

@@ -44,7 +44,6 @@ class TitaniumCommunityClass
     private function __construct()
     {
         add_action('wp_enqueue_scripts', array(__CLASS__, 'enqueueScripts'));
-        add_action('wp_ajax_titanium_lookup_suburb', array($this, 'lookupSuburbs'));
         add_action('wp_ajax_titanium_lookup_suburb', array($this, 'ajaxLookupSuburbs'));
         add_action('wp_ajax_titanium_compute_community_details', array($this, 'ajaxComputeCommunityDetails'));
         add_action('wp_ajax_nopriv_titanium_lookup_suburb', array($this, 'ajaxLookupSuburbs'));
@@ -118,7 +117,7 @@ class TitaniumCommunityClass
     /**
      * Ajax function to lookup surburb for auto complete
      */
-    public function lookupSuburbs()
+    public function ajaxLookupSuburbs()
     {
         /**
          * Send error message if nothing received
@@ -134,9 +133,9 @@ class TitaniumCommunityClass
         $suggestion = [];
         if ($results)
         {
-           foreach($results as $result) {
-               $suggestion[] = ['value'=> $result->suburb_name." (".$result->postcode.")", 'data'=> $result->suburb_id ];
-           }
+            foreach($results as $result) {
+                $suggestion[] = ['value'=> $result->suburb_name." (".$result->postcode.")", 'data'=> $result->suburb_id ];
+            }
         }
         wp_send_json(["suggestions"=>$suggestion]);
     }
@@ -193,7 +192,7 @@ class TitaniumCommunityClass
          * get the information of GPO
          */
         $gpo = $wpdb->get_row($wpdb->prepare(
-           "select travel_time, distance from gpo where suburb_id = %d",
+            "select travel_time, distance from gpo where suburb_id = %d",
             $surburb_id
         ));
 
@@ -201,7 +200,7 @@ class TitaniumCommunityClass
          * Get the information of Schools in suburb
          */
         $schools = $wpdb->get_row($wpdb->prepare(
-           "SELECT childcare, primary_school, secondary_school, p12_schools, other_schools,
+            "SELECT childcare, primary_school, secondary_school, p12_schools, other_schools,
            (select childcare+primary_school+secondary_school+p12_schools+other_schools) as total_schools
            FROM school where suburb_id = %d",
             $surburb_id
