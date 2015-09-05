@@ -6,7 +6,7 @@ img.img-responsive {
     opacity:0.7;
     filter:alpha(opacity=40);
     margin-left: 70px;
-    heigh: 400px;
+    height: 400px;
     width: 1138px;
 }
 .logo.pull-left > a > img{
@@ -87,7 +87,7 @@ input[placeholder] {
     height: auto;
 }
 @media (min-width: 768px) {
-    .titnium-menu-nav{
+    .titanium-menu-nav{
         float: right !important;
     }
 }
@@ -111,43 +111,39 @@ section.row.profiles {
 .col-sm-6.profile {
     width: 49%;
 }
-.property-info {
-    height: auto;
-    position: relative;
-}
+
 .property-photo {
-    width: 30%;
+    width: 25%;
     height: auto;
 }
 .property-photo > img {
     float: left;
     width: auto;
     height: 200px;
-    margin-left:10%;
+    margin-left: 10%;
 }
 .address {
-    width: inherit;
+    width: 90%;
     height: 100%;
-    margin-left: 70px;
+    margin-left: 5%;
 }
 .address > .icon-row {
-    width: 75%;
     height: 80px;
     margin-top: 30px;
-    margin-left: 20%;
-    position: relative;
+    margin-left: 200px;
 }
 .property-icon {
     width: 25%;
     height: 80px;
     text-align: center;
     float: left;
+    position: relative;
 }
-.property-icon > img {
-    margin-top: 14px;
-}
+
 .property-icon > h3 {
     font-size: medium;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 #community-container .details {
     display: none;
@@ -155,22 +151,109 @@ section.row.profiles {
 .row {
     margin-top: 1%;
 }
-
-.property-icon:hover {
+.hexagon-box-small:hover {
     background: url(../../../quality/images/property-green.png) no-repeat center;
 }
-
-.container.qua_heading_title {
+.window-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/window.png) no-repeat center;
+}
+.water-tank-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/water-tank.png) no-repeat center;
+}
+.air-conditioner-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/air-conditioner.png) no-repeat center;
+}
+.skylight-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/skylight.png) no-repeat center;
+}
+.thermostats-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/thermostats.png) no-repeat center;
+}
+.energy-saver-system-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/energy-saver-system.png) no-repeat center;
+}
+.external-shading-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/external-shading.png) no-repeat center;
+}
+.nathers-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/nathers.png) no-repeat center;
+}
+#community-container.container.qua_heading_title {
     border-top: solid lightgrey 2px;
     padding-top: 2%;
+    height: auto;
 }
 
-@media (max-width: 768px) {
-    .icon-row {
-        margin-left: 10% !important;
-        float: left !important;
+
+
+@media (max-width: 414px) {
+    .address{
+        width:100%;
+    }
+    .property-photo{
+        width:100%;
+        float:left;
+        margin-left:45px;
+    }
+    .property-icon{
+        width:100%;
+        margin:10px 10px 20px -45px;
+        float:left;
+        background:left;
+    }
+    .property-info{
+        width:100%;
+        height: 1200px;
+    }
+    .icon-row{
+        width:100%;
+    }
+
+    .col-md-3.col-sm-6.qua-service-area{
+        width: 100%;
+        margin-bottom: 0;
+        float:left;
+        background:left;
     }
 }
-.property-icon{
 
-}
