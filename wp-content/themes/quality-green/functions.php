@@ -109,5 +109,18 @@ if (current_user_can('seller')) {
     add_action( 'admin_footer', 'cor_profile_subject_end' );
 }
 
+add_action( 'current_screen', 'thisScreen' );
+function thisScreen() {
+    $currentScreen = get_current_screen();
+    if( $currentScreen->id == "house" ) {
+        add_action( 'admin_enqueue_scripts', 'enqueue_style_for_add_house' );
+    }
+}
+
+function enqueue_style_for_add_house() {
+    wp_enqueue_style( 'titanium-add-house', get_stylesheet_directory_uri() . '/assets/css/add-house.css' );
+}
+
+
 
 ?>

@@ -267,5 +267,6 @@ section.row.profiles {
 }
 
 .qtip-title{
-
+    font-size: 15px !important;
+    line-height: 1.4em !important;
 }

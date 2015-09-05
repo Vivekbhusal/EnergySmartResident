@@ -13,29 +13,37 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				<div class="hexagon-box-small">
 					<a href=""><span class="window-icon"></span></a>
 				</div>
-				<h3>Window</h3>
-				<div class="details" id="window-details"></div>
+				<h3 class="titanium-popup-class" title="Window">Window</h3>
+				<div class="details" id="window-details">
+					All the windows within the house are wood-framed.
+				</div>
 			</div>
 			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="water-tank-icon"></span></a>
 				</div>
-				<h3>Water Tank</h3>
-				<div class="details" id="water-tank-details"></div>
+				<h3 class="titanium-popup-class" title="Water Tank">Water Tank</h3>
+				<div class="details" id="water-tank-details">
+					Active hot water system is contained within the house.
+				</div>
 			</div>
 			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="air-conditioner-icon"></span></a>
 				</div>
-				<h3>Air Conditioner</h3>
-				<div class="details" id="air-conditioner-details"></div>
+				<h3 class="titanium-popup-class" title="Air Conditioner">Air Conditioner</h3>
+				<div class="details" id="air-conditioner-details">
+					The house contains air conditioner in each bedroom.
+				</div>
 			</div>
 			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="skylight-icon"></span></a>
 				</div>
-				<h3>Skylight</h3>
-				<div class="details" id="skylight-details"></div>
+				<h3 class="titanium-popup-class" title="Skylight">Skylight</h3>
+				<div class="details" id="skylight-details">
+					There is no skylight within the house.
+				</div>
 			</div>
 		</div>
 		<div class="icon-row">
@@ -43,24 +51,28 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				<div class="hexagon-box-small">
 					<a href=""><span class="thermostats-icon"></span></a>
 				</div>
-				<h3>Thermostats</h3>
-				<div class="details" id="thermostats-details"></div>
+				<h3 class="titanium-popup-class" title="Thermostats">Thermostats</h3>
+				<div class="details" id="thermostats-details">
+					A thermostat is used to control the temperature within the house.
+				</div>
 			</div>
 			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="energy-saver-system-icon"></span></a>
 				</div>
-				<h3>Energy Saver System</h3>
-				<div class="details" id="energy-saver-system-details"></div>
+				<h3 class="titanium-popup-class" title="Energy Saver System">Energy Saver System</h3>
+				<div class="details" id="energy-saver-system-details">
+					The house uses solar electric system to saving the energy.
+				</div>
 			</div>
 			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="external-shading-icon"></span></a>
 				</div>
-				<h3 class="titanium-popup-class" title="Shading">External Shading</h3>
+				<h3 class="titanium-popup-class" title="External Shading">External Shading</h3>
 				<div class="details" id="external-shading-details">
 					<p>
-						The house has <b>Evergreen Plants</b> for Shading
+						The house has <b>Evergreen Plants</b> for External Shading
 					</p>
 					<p>
 						Shading can block up to 90% of solar heat which helps in increasing efficiency. Evergreen plants are recommended for hot humid and some hot dry climates to reduce unwanted glare and heat gain.
@@ -74,7 +86,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				</div>
 				<h3 class="titanium-popup-class" title="Nathers">Nathers</h3>
 				<div class="details" id="nathers-details">
-					He has certfied the house form xyz company.
+					He has certified the house from xyz company.
 				</div>
 			</div>
 		</div>

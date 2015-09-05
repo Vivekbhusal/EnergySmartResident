@@ -40,9 +40,17 @@ class rc_sweet_custom_dashboard {
 	
 		add_action('admin_menu', array( &$this,'rc_scd_register_menu') );
 		add_action('load-index.php', array( &$this,'rc_scd_redirect_dashboard') );
+		add_action('admin_enqueue_scripts', array(__CLASS__, 'enqueueScripts'));
  
 	} // end constructor
- 
+
+	public static function enqueueScripts()
+	{
+		wp_enqueue_style(
+			'dashboard-styles',
+			plugins_url('sweet-custom-dashboard/admin.css')
+		);
+	}
 	function rc_scd_redirect_dashboard() {
 	
 		if( is_admin() ) {
