@@ -10,8 +10,11 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 			<div class="icon-row">
 					<div class="property-icon">
-						<img src="/wp-content/themes/quality/images/window.png"/>
+						<div class="hexagon-box-small">
+						<a href=""><span class="window-icon"></span></a>
+						</div>
 						<h3>Window</h3>
+						<div class="details" id="gpo-details">
 					</div>
 					<div class="property-icon">
 						<img src="/wp-content/themes/quality/images/water-tank.png"/>
