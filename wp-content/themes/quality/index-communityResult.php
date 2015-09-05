@@ -83,7 +83,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 <div id="community-container" class="container qua_heading_title" style="display: none">
 	<div class="row">
 		 <div class="qua_heading_title">
-			 <h1 id="suburb-name">Clayton 3168</h1>
+			 <h1 id="suburb-name"></h1>
 			 <div class="qua-separator"></div>
 		 </div>
 	</div>
@@ -100,7 +100,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			<div class="hexagon-box">
 				<a href=""><span class="GPO-icon"/></a>
 			</div>
-			<h2 class="titanium-popup-class" id="gpo-head"  title="General Post Office">GPO</h2>
+			<h2 class="titanium-popup-class" id="gpo-head" title="General Post Office">GPO</h2>
 			<div class="details" id="gpo-details">
 			</div>
 
@@ -124,7 +124,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			<div class="hexagon-box">
 				<a href=""><span class="crime-rate-icon"/></a>
 			</div>
-			<h2 id="crime-head"  title="Crime rate">Crime</h2>
+			<h2 class="titanium-popup-class" id="crime-head"  title="Crime rate">Crime</h2>
 			<div class="details" id="crime-details">
 				<div id="crime-chart">
 
@@ -136,7 +136,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			<div class="hexagon-box">
 				<a href=""><span class="aged-care-icon"/></a>
 			</div>
-			<h2 id="age-care-head"  title="Aged Care">0 Aged Care</h2>
+			<h2 class="titanium-popup-class" id="age-care-head" title="Aged Care">0 Aged Care</h2>
 			<div class="details" id="age-care-details">
 				<p>
 					<b>No. of High Care : </b><span class="no-of-high-care"></span></br>
@@ -150,7 +150,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			<div class="hexagon-box">
 				<a href=""><span class="health-care-icon"/></a>
 			</div>
-			<h2 id="health-care-head"  title="Health Centers">Health Centers</h2>
+			<h2 class="titanium-popup-class" id="health-care-head"  title="Health Centers">Health Centers</h2>
 			<div class="details" id="health-care-details">
 				<p>
 					<b>No. of Pharmacies : </b><span class="no-of-pharmacies"></span></br>
