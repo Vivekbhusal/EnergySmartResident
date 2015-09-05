@@ -143,10 +143,10 @@ jQuery(document).ready(function($){
      * the hexagon boxes.
      * Displays detailed information about the attributes
      */
-    $(".qua-service-area").qtip({
+    $(".titanium-popup-container").qtip({
         content: {
             title: function(){
-                return $(this).find('h2').attr('title');
+                return $(this).find('.titanium-popup-class').attr('title');
             },
             text: function(event, api){
                 return $(this).find('.details').html();

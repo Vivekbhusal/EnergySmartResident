@@ -148,6 +148,10 @@ section.row.profiles {
 #community-container .details {
     display: none;
 }
+
+.property-info .details{
+    display: none;
+}
 .row {
     margin-top: 1%;
 }
@@ -255,4 +259,13 @@ section.row.profiles {
         float:left;
         background:left;
     }
+}
+
+.qtip-content {
+    font-size: 14px !important;
+    line-height: 1.4em !important;
+}
+
+.qtip-title{
+
 }

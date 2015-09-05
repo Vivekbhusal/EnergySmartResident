@@ -9,28 +9,28 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			<img src="/wp-content/themes/quality/images/house.png"/>
 		</div>
 		<div class="icon-row">
-			<div class="property-icon">
+			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="window-icon"></span></a>
 				</div>
 				<h3>Window</h3>
 				<div class="details" id="window-details"></div>
 			</div>
-			<div class="property-icon">
+			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="water-tank-icon"></span></a>
 				</div>
 				<h3>Water Tank</h3>
 				<div class="details" id="water-tank-details"></div>
 			</div>
-			<div class="property-icon">
+			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="air-conditioner-icon"></span></a>
 				</div>
 				<h3>Air Conditioner</h3>
 				<div class="details" id="air-conditioner-details"></div>
 			</div>
-			<div class="property-icon">
+			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="skylight-icon"></span></a>
 				</div>
@@ -39,63 +39,77 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 		</div>
 		<div class="icon-row">
-			<div class="property-icon">
+			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="thermostats-icon"></span></a>
 				</div>
 				<h3>Thermostats</h3>
 				<div class="details" id="thermostats-details"></div>
 			</div>
-			<div class="property-icon">
+			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="energy-saver-system-icon"></span></a>
 				</div>
 				<h3>Energy Saver System</h3>
 				<div class="details" id="energy-saver-system-details"></div>
 			</div>
-			<div class="property-icon">
+			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="external-shading-icon"></span></a>
 				</div>
-				<h3>External Shading</h3>
-				<div class="details" id="external-shading-details"></div>
+				<h3 class="titanium-popup-class" title="Shading">External Shading</h3>
+				<div class="details" id="external-shading-details">
+					<p>
+						The house has <b>Evergreen Plants</b> for Shading
+					</p>
+					<p>
+						Shading can block up to 90% of solar heat which helps in increasing efficiency. Evergreen plants are recommended for hot humid and some hot dry climates to reduce unwanted glare and heat gain.
+					</p>
+
+				</div>
 			</div>
-			<div class="property-icon">
+			<div class="property-icon titanium-popup-container">
 				<div class="hexagon-box-small">
 					<a href=""><span class="nathers-icon"></span></a>
 				</div>
-				<h3>Nathers</h3>
-				<div class="details" id="nathers-details"></div>
+				<h3 class="titanium-popup-class" title="Nathers">Nathers</h3>
+				<div class="details" id="nathers-details">
+					He has certfied the house form xyz company.
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div id="community-container" class="container qua_heading_title" style="display: block">
-	<h1>Clayton 3168</h1>
-	<div class="qua-separator"></div>
+<div id="community-container" class="container qua_heading_title" style="display: none">
 	<div class="row">
-		<div class="col-md-3 col-sm-6 qua-service-area">
+		 <div class="qua_heading_title">
+			 <h1 id="suburb-name">Clayton 3168</h1>
+			 <div class="qua-separator"></div>
+		 </div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
 			<div class="hexagon-box">
 				<a href=""><span class="hospital-icon"/></a>
 			</div>
-			<h2 id="hospital-head" title="Hospital">1 KM Hospitals</h2>
+			<h2 class="titanium-popup-class" id="hospital-head" title="Hospital">1 KM Hospitals</h2>
 			<div data-my-position="center left" data-at-position="top right" class="details" id="hospital-details">
 			</div>
 		</div>
-		<div class="col-md-3 col-sm-6 qua-service-area">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
 			<div class="hexagon-box">
 				<a href=""><span class="GPO-icon"/></a>
 			</div>
-			<h2 id="gpo-head"  title="General Post Office">GPO</h2>
+			<h2 class="titanium-popup-class" id="gpo-head"  title="General Post Office">GPO</h2>
 			<div class="details" id="gpo-details">
 			</div>
 
 		</div>
-		<div class="col-md-3 col-sm-6 qua-service-area">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
 			<div class="hexagon-box">
 				<a href=""><span class="school-icon"/></a>
 			</div>
-			<h2 id="school-head"  title="Schools">School</h2>
+			<h2 class="titanium-popup-class"  id="school-head"  title="Schools">School</h2>
 			<div class="details" id="school-details">
 				<p>
 					<b>No. of Child Care : </b><span class="no-of-child-care"></span></br>
@@ -106,7 +120,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				</p>
 			</div>
 		</div>
-		<div class="col-md-3 col-sm-6 qua-service-area">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
 			<div class="hexagon-box">
 				<a href=""><span class="crime-rate-icon"/></a>
 			</div>
@@ -118,7 +132,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 
 		</div>
-		<div class="col-md-3 col-sm-6 qua-service-area">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
 			<div class="hexagon-box">
 				<a href=""><span class="aged-care-icon"/></a>
 			</div>
@@ -132,7 +146,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 
 		</div>
-		<div class="col-md-3 col-sm-6 qua-service-area">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
 			<div class="hexagon-box">
 				<a href=""><span class="health-care-icon"/></a>
 			</div>
