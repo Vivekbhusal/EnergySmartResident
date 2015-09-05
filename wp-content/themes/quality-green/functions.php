@@ -25,5 +25,9 @@ function new_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
+/**
+ * Redirect Logouts to home page
+ */
+add_action('wp_logout',create_function('','wp_redirect(home_url());exit();'));
 
 ?>
