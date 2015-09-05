@@ -110,22 +110,27 @@ section.row.profiles {
 .col-sm-6.profile {
     width: 49%;
 }
+.property-info {
+    height: auto;
+}
 .property-photo {
     width: 30%;
+    height: auto;
 }
 .property-photo > img {
     float: left;
     width: auto;
     height: 200px;
-    margin-left:40px;
+    margin-left:10%;
 }
 .address {
     width: inherit;
+    height: 100%;
     margin-left: 70px;
 }
 .address > .icon-row {
     width: 75%;
-    height: 80px;
+    height: 100%;
     margin-top: 30px;
     margin-left: 20%;
 }
@@ -151,10 +156,18 @@ section.row.profiles {
     height: 2px;
     width: 80%;
     margin-left: 10%;
-    margin-bottom: 10px;
+    position: absolute;
     background-color: lightgrey;
 }
 
 .property-icon:hover {
     background: url(../../../quality/images/property-green.png) no-repeat center;
+}
+
+/**@media (max-width: 768px) {
+    .property-icon{
+        width:100% !important;
+        height: 100% !important;
+        float:left;
+    }
 }
