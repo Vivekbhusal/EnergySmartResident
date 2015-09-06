@@ -46,6 +46,15 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 					There is no skylight within the house.
 				</div>
 			</div>
+			<div class="property-icon titanium-popup-container">
+				<div class="hexagon-box-small">
+					<a href=""><span class="solar-water-heating-icon"></span></a>
+				</div>
+				<h3 class="titanium-popup-class" title="Solar Water Heating">Solar Water Heating</h3>
+				<div class="details" id="solar-water-heating-details">
+					There is no solar water heating system within the house.
+				</div>
+			</div>
 		</div>
 		<div class="icon-row">
 			<div class="property-icon titanium-popup-container">
@@ -79,6 +88,15 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 						Shading can block up to 90% of solar heat which helps in increasing efficiency. Evergreen plants are recommended for hot humid and some hot dry climates to reduce unwanted glare and heat gain.
 					</p>
 
+				</div>
+			</div>
+			<div class="property-icon titanium-popup-container">
+				<div class="hexagon-box-small">
+					<a href=""><span class="heater-icon"></span></a>
+				</div>
+				<h3 class="titanium-popup-class" title="Heater">Heater</h3>
+				<div class="details" id="heater-details">
+					There is central heater system within the house.
 				</div>
 			</div>
 			<div class="property-icon titanium-popup-container">
