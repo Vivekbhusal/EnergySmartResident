@@ -173,7 +173,8 @@ jQuery(document).ready(function($){
             classes: 'qtip-green qtip-shadow qtip-rounded'
         },
         position:{
-            target: 'mouse'
+            my: 'bottom center',
+            at: 'top center'
         }
     });
 });
