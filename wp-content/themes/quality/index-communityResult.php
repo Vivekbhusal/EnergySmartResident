@@ -1,7 +1,7 @@
 <!-- Quality Service Section ---->
 <?php $quality_pro_options=theme_data_setup();
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
-<div class="property-info qua_heading_title container" style="display: block">
+<div id="energy-rating-section" class="property-info qua_heading_title container" style="display: none">
 	<h1>22 Highland Ave, Clayton, VIC, 3168</h1>
 	<div class="qua-separator"></div>
 	<div class="address">
