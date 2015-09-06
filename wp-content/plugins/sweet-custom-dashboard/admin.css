@@ -82,7 +82,7 @@ h1 {
 .add-house-block > span {
     color: #19A347;
 }
-.add-house > h2 {
+.add-house-title {
     text-align: center;
     width:226px;
 }
@@ -104,13 +104,10 @@ h1 {
     vertical-align: middle;
     margin-left: 0;
 }
-.add-blog-block > a {
- color: transparent !important;
-}
 .add-blog-block > span {
     color: #99FF33;
 }
-.add-blog > h2 {
+.add-blog-title {
     text-align: center;
     width:226px;
 }
@@ -122,4 +119,7 @@ h1 {
 .add-button-row {
     margin-top: -450px;
     margin-bottom: 500px;
+}
+.add-button-row > div > a {
+    color: transparent;
 }

@@ -26,17 +26,17 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 			<a href="/wp-admin/post-new.php?post_type=house">
 			<div class="add-house-block">
 				<span>+</span>
-			</div></a>
-			<h2>Add House<h2>
-
+			</div>
+			<h2 class="add-house-title">Add House<h2>
+			</a>
 		</div>
 		<div class="add-blog">
 			<a href="/wp-admin/post-new.php">
 			<div class="add-blog-block">
 				<span>+</span>
-			</div></a>
-			<h2>Add Blog</h2>
-
+			</div>
+			<h2 class="add-blog-title">Add Blog</h2>
+			</a>
 		</div>
 <!--		<p>-->
 <!--			<h3>You Can:</h3>-->
