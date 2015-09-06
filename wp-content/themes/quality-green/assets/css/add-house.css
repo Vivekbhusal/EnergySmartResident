@@ -1,3 +1,55 @@
+
 #poststuff .ui-sortable-handle{
     display: none !important;
+}
+#pods-form-ui-pods-meta-house-picture {
+    margin-top: 3%;
+}
+.form-table.pods-metabox.pods-admin.pods-dependency {
+    width: inherit;
+    margin-left: -6px;
+}
+.pods-form-ui-row-name-post-code {
+    border-bottom: solid #19A347 7px;
+    padding-bottom: 5%;
+}
+.pods-field.pods-boolean {
+    width: 80px;
+    float: left;
+    margin-top: 0;
+}
+.pods-field.pods-boolean > input {
+    margin-top: 5px;
+
+}
+.pods-field.pods-boolean > label {
+    margin-left: 30px;
+}
+
+@media (max-width: 768px){
+    .pods-field.pods-boolean > input {
+        margin-top: 3px;
+        width:30%;
+    }
+}
+.pods-submittable-fields > p {
+    float: right;
+    width: 535px;
+    margin-left: -100px;
+    color: grey;
+}
+th > label {
+    width: 210px;
+}
+li {
+    height: 35px;
+}
+li > div > label {
+    width: 150px;
+}
+.pods-pick-values.pods-pick-checkbox {
+    width: 250px;
+}
+#pods-form-ui-pods-meta-certificate-of-inspection-upload {
+    margin-top: 15px;
 }

@@ -6,7 +6,8 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 	<div class="qua-separator"></div>
 	<div class="address">
 		<div class="property-photo">
-			<img src="/wp-content/themes/quality/images/house.png"/>
+			<img id="house" src="/wp-content/themes/quality/images/house.png"/>
+			<img id="verify" src="/wp-content/themes/quality/images/verified.png"/>
 		</div>
 		<div class="icon-row">
 			<div class="property-icon titanium-popup-container">

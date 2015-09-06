@@ -113,14 +113,21 @@ section.row.profiles {
 }
 
 .property-photo {
-    width: 25%;
+    width: 20%;
     height: auto;
+    float: left;
 }
-.property-photo > img {
+#house {
     float: left;
     width: auto;
     height: 200px;
     margin-left: 10%;
+}
+#verify {
+    width: 100px;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 5px;
 }
 .address {
     width: 90%;
@@ -130,7 +137,8 @@ section.row.profiles {
 .address > .icon-row {
     height: 80px;
     margin-top: 30px;
-    margin-left: 200px;
+    margin-left: 250px;
+    vertical-align: top !important;
 }
 .property-icon {
     width: 25%;
@@ -234,24 +242,30 @@ section.row.profiles {
     .address{
         width:100%;
     }
+    #verify {
+        margin-top: 210px;
+        float: left;
+        margin-left: -128px;
+    }
     .property-photo{
         width:100%;
         float:left;
-        margin-left:45px;
+        margin-left:50px;
     }
     .property-icon{
-        width:100%;
-        margin:10px 10px 20px -45px;
-        float:left;
-        background:left;
+        width:100% ;
+        margin-top: 30px;
+        float: left;
     }
     .property-info{
         width:100%;
-        height: 1200px;
+        height: 1250px;
     }
-    .icon-row{
-        width:100%;
+    .icon-row {
+        height: 350px;
+        margin-left: -40px !important;
     }
+
 
     .col-md-3.col-sm-6.qua-service-area{
         width: 100%;
