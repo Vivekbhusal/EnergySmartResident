@@ -137,11 +137,11 @@ section.row.profiles {
 .address > .icon-row {
     height: 80px;
     margin-top: 30px;
-    margin-left: 250px;
+    margin-left: 210px;
     vertical-align: top !important;
 }
 .property-icon {
-    width: 25%;
+    width: 20%;
     height: 80px;
     text-align: center;
     float: left;
@@ -173,6 +173,22 @@ section.row.profiles {
     margin-left: 25%;
     display:block;
     background: url(../../../quality/images/window.png) no-repeat center;
+}
+.heater-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/heater.png) no-repeat center;
+}
+.solar-water-heating-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/solar-water-heating.png) no-repeat center;
 }
 .water-tank-icon {
     background-size: 100% 100%;
@@ -259,11 +275,16 @@ section.row.profiles {
     }
     .property-info{
         width:100%;
-        height: 1250px;
+        height: 1450px;
     }
     .icon-row {
-        height: 350px;
+        height: 420px;
         margin-left: -40px !important;
+    }
+    @media (max-width: 769px) {
+        .property-icon > h3{
+            font-size: 15px !important;
+        }
     }
 
 
