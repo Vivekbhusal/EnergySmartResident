@@ -14,7 +14,7 @@ jQuery(document).ready(function($){
     $('.pods-form-ui-row-name-has-skylight').
         prepend('<th class="icon" rowspan="1"><span class="skylight-icon"></span></th>');
     $('.pods-form-ui-row-name-solar-hot-water-system').
-        prepend('<th class="icon" rowspan="2"><span class="skylight-icon"></span></th>');
+        prepend('<th class="icon" rowspan="2"><span class="hot-water-system-icon"></span></th>');
 
     $('.pods-form-ui-row-name-has-thermostat').
         prepend('<th class="icon" rowspan="1"><span class="thermostat-icon"></span></th>');
@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
         prepend('<th class="icon" rowspan="2"><span class="external-shading-icon"></span></th>');
 
     $('.pods-form-ui-row-name-house-has-electric-heaters').
-        prepend('<th class="icon" rowspan="2"><span class="external-shading-icon"></span></th>');
+        prepend('<th class="icon" rowspan="2"><span class="heater-icon"></span></th>');
 
     $('.pods-form-ui-row-name-is-property-inspection').
         prepend('<th class="icon" rowspan="2"><span class="nathers-icon"></span></th>');
