@@ -119,6 +119,7 @@ function thisScreen() {
 
 function enqueue_style_for_add_house() {
     wp_enqueue_style( 'titanium-add-house', get_stylesheet_directory_uri() . '/assets/css/add-house.css' );
+    wp_enqueue_script('titanium-add-house', get_stylesheet_directory_uri().'/assets/js/add-house.js', ['jquery']);
 }
 
 
