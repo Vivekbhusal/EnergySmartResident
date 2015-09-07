@@ -123,5 +123,41 @@ function enqueue_style_for_add_house() {
 }
 
 
+/**
+ * Change post title before save
+ * The format of title will be
+ * HouseNumber + Street Name + Suburb + Postcode
+ * eg: 9/30 Maroo St., Hughesdale, 3166
+ */
+add_filter( 'wp_insert_post_data' , 'modify_post_title' , '99', 2 );
+
+function modify_post_title( $data , $postarr )
+{
+    if($data['post_type'] == 'house') {
+        $house_number = isset($postarr['pods_meta_house_number']) ? $postarr['pods_meta_house_number'] : null;
+        $street_name = isset($postarr['pods_meta_street_name']) ? $postarr['pods_meta_street_name'] :null;
+        $post_code = isset($postarr['pods_meta_post_code']) ? $postarr['pods_meta_post_code'] : null;
+        $suburb = isset($postarr['pods_meta_suburb']) ? $postarr['pods_meta_suburb'] : null;
+
+        $title = "";
+        if (!is_null($house_number)){
+            $title = $house_number ." ";
+        }
+        if (!is_null($street_name)) {
+            $title .= $street_name.", ";
+        }
+        if (!is_null($suburb)) {
+            $title .= $suburb.", ";
+        }
+        if (!is_null($post_code)) {
+            $title .= strval($post_code);
+        }
+
+        $data['post_title'] = $title;
+
+    }
+    return $data;
+}
+
 
 ?>

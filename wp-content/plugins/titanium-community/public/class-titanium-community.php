@@ -19,6 +19,12 @@ class TitaniumCommunityClass
      */
     protected static $instance = null;
 
+    /**
+     * Contains list of houses and id for autocomplete suggestion
+     * @var array|null
+     */
+    private static $allHouseSuggestion = null;
+
 
     /**
      * Return an instance of this class.
@@ -43,16 +49,24 @@ class TitaniumCommunityClass
      */
     private function __construct()
     {
+        self::$allHouseSuggestion = $this->RetriveAllPostTitleOfHouse();
         add_action('wp_enqueue_scripts', array(__CLASS__, 'enqueueScripts'));
-        add_action('wp_ajax_titanium_lookup_suburb', array($this, 'ajaxLookupSuburbs'));
-        add_action('wp_ajax_titanium_compute_community_details', array($this, 'ajaxComputeCommunityDetails'));
-        add_action('wp_ajax_nopriv_titanium_lookup_suburb', array($this, 'ajaxLookupSuburbs'));
-        add_action('wp_ajax_nopriv_titanium_compute_community_details', array($this, 'ajaxComputeCommunityDetails'));
+        /**
+         * Ajax callback for loggedin users
+         */
+        add_action('wp_ajax_titanium_compute_house_community_details', array($this, 'ajaxComputeHouseAndCommunityDetails'));
+
+        /**
+         * Ajax callback for non-logged users
+         */
+        add_action('wp_ajax_nopriv_titanium_compute_house_community_details', array($this, 'ajaxComputeHouseAndCommunityDetails'));
     }
 
     /**
      * Enqueue all the style
      * and scripts of the plugins
+     * @since 1.0.0
+     * @edited 2.0.0
      */
     public static function enqueueScripts()
     {
@@ -107,7 +121,10 @@ class TitaniumCommunityClass
         wp_localize_script(
             'titanium-community',
             'titanium',
-            array( 'ajaxurl' => admin_url('admin-ajax.php')
+            array(
+                'ajaxurl' => admin_url('admin-ajax.php'),
+                'autocompleteHouseSuggestion' => self::$allHouseSuggestion,
+                'nonce' => wp_create_nonce( "community_nonce" ),
             )
         );
 
@@ -116,6 +133,7 @@ class TitaniumCommunityClass
 
     /**
      * Ajax function to lookup surburb for auto complete
+     * @since 1.0.0
      */
     public function ajaxLookupSuburbs()
     {
@@ -141,19 +159,11 @@ class TitaniumCommunityClass
     }
 
     /**
-     * Ajax function to compute the information about
+     * Function to compute the information about
      * the requested suburb.
+     * @param $surburb_id
      */
-    public function ajaxComputeCommunityDetails() {
-
-        /**
-         * Send error message if nothing received
-         */
-        if(!isset($_POST['query']))
-            wp_send_json_error();
-
-        $surburb_id = $_POST['query'];
-
+    private function ComputeCommunityDetails($postcode) {
         /**
          * Get the information from database related with
          * the suburb.
@@ -162,8 +172,8 @@ class TitaniumCommunityClass
         /**
          * Get surburb Information
          */
-        $suburb_info = $wpdb->get_row($wpdb->prepare("SELECT * from suburb where suburb_id = %d", $surburb_id));
-
+        $suburb_info = $wpdb->get_row($wpdb->prepare("SELECT * from suburb where postcode = %d", $postcode));
+        $surburb_id = $suburb_info->suburb_id;
         /**
          * Get information about hospital
          */
@@ -225,10 +235,104 @@ class TitaniumCommunityClass
             "agecare" => $ageCare
 
         );
-        error_log(print_r(json_encode($result), true));
 
-        wp_send_json($result);
+        return $result;
 
     }
 
+    /**
+     * Retrieve all the house titles and its Id for autocomplete suggestion
+     * @return array
+     * @since 2.0.0
+     */
+    private function RetriveAllPostTitleOfHouse() {
+        $args = array(
+            'posts_per_page'   => -1,
+            'offset'           => 0,
+            'category'         => '',
+            'category_name'    => '',
+            'orderby'          => 'date',
+            'order'            => 'DESC',
+            'include'          => '',
+            'exclude'          => '',
+            'meta_key'         => '',
+            'meta_value'       => '',
+            'post_type'        => 'house',
+            'post_mime_type'   => '',
+            'post_parent'      => '',
+            'author'	   => '',
+            'post_status'      => 'publish',
+            'suppress_filters' => true
+        );
+        $posts_array = get_posts( $args );
+
+        $suggestion = [];
+        foreach($posts_array as $key => $post) {
+            $suggestion[] = ['value' => $post->post_title, 'data'=>$post->ID];
+        }
+
+        return $suggestion;
+    }
+
+
+    /**
+     * AJAX function to get all the details about house and community
+     * @returns array
+     * @since 2.0.0
+     */
+    public function ajaxComputeHouseAndCommunityDetails() {
+        check_ajax_referer( 'community_nonce', 'nonce' );
+
+        if (!isset($_POST['query']))
+            wp_send_json_error();
+
+        $post_id = $_POST['query'];
+
+        $suburb_id = get_post_meta($post_id, 'post_code', true);
+
+        $community_details = $this->ComputeCommunityDetails($suburb_id);
+        $house_details = $this->computePropertyDetails($post_id);
+
+        wp_send_json(['house_details'=>$house_details, 'community_details'=>$community_details]);
+    }
+
+    private function computePropertyDetails($post_id) {
+        $property_meta = get_post_meta($post_id);
+
+        /**Property Image**/
+        $property_house = get_post_meta($post_id, 'house_picture', true);
+        $property_url = wp_get_attachment_url($property_house['ID']);
+
+        /**House Address **/
+        $property_address = $this->getHouseAddress($post_id);
+
+        return [
+            'house_img'=>$property_url,
+            'address' => $property_address
+        ];
+    }
+
+    private function getHouseAddress($post_id) {
+
+        $house_number = get_post_meta($post_id, 'house_number', true) ? get_post_meta($post_id, 'house_number', true) : null;
+        $street_name = get_post_meta($post_id, 'street_name', true) ? get_post_meta($post_id, 'street_name', true) :null;
+        $post_code = get_post_meta($post_id, 'post_code', true) ? get_post_meta($post_id, 'post_code', true) : null;
+        $suburb = get_post_meta($post_id, 'suburb', true) ? get_post_meta($post_id, 'suburb', true) : null;
+
+        $title = "";
+        if (!is_null($house_number)){
+            $title = $house_number ." ";
+        }
+        if (!is_null($street_name)) {
+            $title .= $street_name.", ";
+        }
+        if (!is_null($suburb)) {
+            $title .= $suburb.", ";
+        }
+        if (!is_null($post_code)) {
+            $title .= strval($post_code);
+        }
+
+        return $title;
+    }
 }
