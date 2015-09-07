@@ -2,12 +2,13 @@
 <?php $quality_pro_options=theme_data_setup();
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
 <div id="energy-rating-section" class="property-info qua_heading_title container" style="display: none">
-	<h1>22 Highland Ave, Clayton, VIC, 3168</h1>
+	<h1 class="property-title"></h1>
 	<div class="qua-separator"></div>
 	<div class="address">
 		<div class="property-photo">
+			<img id="verified" src="/wp-content/themes/quality/images/verified.png"/>
+			<img id="unverified" src="/wp-content/themes/quality/images/unverified.png"/>
 			<img id="house" src="/wp-content/themes/quality/images/house.png"/>
-			<img id="verify" src="/wp-content/themes/quality/images/verified.png"/>
 		</div>
 		<div class="icon-row">
 			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
@@ -113,7 +114,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 </div>
 <div id="community-container" class="container qua_heading_title" style="display: none">
 	<div class="row">
-		 <div class="qua_heading_title">
+		 <div class="community qua_heading_title">
 			 <h1 id="suburb-name"></h1>
 			 <div class="qua-separator"></div>
 		 </div>
