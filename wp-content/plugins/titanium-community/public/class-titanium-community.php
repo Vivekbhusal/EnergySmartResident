@@ -336,12 +336,11 @@ class TitaniumCommunityClass
             $air_conditioner_text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $type))->info;
         }
 
-        /**Sky light**/
-        $has_sky_light = get_post_meta($post_id, 'has_skylight', true);
-        $sky_light_value = ($has_sky_light == 0)
-            ? 'skylight_no'
-            : 'skylight_yes';
-        $sky_light_text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $sky_light_value))->info;
+        $sky_light = $this->getPropertyWithBooleanOption(
+            $post_id,
+            'has_skylight',
+            array('skylight_no', 'skylight_yes')
+        );
 
         $solar_water = $this->getPropertyWithMultiOption(
             $post_id,
@@ -357,9 +356,28 @@ class TitaniumCommunityClass
             'window'        => $window_frame_text,
             'water_tank'    => ['has_tank'=> $rain_water_tank, 'text' => $rain_water_tank_text],
             'air_conditioner'   => ['has_air_conditioner' => $has_air_conditioner, 'text' => $air_conditioner_text],
-            'sky_light'     => ['has_sky_light' => $has_sky_light, 'text' => $sky_light_text],
+            'sky_light'     => $sky_light,
             'solar_water'   => $solar_water
         ];
+    }
+
+    /**
+     * @param $post_id \WP_Post id of the post
+     * @param $key String  key name of context
+     * @param $optionKeys array negative and positive options
+     * @return array
+     */
+    private function getPropertyWithBooleanOption($post_id, $key, $optionKeys) {
+        global $wpdb;
+
+        /**Check whether property has defined $key**/
+        $has_key = get_post_meta($post_id, $key)[0];
+        $value = ($has_key == 0)
+            ? $optionKeys[0]
+            : $optionKeys[1];
+        $text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $value))->info;
+
+        return ['has' => $has_key, 'text' => $text];
     }
 
     /**
