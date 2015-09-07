@@ -64,8 +64,6 @@ jQuery(document).ready(function($){
      * @since 2.0.0
      */
     $.Topic('display-property-info').subscribe(function(response){
-
-        console.log(response);
         /**Set the addressof house**/
         $("#energy-rating-section h1").html(response.address);
 
@@ -124,9 +122,13 @@ jQuery(document).ready(function($){
 
         if(response.nathers.has == "1") {
             $(".nathers-icon").wrap("<a target='_blank' href='"+response.nathers.file+"' class='nather-file-attachment'></a>");
+            $("#verified").show();
+            $("#unverified").hide();
         } else {
             if($(".nather-file-attachment"))
                 $(".nathers-icon").unwrap();
+            $("#verified").hide();
+            $("#unverified").show();
         }
 
 
@@ -225,7 +227,7 @@ jQuery(document).ready(function($){
      * @since 1.0.0
      * @edited 2.0.0
      */
-    $(".titanium-popup-container").qtip({
+    $(".titanium-community-popup-container").qtip({
         content: {
             title: function(){
                 return $(this).find('.titanium-popup-class').attr('title');
@@ -240,6 +242,24 @@ jQuery(document).ready(function($){
         position:{
             my: 'bottom center',
             at: 'top center'
+        }
+    });
+
+    $(".titanium-property-popup-container").qtip({
+        content: {
+            title: function(){
+                return $(this).find('.titanium-popup-class').attr('title');
+            },
+            text: function(event, api){
+                return $(this).find('.details').html();
+            }
+        },
+        style: {
+            classes: 'qtip-green qtip-shadow qtip-rounded'
+        },
+        position:{
+            my: 'top center',
+            at: 'bottom center'
         }
     });
 });

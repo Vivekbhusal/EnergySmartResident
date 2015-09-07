@@ -11,16 +11,16 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			<img id="house" src="/wp-content/themes/quality/images/house.png"/>
 		</div>
 		<div class="icon-row">
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="window-icon"></span>
 				</div>
-				<h3 data-qtip-at="bottom center" data-qtip-my="top center"  class="titanium-popup-class" title="Window">Window</h3>
+				<h3 class="titanium-popup-class" title="Window">Window</h3>
 				<div class="details" id="window-details">
 					All the windows within the house are wood-framed.
 				</div>
 			</div>
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="water-tank-icon"></span>
 				</div>
@@ -29,7 +29,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 					Active hot water system is contained within the house.
 				</div>
 			</div>
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="air-conditioner-icon"></span>
 				</div>
@@ -38,7 +38,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 					The house contains air conditioner in each bedroom.
 				</div>
 			</div>
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="skylight-icon"></span>
 				</div>
@@ -47,7 +47,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 					There is no skylight within the house.
 				</div>
 			</div>
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="solar-water-heating-icon"></span>
 				</div>
@@ -58,7 +58,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 		</div>
 		<div class="icon-row">
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="thermostats-icon"></span>
 				</div>
@@ -67,7 +67,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 					A thermostat is used to control the temperature within the house.
 				</div>
 			</div>
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="energy-saver-system-icon"></span>
 				</div>
@@ -76,7 +76,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 					The house uses solar electric system to saving the energy.
 				</div>
 			</div>
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="external-shading-icon"></span>
 				</div>
@@ -91,7 +91,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 
 				</div>
 			</div>
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="heater-icon"></span>
 				</div>
@@ -100,7 +100,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 					There is central heater system within the house.
 				</div>
 			</div>
-			<div data-qtip-at="bottom center" data-qtip-my="top center" class="property-icon titanium-popup-container">
+			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
 					<span class="nathers-icon"></span>
 				</div>
@@ -120,7 +120,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 		 </div>
 	</div>
 	<div class="row">
-		<div data-qtip-at="top center" data-qtip-my="bottom center" class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-community-popup-container">
 			<div class="hexagon-box">
 				<span class="hospital-icon"></span>
 			</div>
@@ -128,7 +128,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			<div data-my-position="center left" data-at-position="top right" class="details" id="hospital-details">
 			</div>
 		</div>
-		<div data-qtip-at="top center" data-qtip-my="bottom center" class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-community-popup-container">
 			<div class="hexagon-box">
 				<span class="GPO-icon"></span>
 			</div>
@@ -137,7 +137,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 
 		</div>
-		<div data-qtip-at="top center" data-qtip-my="bottom center" class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-community-popup-container">
 			<div class="hexagon-box">
 				<span class="school-icon"></span>
 			</div>
@@ -152,7 +152,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				</p>
 			</div>
 		</div>
-		<div data-qtip-at="top center" data-qtip-my="bottom center" class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-community-popup-container">
 			<div class="hexagon-box">
 				<span class="crime-rate-icon"></span>
 			</div>
@@ -164,7 +164,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 
 		</div>
-		<div data-qtip-at="top center" data-qtip-my="bottom center" class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-community-popup-container">
 			<div class="hexagon-box">
 				<span class="aged-care-icon"></span>
 			</div>
@@ -178,7 +178,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 
 		</div>
-		<div data-qtip-at="top center" data-qtip-my="bottom center" class="col-md-3 col-sm-6 qua-service-area titanium-popup-container">
+		<div class="col-md-3 col-sm-6 qua-service-area titanium-community-popup-container">
 			<div class="hexagon-box">
 				<span class="health-care-icon"></span>
 			</div>
