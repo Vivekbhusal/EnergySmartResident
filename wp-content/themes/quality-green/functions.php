@@ -137,7 +137,7 @@ function modify_post_title( $data , $postarr )
         $house_number = isset($postarr['pods_meta_house_number']) ? $postarr['pods_meta_house_number'] : null;
         $street_name = isset($postarr['pods_meta_street_name']) ? $postarr['pods_meta_street_name'] :null;
         $post_code = isset($postarr['pods_meta_post_code']) ? $postarr['pods_meta_post_code'] : null;
-        $suburb = isset($postarr['pods_meta_post_suburb']) ? $postarr['pods_meta_post_suburb'] : null;
+        $suburb = isset($postarr['pods_meta_suburb']) ? $postarr['pods_meta_suburb'] : null;
 
         $title = "";
         if (!is_null($house_number)){

@@ -289,10 +289,16 @@ class TitaniumCommunityClass
         $post_id = $_POST['query'];
 
         $suburb_id = get_post_meta($post_id, 'post_code', true);
+        $this->computePropertyDetails($post_id);
         $community_details = $this->ComputeCommunityDetails($suburb_id);
         $house_details = array('fulladdress'=>'148 Well Street, South Melbourne, 3205', 'verified'=>0);
 
         wp_send_json(['house_details'=>$house_details, 'community_details'=>$community_details]);
+    }
+
+    private function computePropertyDetails($post_id) {
+        $property_meta = get_post_meta($post_id);
+        error_log(print_r($property_meta, true));
     }
 
 }
