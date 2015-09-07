@@ -64,6 +64,12 @@ jQuery(document).ready(function($){
      * @since 2.0.0
      */
     $.Topic('display-property-info').subscribe(function(response){
+        
+        /**Set the addressof house**/
+        $("#energy-rating-section h1").html(response.address);
+
+        /**Set the image**/
+        $('#house').attr('src', response.house_img);
 
     });
 

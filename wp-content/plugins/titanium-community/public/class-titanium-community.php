@@ -289,16 +289,50 @@ class TitaniumCommunityClass
         $post_id = $_POST['query'];
 
         $suburb_id = get_post_meta($post_id, 'post_code', true);
-        $this->computePropertyDetails($post_id);
+
         $community_details = $this->ComputeCommunityDetails($suburb_id);
-        $house_details = array('fulladdress'=>'148 Well Street, South Melbourne, 3205', 'verified'=>0);
+        $house_details = $this->computePropertyDetails($post_id);
 
         wp_send_json(['house_details'=>$house_details, 'community_details'=>$community_details]);
     }
 
     private function computePropertyDetails($post_id) {
         $property_meta = get_post_meta($post_id);
-        error_log(print_r($property_meta, true));
+
+        /**Property Image**/
+        $property_house = get_post_meta($post_id, 'house_picture', true);
+        $property_url = wp_get_attachment_url($property_house['ID']);
+
+        /**House Address **/
+        $property_address = $this->getHouseAddress($post_id);
+
+        return [
+            'house_img'=>$property_url,
+            'address' => $property_address
+        ];
     }
 
+    private function getHouseAddress($post_id) {
+
+        $house_number = get_post_meta($post_id, 'house_number', true) ? get_post_meta($post_id, 'house_number', true) : null;
+        $street_name = get_post_meta($post_id, 'street_name', true) ? get_post_meta($post_id, 'street_name', true) :null;
+        $post_code = get_post_meta($post_id, 'post_code', true) ? get_post_meta($post_id, 'post_code', true) : null;
+        $suburb = get_post_meta($post_id, 'suburb', true) ? get_post_meta($post_id, 'suburb', true) : null;
+
+        $title = "";
+        if (!is_null($house_number)){
+            $title = $house_number ." ";
+        }
+        if (!is_null($street_name)) {
+            $title .= $street_name.", ";
+        }
+        if (!is_null($suburb)) {
+            $title .= $suburb.", ";
+        }
+        if (!is_null($post_code)) {
+            $title .= strval($post_code);
+        }
+
+        return $title;
+    }
 }

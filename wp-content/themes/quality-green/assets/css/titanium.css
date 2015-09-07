@@ -119,9 +119,10 @@ section.row.profiles {
 }
 #house {
     float: left;
-    width: auto;
+    width: 204px;
     height: 200px;
-    margin-left: 10%;
+    border: 4px #848080 solid;
+    border-radius: 10px;
 }
 #verify {
     width: 100px;
