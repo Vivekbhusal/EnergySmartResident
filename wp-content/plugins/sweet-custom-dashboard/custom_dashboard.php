@@ -11,7 +11,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 <div class="wrap about-wrap">
 
 <!--	//Write whatever you want here...-->
-<h1>Welcome <?php echo wp_get_current_user()->display_name; ?>,</h1>
+<h1 class="user-welcome">Welcome <?php echo wp_get_current_user()->display_name; ?>,</h1>
 	<div class="logo">
 		<a href=""><span class="logo-photo"/></a>
 	</div>

@@ -1,5 +1,7 @@
-h1 {
+.user-welcome {
     text-align: left;
+    padding-left: 30px !important;
+    padding-top:10px !important;
     color: #19A347 !important;
 }
 .wrap.about-wrap {
@@ -92,7 +94,7 @@ h1 {
 }
 .add-blog-block{
     border-radius: 9px;
-    border: 18px #99FF33 solid;
+    border: 18px #19A347 solid;
     width: 190px;
     height: 171px;
     font-size: 232px;
@@ -104,7 +106,7 @@ h1 {
     margin-left: 0;
 }
 .add-blog-block > span {
-    color: #99FF33;
+    color: #19A347;
 }
 .add-blog-title {
     text-align: center;
