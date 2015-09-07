@@ -296,8 +296,13 @@ class TitaniumCommunityClass
         wp_send_json(['house_details'=>$house_details, 'community_details'=>$community_details]);
     }
 
+    /**
+     * computes all the information about the property
+     * @param $post_id \WP_Post Id of the post
+     * @return array
+     * @since 2.0.0
+     */
     private function computePropertyDetails($post_id) {
-        $property_meta = get_post_meta($post_id);
 
         /**Property Image**/
         $property_house = get_post_meta($post_id, 'house_picture', true);
@@ -305,10 +310,6 @@ class TitaniumCommunityClass
 
         /**House Address **/
         $property_address = $this->getHouseAddress($post_id);
-
-        /**House verified**/
-        $is_house_verfied = get_post_meta($post_id, 'is_property_inspection', true);
-        $inspection_file_path = '';
 
         global $wpdb;
         /**Window**/
@@ -318,30 +319,29 @@ class TitaniumCommunityClass
             $window_frame_text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $frame))->info;
         }
 
-        /**Water tank**/
-        $rain_water_tank = get_post_meta($post_id, 'rain_water_tank', true);
-        $rain_water_tank_value = ($rain_water_tank == 0)
-            ? 'rainwater_tank_no'
-            : 'rainwater_tank_yes';
-        $rain_water_tank_text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $rain_water_tank_value))->info;
+        /**Rain water tank**/
+        $rain_water_tank = $this->getPropertyWithBooleanOption(
+            $post_id,
+            'rain_water_tank',
+            ['rainwater_tank_no', 'rainwater_tank_yes']
+        );
 
         /**Air Conditioner**/
-        $has_air_conditioner = get_post_meta($post_id, 'house_has_air_conditioner', true);
-        $air_conditioner_value = ($has_air_conditioner === 0)
-            ? 'air_conditioner_no'
-            : 'air_conditioner_yes';
-        $air_conditioner_text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $air_conditioner_value))->info;
-        $air_conditioner_type = get_post_meta($post_id, 'type_of_air_conditioner');
-        foreach($air_conditioner_type as $type) {
-            $air_conditioner_text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $type))->info;
-        }
+        $air_conditioner = $this->getPropertyWithMultiOption(
+            $post_id,
+            'house_has_air_conditioner',
+            'type_of_air_conditioner',
+            ['air_conditioner_no', 'air_conditioner_yes']
+        );
 
+        /**Sky light information**/
         $sky_light = $this->getPropertyWithBooleanOption(
             $post_id,
             'has_skylight',
             array('skylight_no', 'skylight_yes')
         );
 
+        /**Solar water system information**/
         $solar_water = $this->getPropertyWithMultiOption(
             $post_id,
             'solar_hot_water_system',
@@ -349,15 +349,68 @@ class TitaniumCommunityClass
             array('solar_water_heaters_no', 'solar_water_heaters_yes')
         );
 
+        /**Thermostat details information**/
+        $thermostat = $this->getPropertyWithBooleanOption(
+            $post_id,
+            'has_thermostat',
+            ['thermostats_no', 'thermostats_yes']
+        );
+
+        /**Energy saver system information**/
+        $energy_saver = $this->getPropertyWithMultiOption(
+            $post_id,
+            'has_energy_saver_system',
+            'type_of_energy_saver',
+            ['energy_saver_system_no', 'energy_saver_system_yes']
+        );
+
+        /**External shading information**/
+        $shading = $this->getPropertyWithMultiOption(
+            $post_id,
+            'has_external_shading',
+            'type_of_external_shading',
+            ['external_shading_no', 'external_shading_yes']
+        );
+
+        /**house electric heater**/
+        $heater = $this->getPropertyWithMultiOption(
+            $post_id,
+            'house_has_electric_heaters',
+            'type_of_electric_heater',
+            ['electric_heaters_no', 'electric_heaters_yes']
+        );
+
+        /**Property inspection and certification**/
+        $nathers = $this->getPropertyWithBooleanOption(
+            $post_id,
+            'is_property_inspection',
+            ['house_inspected_no', 'house_inspected_yes']
+        );
+
+        /**Check if the user has uploaded certificate**/
+        $inspectionCertificate = get_post_meta($post_id, 'certificate_of_inspection', true);
+        if(!empty($inspectionCertificate)){
+            $certificateURL = wp_get_attachment_url($inspectionCertificate['ID']);
+            $nathers['file'] = $certificateURL;
+            $nathers['text'] .= " <p class='nathers-italic'>Click on the icon to see the certificate</p>";
+        } else {
+            $nathers['has'] = "0";
+            $nathers['text'] = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", 'house_inspected_no'))->info;
+        }
+
         return [
             'house_img'     => $property_url,
             'address'       => $property_address,
-            'verify'        => ['is_verified'=> $is_house_verfied, 'inspection_file' => $inspection_file_path],
             'window'        => $window_frame_text,
-            'water_tank'    => ['has_tank'=> $rain_water_tank, 'text' => $rain_water_tank_text],
-            'air_conditioner'   => ['has_air_conditioner' => $has_air_conditioner, 'text' => $air_conditioner_text],
+            'water_tank'    => $rain_water_tank,
+            'air_conditioner'   => $air_conditioner,
             'sky_light'     => $sky_light,
-            'solar_water'   => $solar_water
+            'solar_water'   => $solar_water,
+            'thermostat'    => $thermostat,
+            'energy_saver'  => $energy_saver,
+            'shading'       => $shading,
+            'heater'        => $heater,
+            'nathers'       => $nathers
         ];
     }
 
@@ -396,12 +449,14 @@ class TitaniumCommunityClass
             ? $optionKeys[0]
             : $optionKeys[1];
         $text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $value))->info;
-        $types = get_post_meta($post_id, $keyType);
 
-        foreach($types as $type) {
-            if(!empty($type)) {
-                error_log("getting type values");
-                $text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $type))->info;
+        if (!empty($keyType)) {
+            $types = get_post_meta($post_id, $keyType);
+
+            foreach($types as $type) {
+                if(!empty($type)) {
+                    $text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $type))->info;
+                }
             }
         }
 
@@ -409,6 +464,11 @@ class TitaniumCommunityClass
     }
 
 
+    /**
+     * returns the full address of house
+     * @param $post_id \WP_Post Id of post
+     * @return string
+     */
     private function getHouseAddress($post_id) {
 
         $house_number = get_post_meta($post_id, 'house_number', true) ? get_post_meta($post_id, 'house_number', true) : null;

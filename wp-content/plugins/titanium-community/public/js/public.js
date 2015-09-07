@@ -87,6 +87,49 @@ jQuery(document).ready(function($){
             ? $("#air-conditioner-details").html(response.air_conditioner.text)
             : $("#air-conditioner-details").html("No information found");
 
+        /**Set skylight information**/
+        (response.sky_light.text)
+            ? $("#skylight-details").html(response.sky_light.text)
+            : $("#skylight-details").html("No information found");
+
+        /**Set solar water heater**/
+        (response.solar_water.text)
+            ? $("#solar-water-heating-details").html(response.solar_water.text)
+            : $("#solar-water-heating-details").html("No information found");
+
+        /**Set thermostat information**/
+        (response.thermostat.text)
+            ? $("#thermostats-details").html(response.thermostat.text)
+            : $("#thermostats-details").html("No information found");
+
+        /**Energy saver system**/
+        (response.energy_saver.text)
+            ? $("#energy-saver-system-details").html(response.energy_saver.text)
+            : $("#energy-saver-system-details").html("No information found");
+
+        /**External shading**/
+        (response.shading.text)
+            ? $("#external-shading-details").html(response.shading.text)
+            : $("#external-shading-details").html("No information found");
+
+        /**Heater details**/
+        (response.heater.text)
+            ? $("#heater-details").html(response.heater.text)
+            : $("#heater-details").html("No information found");
+
+        /**Nathers details**/
+        (response.nathers.text)
+            ? $("#nathers-details").html(response.nathers.text)
+            : $("#nathers-details").html("No information found");
+
+        if(response.nathers.has == "1") {
+            $(".nathers-icon").wrap("<a target='_blank' href='"+response.nathers.file+"' class='nather-file-attachment'></a>");
+        } else {
+            if($(".nather-file-attachment"))
+                $(".nathers-icon").unwrap();
+        }
+
+
     });
 
     /**
