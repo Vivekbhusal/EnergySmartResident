@@ -42,58 +42,26 @@
     vertical-align: middle;
 }
 .add-house-block{
-    border-radius: 9px;
-    border: 18px #19A347 solid;
     width: 190px;
-    height: 171px;
-    font-size: 232px;
-    text-align: center;
-    color: #eee;
-    min-height: 10em;
-    display: table-cell;
-    vertical-align: middle;
-}
-.add-house-block > span {
-    color: #19A347;
+    height: 180px;
+    background-size: 100% 100%;
+    margin-left: 20%;
+    display:block;
+    background: url(../../themes/quality/images/add.png) no-repeat center;
 }
 .add-house-title {
     text-align: center;
-    width:226px;
+    width:78%;
+
 }
 .add-house {
-    width: 25%;
-    margin-left: 25%;
-    float: left;
-}
-.add-blog-block{
-    border-radius: 9px;
-    border: 18px #19A347 solid;
-    width: 190px;
-    height: 171px;
-    font-size: 232px;
-    text-align: center;
-    color: #eee;
-    min-height: 10em;
-    display: table-cell;
-    vertical-align: middle;
-    margin-left: 0;
-}
-.add-blog-block > span {
-    color: #19A347;
-}
-.add-blog-title {
-    text-align: center;
-    width:226px;
-}
-.add-blog {
-    width: 25%;
-    margin-right: 25%;
-    float: right;
+    width: 50%;
+    margin-left: 30%;
 }
 .add-button-row {
     margin-top: -450px;
-    margin-bottom: 500px;
     margin-left: 30px;
+    text-align: center;
 }
 .add-button-row > div > a {
     color: transparent;
