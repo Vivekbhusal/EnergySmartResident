@@ -10,10 +10,18 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 ?>
 <div class="wrap about-wrap">
 
+<<<<<<< Updated upstream
 <!--	//Write whatever you want here...-->
 <h1 class="user-welcome">Welcome <?php echo wp_get_current_user()->display_name; ?>,</h1>
 	<div class="logo">
 		<a href=""><span class="logo-photo"/></a>
+=======
+	<!--
+	<h1><?php _e( 'Welcome to My Custom Dashboard Page' ); ?></h1>
+	
+	<div class="about-text">
+		<?php _e('Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.' ); ?>
+>>>>>>> Stashed changes
 	</div>
 <p id="dashboard-p">
 	Energy Smart Resident is build on the concept to measure <b>'How green is your neighbourhood?'</b>.<br/>
@@ -36,6 +44,10 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 <!--			<h4>Make Posts On The Blog  <a href="/wp-admin/edit.php"><span class="post"></span></a></h4>-->
 <!--		</p>-->
 	</div>
+<<<<<<< Updated upstream
 <!--	Delete till here-->
+=======
+	-->
+>>>>>>> Stashed changes
 
 </div>
