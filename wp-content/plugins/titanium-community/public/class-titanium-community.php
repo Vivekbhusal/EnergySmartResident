@@ -306,11 +306,90 @@ class TitaniumCommunityClass
         /**House Address **/
         $property_address = $this->getHouseAddress($post_id);
 
+        /**House verified**/
+        $is_house_verfied = get_post_meta($post_id, 'is_property_inspection', true);
+        $inspection_file_path = '';
+
+        global $wpdb;
+        /**Window**/
+        $window_frame = get_post_meta($post_id, 'type_of_window_frame');
+        $window_frame_text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", 'window_frame'))->info;
+        foreach($window_frame as $frame) {
+            $window_frame_text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $frame))->info;
+        }
+
+        /**Water tank**/
+        $rain_water_tank = get_post_meta($post_id, 'rain_water_tank', true);
+        $rain_water_tank_value = ($rain_water_tank == 0)
+            ? 'rainwater_tank_no'
+            : 'rainwater_tank_yes';
+        $rain_water_tank_text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $rain_water_tank_value))->info;
+
+        /**Air Conditioner**/
+        $has_air_conditioner = get_post_meta($post_id, 'house_has_air_conditioner', true);
+        $air_conditioner_value = ($has_air_conditioner === 0)
+            ? 'air_conditioner_no'
+            : 'air_conditioner_yes';
+        $air_conditioner_text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $air_conditioner_value))->info;
+        $air_conditioner_type = get_post_meta($post_id, 'type_of_air_conditioner');
+        foreach($air_conditioner_type as $type) {
+            $air_conditioner_text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $type))->info;
+        }
+
+        /**Sky light**/
+        $has_sky_light = get_post_meta($post_id, 'has_skylight', true);
+        $sky_light_value = ($has_sky_light == 0)
+            ? 'skylight_no'
+            : 'skylight_yes';
+        $sky_light_text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $sky_light_value))->info;
+
+        $solar_water = $this->getPropertyWithMultiOption(
+            $post_id,
+            'solar_hot_water_system',
+            'type_of_hot_water_system',
+            array('solar_water_heaters_no', 'solar_water_heaters_yes')
+        );
+
         return [
-            'house_img'=>$property_url,
-            'address' => $property_address
+            'house_img'     => $property_url,
+            'address'       => $property_address,
+            'verify'        => ['is_verified'=> $is_house_verfied, 'inspection_file' => $inspection_file_path],
+            'window'        => $window_frame_text,
+            'water_tank'    => ['has_tank'=> $rain_water_tank, 'text' => $rain_water_tank_text],
+            'air_conditioner'   => ['has_air_conditioner' => $has_air_conditioner, 'text' => $air_conditioner_text],
+            'sky_light'     => ['has_sky_light' => $has_sky_light, 'text' => $sky_light_text],
+            'solar_water'   => $solar_water
         ];
     }
+
+    /**
+     * @param $post_id \WP_Post id of the post
+     * @param $key String  key name of context
+     * @param $keyType String key name for this option
+     * @param $optionKeys array negative and positive options
+     * @return array
+     */
+    private function getPropertyWithMultiOption($post_id, $key, $keyType, $optionKeys) {
+        global $wpdb;
+
+        /**Check whether property has defined $key**/
+        $has_key = get_post_meta($post_id, $key)[0];
+        $value = ($has_key == 0)
+            ? $optionKeys[0]
+            : $optionKeys[1];
+        $text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $value))->info;
+        $types = get_post_meta($post_id, $keyType);
+
+        foreach($types as $type) {
+            if(!empty($type)) {
+                error_log("getting type values");
+                $text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $type))->info;
+            }
+        }
+
+        return ['has'=> $has_key, 'text' => $text];
+    }
+
 
     private function getHouseAddress($post_id) {
 

@@ -64,12 +64,28 @@ jQuery(document).ready(function($){
      * @since 2.0.0
      */
     $.Topic('display-property-info').subscribe(function(response){
-        
+
+        console.log(response);
         /**Set the addressof house**/
         $("#energy-rating-section h1").html(response.address);
 
         /**Set the image**/
         $('#house').attr('src', response.house_img);
+
+        /**Set window information**/
+        (response.window)
+            ? $("#window-details").html(response.window)
+            : $("#window-details").html("No information found");
+
+        /**Set rain water tank information**/
+        (response.water_tank.text)
+            ? $("#water-tank-details").html(response.water_tank.text)
+            : $("#water-tank-details").html("No information found");
+
+        /**Set Air conditioner information**/
+        (response.air_conditioner.text)
+            ? $("#air-conditioner-details").html(response.air_conditioner.text)
+            : $("#air-conditioner-details").html("No information found");
 
     });
 
