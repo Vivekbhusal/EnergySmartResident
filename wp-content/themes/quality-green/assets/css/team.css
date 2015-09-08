@@ -104,4 +104,35 @@
     width: 65%;
 }
 
+@media (max-width: 414px) {
+    .intro .lead  {
+        width:200px;
+        margin-left: -45px;
+     }
+    .intro h2 {
+        font-size:14px;
+    }
+    .profile-content p{
+        width:200px;
+        margin-top:80px;
+        margin-left:-150px;
+    }
+    .profile-content h3{
+        font-size:16px;
+        margin-left:-40px;
+    }
+    .img-circle {
+        margin-left: -45px;
+    }
+    .lead.position{
+        font-size:11px;
+        margin-left: -45px;
+    }
+    .profile-content:before {
+        margin-left: -40px;
+        margin-top:20px;
+    }
+
+
+}
 

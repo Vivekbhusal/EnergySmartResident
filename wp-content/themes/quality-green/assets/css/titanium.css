@@ -322,5 +322,12 @@ section.row.profiles {
     line-height: 1.4em !important;
 }
 
-
+@media (max-width: 414px) {
+    .autocomplete-suggestion{
+        font-size:12px;
+    }
+    input.form-control{
+        font-size:12px;
+    }
+}
 
