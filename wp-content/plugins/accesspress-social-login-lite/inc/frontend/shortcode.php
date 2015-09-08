@@ -29,7 +29,8 @@ if (is_user_logged_in()){
 //	}else{
 //		$user_logout_url = wp_logout_url( $current_url );
 //	}
-//	?><!--<div class="user-login">Welcome <b>--><?php //echo $user_info; ?><!--</b>&nbsp;|&nbsp;<a href="--><?php //echo $user_logout_url; ?><!--" title="Logout">Logout</a></div>-->
+//	?> <a href="/wp-admin" class="user-login-dashboard">Dashboard</a>
+	<!--<div class="user-login">Welcome <b>--><?php //echo $user_info; ?><!--</b>&nbsp;|&nbsp;<a href="--><?php //echo $user_logout_url; ?><!--" title="Logout">Logout</a></div>-->
 	<?php
 }else{
 ?>
