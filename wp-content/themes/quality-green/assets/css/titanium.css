@@ -304,11 +304,7 @@ section.row.profiles {
         .property-icon > h3{
             font-size: 15px !important;
         }
-        .flex-slider-center{
-            margin-top: 30%;
-        }
     }
-
 
     .col-md-3.col-sm-6.qua-service-area{
         width: 100%;
@@ -337,8 +333,11 @@ section.row.profiles {
         font-size:12px;
     }
     .flex-slider-center {
-        margin-top: -45%;
+        margin-top: -40%;
         position: relative;
+    }
+    .parallax-window {
+        position: inherit;
     }
 
 }
