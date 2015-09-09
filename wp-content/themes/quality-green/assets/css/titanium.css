@@ -97,7 +97,7 @@ input[placeholder] {
 }
 
 .flex-slider-center {
-    margin-top: 280px;
+    margin-top: -13%;
     top: 0px;
     position: relative;
 }
@@ -266,6 +266,10 @@ section.row.profiles {
 .community.qua_heading_title {
     margin-bottom: 0;
 }
+#menu-home {
+    z-index:10;
+    position:relative;
+}
 
 
 @media (max-width: 414px) {
@@ -300,6 +304,9 @@ section.row.profiles {
         .property-icon > h3{
             font-size: 15px !important;
         }
+        .flex-slider-center{
+            margin-top: 30%;
+        }
     }
 
 
@@ -328,7 +335,11 @@ section.row.profiles {
     }
     input.form-control{
         font-size:12px;
-        margin-top: -450px;
     }
+    .flex-slider-center {
+        margin-top: -45%;
+        position: relative;
+    }
+
 }
 
