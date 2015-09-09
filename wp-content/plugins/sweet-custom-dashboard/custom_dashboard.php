@@ -16,8 +16,8 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 		<a href=""><span class="logo-photo"/></a>
 	</div>
 	<p id="dashboard-p">
-		Energy Smart Resident is build on the concept to measure <b>'How green is your neighbourhood?'</b>.<br/>
-		On this user personal page, you are able to add new properties by clicking Add House.<br/>
+		Energy Smart Resident is built on the concept to measure <b>'How green is your neighbourhood?'</b>.<br/>
+		On this user personal page, you are able to add new properties.<br/>
 		Users can edit their account information on <a href="/wp-admin/profile.php">Profile Page</a>.<br/>
 		Also, you can make some posts to our <a href="/wp-admin/post-new.php">Blog</a>.
 	</p>

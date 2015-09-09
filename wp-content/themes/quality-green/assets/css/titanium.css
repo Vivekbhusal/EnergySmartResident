@@ -99,7 +99,7 @@ input[placeholder] {
 .flex-slider-center {
     margin-top: 280px;
     top: 0px;
-    position: absolute;
+    position: relative;
 }
 .slider-input > div.parallax-window {
     position: static;
@@ -328,6 +328,7 @@ section.row.profiles {
     }
     input.form-control{
         font-size:12px;
+        margin-top: -450px;
     }
 }
 
