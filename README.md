@@ -68,75 +68,75 @@ Our team use Github as Version Control System.
 
 #### AccessPress Social Login lite
 It allows our website users to register/login to the website using one of their favorite social website accounts.
-Path : /wp-content/plugins/accesspress-social-login-lite
-URL: https://wordpress.org/plugins/accesspress-social-login-lite/
+* Path : /wp-content/plugins/accesspress-social-login-lite
+* URL: https://wordpress.org/plugins/accesspress-social-login-lite/
 
 #### Advanced Access Manager
 AAM gives us flexible and customizable control over our single blog or multisite network.
-Path: /wp-content/plugins/advanced-access-manager
-URL: https://wordpress.org/plugins/advanced-access-manager/
+* Path: /wp-content/plugins/advanced-access-manager
+* URL: https://wordpress.org/plugins/advanced-access-manager/
 
 #### Contact Form 7
 Contact Form 7 can manage multiple contact forms, plus we can customize the form and the mail contents flexibly with simple markup.
-Path:/wp-content/plugins/contact-form-7
-URL: https://wordpress.org/plugins/contact-form-7/
+* Path:/wp-content/plugins/contact-form-7
+* URL: https://wordpress.org/plugins/contact-form-7/
 
 #### Google Analytics for WordPress
 This Google Analytics for WordPress plugin enables us to track our site using the latest Google Analytics tracking code and allows us to view key Google Analytics reports in our WordPress install.
-Path: /wp-content/plugins/google-analytics-dashboard-for –wp
-URL: https://wordpress.org/plugins/google-analytics-for-wordpress/
+* Path: /wp-content/plugins/google-analytics-dashboard-for –wp
+* URL: https://wordpress.org/plugins/google-analytics-for-wordpress/
 
 #### Login page designer
 Login page designer provides us to easy way to customize the appearance of the wordPress login page with many options.
-Path: /wp-content/plugins/login-page-designer
-URL: https://wordpress.org/plugins/login-page-designer/
+* Path: /wp-content/plugins/login-page-designer
+* URL: https://wordpress.org/plugins/login-page-designer/
 
 #### MapPress
 MapPress adds an interactive map to the wordpress editing screens. When editing a post or page just enter any addresses you'd like to map.
-Path: /wp-content/plugins/mappress-googe-maps-for-wordpress
-URL: https://wordpress.org/plugins/mappress-google-maps-for-wordpress/
+* Path: /wp-content/plugins/mappress-googe-maps-for-wordpress
+* URL: https://wordpress.org/plugins/mappress-google-maps-for-wordpress/
 
 #### Ninja Forms
 Ninja Forms is the easiest way to build any form we need for your WordPress website.
-Path:/wp-content/plugins/ninja-forms
-URL: https://wordpress.org/plugins/ninja-forms/
+* Path:/wp-content/plugins/ninja-forms
+* URL: https://wordpress.org/plugins/ninja-forms/
 
 #### Pods
 Pods is a framework for creating, managing and deploying customized content types and fields
-Path: /wp-content/plugins/pods
-URL: https://wordpress.org/plugins/pods/
+* Path: /wp-content/plugins/pods
+* URL: https://wordpress.org/plugins/pods/
 
 #### Shortcode in menus
 Shortcode in menus allows us to add shortcodes in WordPress Navigation Menus so that we can generate links dynamically. Also allows us to add full fledged html sections to navigation menus.
-Path: /wp-content/plugins/shorcode-in-menus
-URL: https://wordpress.org/plugins/shortcode-in-menus/
+* Path: /wp-content/plugins/shorcode-in-menus
+* URL: https://wordpress.org/plugins/shortcode-in-menus/
 
 #### Sweet custom dashboard
 With this plugin we can create our own WordPress dashboard containing any HTML or PHP elements we want.
-Path: /wp-content/plugins/sweet-custom-dashboard
-URL: https://wordpress.org/plugins/sweet-custom-dashboard/
+* Path: /wp-content/plugins/sweet-custom-dashboard
+* URL: https://wordpress.org/plugins/sweet-custom-dashboard/
 
 ## Our plugin
 
 #### Titanium-community
 This plugin allow the user to search for houses and communities. It provides lots of useful information about the house like: energy saver system, external shading, skylight etc. many things related the house’s energy efficiency. And also useful information about the communities.
-Path:/wp-content/plugins/titanium-community
+* Path:/wp-content/plugins/titanium-community
 
 
 # Accesses and Authentication
 ### Public user access
 Users can access our website by using our website address
-http://energysmartresident.tk/
+* http://energysmartresident.tk/
 
 ### Public user authentication
 User can log in by using their Google account
 
 ### Admin access
 Admin can access to admin panel by login use admin’s user name and password
-User name: please contact developer for username
-Password: please contact developer for password
+* User name: please contact developer for username
+* Password: please contact developer for password
 
 6.4 Production access
 We need to use terminal to access the server. Production server can only be accessed by SSH.
-$ please contact developer for access
-Password: please contact developer for password
+* $ please contact developer for access
+* Password: please contact developer for password
