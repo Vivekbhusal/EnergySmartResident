@@ -50,10 +50,10 @@
 					</div>
 
 					<div class="profile-footer">
-						<a href="tel:<?php get_post_meta($post->ID, 'phone_number')[0] ?>"><i class="fa fa-phone-square"></i></a>
+<!--						<a href="tel:--><?php //get_post_meta($post->ID, 'phone_number')[0] ?><!--"><i class="fa fa-phone-square"></i></a>-->
 						<a href="mailto:<?php echo antispambot(get_post_meta($post->ID, 'email')[0] ); ?>"><i class="fa fa-envelope"></i></a>
 						<?php if ( $linkedin = get_post_meta($post->ID, 'linkedin')[0] ): ?>
-							<a href="<?php echo $linkedin; ?>"><i class="fa fa-linkedin-square""></i></a>
+							<a target="_blank" href="<?php echo $linkedin; ?>"><i class="fa fa-linkedin-square""></i></a>
 						<?php endif; ?>
 					</div>
 				</article><!-- /.profile -->

@@ -1,6 +1,6 @@
 <?php
-update_option('siteurl', 'http://localhost:8888');
-update_option('home', 'http://localhost:8888');
+update_option('siteurl', WP_SITEURL);
+update_option('home', WP_HOME);
 
 add_action( 'wp_enqueue_scripts', 'qualitygreen_enqueue_styles' );
 function qualitygreen_enqueue_styles() {
