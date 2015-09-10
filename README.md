@@ -1,5 +1,5 @@
 
-#1 Document Management
+#Document Management
 We have uploaded all of our documentation to Google drive:
 
 ####Agenda: 
@@ -20,11 +20,11 @@ https://drive.google.com/drive/folders/0B4SDGNwJz0GcfmkzVER4aHBqLUpqSUc2S25GeWFp
 ####System documentation:
 https://drive.google.com/drive/folders/0B4SDGNwJz0GcfkZPQW9nMTNuQmVIMEpjTDI5UlU1bGNFMkp5dkZvRDJlOGswVXIzVUtBQzA
 
-#2 Overview
+#Overview
 Energy Smart Resident is a website application that can help house owners and property agents to exhibit the energy efficiency of their properties and also help the property renter or buyer to gain the useful information about the property energy systems and community environment.
 
 
-#3 ERD
+#ERD
 ![Alt text](/ERD.png "Entity Relationship Diagram")
 
 #4 Technology
@@ -45,93 +45,93 @@ It is used wrap up a piece of software in a complete file system that contains e
 ###HTML5
 It is a core technology mark-up language of the Internet used for structuring and presenting content for the World Wide Web.
 
-CSS
+###CSS
 It is a style sheet language used for describing the look and formatting of a document written in a mark-up language like HTML.
 
-Query
+###Query
 It is a cross-platform JavaScript library designed to simplify the client-side scripting
 of HTML.
 
-Bootstrap
+###Bootstrap
 It is a tool used for creating websites and web applications. It contains HTML and CSS based design templates for typography, forms, buttons, navigation and other interface components and as well as optional JavaScript extensions.
 
-MS Excel
+###MS Excel
 It is a spreadsheet application which can be used analyse data, calculation, graphing
 tools, pivot tables, etc.
 
-Github
+###Github
 Our team use Github as Version Control System.
 
 
-5 Plugin
-5.1 Third party plugins:
+# Plugin
+###Third party plugins:
 
-5.1.1 AccessPress Social Login lite
+#### AccessPress Social Login lite
 It allows our website users to register/login to the website using one of their favorite social website accounts.
 Path : /wp-content/plugins/accesspress-social-login-lite
 URL: https://wordpress.org/plugins/accesspress-social-login-lite/
 
-5.1.2 Advanced Access Manager
+#### Advanced Access Manager
 AAM gives us flexible and customizable control over our single blog or multisite network.
 Path: /wp-content/plugins/advanced-access-manager
 URL: https://wordpress.org/plugins/advanced-access-manager/
 
-5.1.3 Contact Form 7
+#### Contact Form 7
 Contact Form 7 can manage multiple contact forms, plus we can customize the form and the mail contents flexibly with simple markup.
 Path:/wp-content/plugins/contact-form-7
 URL: https://wordpress.org/plugins/contact-form-7/
 
-5.1.4 Google Analytics for WordPress
+#### Google Analytics for WordPress
 This Google Analytics for WordPress plugin enables us to track our site using the latest Google Analytics tracking code and allows us to view key Google Analytics reports in our WordPress install.
 Path: /wp-content/plugins/google-analytics-dashboard-for –wp
 URL: https://wordpress.org/plugins/google-analytics-for-wordpress/
 
-5.1.5 Login page designer
+#### Login page designer
 Login page designer provides us to easy way to customize the appearance of the wordPress login page with many options.
 Path: /wp-content/plugins/login-page-designer
 URL: https://wordpress.org/plugins/login-page-designer/
 
-5.1.6 MapPress
+#### MapPress
 MapPress adds an interactive map to the wordpress editing screens. When editing a post or page just enter any addresses you'd like to map.
 Path: /wp-content/plugins/mappress-googe-maps-for-wordpress
 URL: https://wordpress.org/plugins/mappress-google-maps-for-wordpress/
 
-5.1.7 Ninja Forms
+#### Ninja Forms
 Ninja Forms is the easiest way to build any form we need for your WordPress website.
 Path:/wp-content/plugins/ninja-forms
 URL: https://wordpress.org/plugins/ninja-forms/
 
-5.1.8 Pods
+#### Pods
 Pods is a framework for creating, managing and deploying customized content types and fields
 Path: /wp-content/plugins/pods
 URL: https://wordpress.org/plugins/pods/
 
-5.1.9 Shortcode in menus
+#### Shortcode in menus
 Shortcode in menus allows us to add shortcodes in WordPress Navigation Menus so that we can generate links dynamically. Also allows us to add full fledged html sections to navigation menus.
 Path: /wp-content/plugins/shorcode-in-menus
 URL: https://wordpress.org/plugins/shortcode-in-menus/
 
-5.1.10 Sweet custom dashboard
+#### Sweet custom dashboard
 With this plugin we can create our own WordPress dashboard containing any HTML or PHP elements we want.
 Path: /wp-content/plugins/sweet-custom-dashboard
 URL: https://wordpress.org/plugins/sweet-custom-dashboard/
 
-5.2 Our plugin
+## Our plugin
 
-5.2.1 Titanium-community
+#### Titanium-community
 This plugin allow the user to search for houses and communities. It provides lots of useful information about the house like: energy saver system, external shading, skylight etc. many things related the house’s energy efficiency. And also useful information about the communities.
 Path:/wp-content/plugins/titanium-community
 
 
-6 Accesses and Authentication
-6.1 Public user access
+# Accesses and Authentication
+### Public user access
 Users can access our website by using our website address
 http://energysmartresident.tk/
 
-6.2 Public user authentication
+### Public user authentication
 User can log in by using their Google account
 
-6.3 Admin access
+### Admin access
 Admin can access to admin panel by login use admin’s user name and password
 User name: please contact developer for username
 Password: please contact developer for password
