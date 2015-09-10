@@ -29,13 +29,5 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 				<h2 class="add-house-title">Add House<h2>
 			</a>
 		</div>
-		<!--		<p>-->
-		<!--			<h3>You Can:</h3>-->
-		<!--			<h4>Add New Property  <a href="/wp-admin/post-new.php?post_type=house"><span class="add"></span></a></h4>-->
-		<!--			<h4>Edit Account Information  <a href="/wp-admin/profile.php"><span class="edit"></span></a></h4>-->
-		<!--			<h4>Make Posts On The Blog  <a href="/wp-admin/edit.php"><span class="post"></span></a></h4>-->
-		<!--		</p>-->
 	</div>
-	<!--	Delete till here-->
-
 </div>
