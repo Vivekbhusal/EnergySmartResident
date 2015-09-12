@@ -104,7 +104,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				<div class="hexagon-box-small">
 					<span class="nathers-icon"></span>
 				</div>
-				<h3 class="titanium-popup-class" title="Nathers">Nathers</h3>
+				<h3 class="titanium-popup-class" title="Certification">Certification</h3>
 				<div class="details" id="nathers-details">
 					He has certified the house from xyz company.
 				</div>
