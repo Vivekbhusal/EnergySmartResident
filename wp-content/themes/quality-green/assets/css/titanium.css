@@ -262,6 +262,80 @@ section.row.profiles {
     display:block;
     background: url(../../../quality/images/nathers.png) no-repeat center;
 }
+
+.heater-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:none;
+    background: url(../../../quality/images/heater-grey.png) no-repeat center;
+}
+.solar-water-heating-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:none;
+    background: url(../../../quality/images/solar-water-heating-grey.png) no-repeat center;
+}
+.water-tank-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:none;
+    background: url(../../../quality/images/water-tank-grey.png) no-repeat center;
+}
+.air-conditioner-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:none;
+    background: url(../../../quality/images/air-conditioner-grey.png) no-repeat center;
+}
+.skylight-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:none;
+    background: url(../../../quality/images/skylight-grey.png) no-repeat center;
+}
+.thermostats-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:none;
+    background: url(../../../quality/images/thermostats-grey.png) no-repeat center;
+}
+.energy-saver-system-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:none;
+    background: url(../../../quality/images/energy-saver-system-grey.png) no-repeat center;
+}
+.external-shading-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:none;
+    background: url(../../../quality/images/external-shading-grey.png) no-repeat center;
+}
+.nathers-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:none;
+    background: url(../../../quality/images/nathers-grey.png) no-repeat center;
+}
+
 #community-container.container.qua_heading_title {
     border-top: solid lightgrey 2px;
     height: auto;
