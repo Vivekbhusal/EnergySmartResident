@@ -81,6 +81,9 @@ input[placeholder] {
 .titanium-nav{
     border: 0px !important;
 }
+.navbar {
+    margin-bottom: 0 !important;
+}
 
 .logo > img {
     width: 133px;
@@ -342,3 +345,28 @@ section.row.profiles {
 
 }
 
+.user-login-dashboard ~ ul {
+    margin-top: 15px !important;
+    padding-top: 0;
+    margin-left: 10px;
+    height: 60px;
+    min-width: 126px !important;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+}
+.user-login-dashboard ~ ul > li {
+    text-align: center;
+}
+.user-login-dashboard ~ ul > li > a {
+    margin-bottom: 0 !important;
+    width: 126px;
+}
+
+.user-login-dashboard ~ ul > li > a:hover {
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+}
