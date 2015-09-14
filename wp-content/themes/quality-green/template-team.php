@@ -11,15 +11,6 @@
 
 get_header(); ?>
 <div class="page-seperator"></div>
-<!--<div class="container">-->
-<!--    <div class="row">-->
-<!--        <div class="qua_page_heading">-->
-<!--            --><?php //the_post(); ?>
-<!--            <h1>--><?php //the_title(); ?><!--</h1>-->
-<!--            <div class="qua-separator"></div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 <div id="team" class="">
     <div class="container">
 

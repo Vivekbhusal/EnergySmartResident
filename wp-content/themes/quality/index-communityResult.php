@@ -1,7 +1,7 @@
 <!-- Quality Service Section ---->
 <?php $quality_pro_options=theme_data_setup();
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
-<div id="energy-rating-section" class="property-info qua_heading_title container" style="display: none">
+<div id="energy-rating-section" class="property-info qua_heading_title container" style="display: block">
 	<h1 class="property-title"></h1>
 	<div class="qua-separator"></div>
 	<div class="address">
@@ -198,21 +198,5 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 		</div>
 	</div>
-</div>
-<div class="container">
-
-	<div class="row">
-		<div class="qua_heading_title">
-			<?php if($current_options['service_title']) { ?>
-				<h1><?php echo $current_options['service_title']; ?></h1>
-				<div class="qua-separator" id=""></div>
-			<?php } ?>
-
-			<?php if($current_options['service_description']) { ?>
-				<p><?php echo $current_options['service_description']; ?></p>
-			<?php } ?>
-		</div>
-	</div>
-
 </div>
 <!-- /Quality Service Section ---->

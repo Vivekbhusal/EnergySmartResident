@@ -9,6 +9,7 @@
 
 			/**Display Community Results **/
 			get_template_part('index', 'communityResult');
+			get_template_part('index', 'aboutus');
 
 //			get_template_part('index', 'team');
 
