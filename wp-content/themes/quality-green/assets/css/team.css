@@ -106,6 +106,58 @@
 
 @media (max-width: 414px) {
     .intro .lead  {
+        width:300px;
+    }
+    .intro h2 {
+        font-size:20px;
+    }
+    .profile-content p{
+        width:200px;
+    }
+    .profile-content h3{
+        font-size:16px;
+
+    }
+    .lead.position{
+        font-size:11px;
+    }
+    .profile-content:before {
+        margin-top:20px;
+    }
+    #team{
+        margin-left:-5px!important;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .profile-content p{
+        width:200px;
+    }
+    .profile-content h3{
+        font-size:16px;
+    }
+    .lead.position{
+        font-size:11px;
+    }
+    .profile-content:before {
+        margin-top:20px;
+    }
+    #team{
+        margin-left:100px;
+    }
+}
+@media (min-width: 768px) {
+    #team{
+        margin-left:100px;
+    }
+
+}
+
+/*@media (max-width: 414px) {
+    .intro .lead  {
         width:200px;
         margin-left: -45px;
      }
@@ -134,5 +186,6 @@
     }
 
 
-}
+}*/
+
 
