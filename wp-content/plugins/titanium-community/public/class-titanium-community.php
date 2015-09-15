@@ -316,7 +316,9 @@ class TitaniumCommunityClass
         $window_frame = get_post_meta($post_id, 'type_of_window_frame');
         $window_frame_text = $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", 'window_frame'))->info;
         foreach($window_frame as $frame) {
-            $window_frame_text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $frame))->info;
+            if (!empty($frame)) {
+                $window_frame_text .= $wpdb->get_row($wpdb->prepare("SELECT * from energy_info where computer_title = %s", $frame))->info;
+            }
         }
 
         /**Rain water tank**/
@@ -415,10 +417,29 @@ class TitaniumCommunityClass
     }
 
     /**
+     * Static function to call the private function of class
+     * Get the result of property
+     * @param $postID
+     * @return array
+     * @since 3.0.0
+     */
+    public static function getPropertyDetailsByPostID($postID)
+    {
+        return self::getInstance()->computePropertyDetails($postID);
+    }
+
+    public static function getCommunityDetailsByPostID($postID)
+    {
+        $postCode = get_post_meta($postID, 'post_code', true);
+        return self::getInstance()->ComputeCommunityDetails($postCode);
+    }
+
+    /**
      * @param $post_id \WP_Post id of the post
      * @param $key String  key name of context
      * @param $optionKeys array negative and positive options
      * @return array
+     * @since 2.0.0
      */
     private function getPropertyWithBooleanOption($post_id, $key, $optionKeys) {
         global $wpdb;
@@ -439,6 +460,7 @@ class TitaniumCommunityClass
      * @param $keyType String key name for this option
      * @param $optionKeys array negative and positive options
      * @return array
+     * @since 2.0.0
      */
     private function getPropertyWithMultiOption($post_id, $key, $keyType, $optionKeys) {
         global $wpdb;
@@ -468,6 +490,7 @@ class TitaniumCommunityClass
      * returns the full address of house
      * @param $post_id \WP_Post Id of post
      * @return string
+     * @since 2.0.0
      */
     private function getHouseAddress($post_id) {
 
