@@ -1,6 +1,11 @@
 <!-- Quality Service Section ---->
 <?php $quality_pro_options=theme_data_setup();
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
+<div id="titanium-result-anchor"></div>
+<div class="container titanium-property-alert alert alert-danger">
+	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	<span class="titanium-alert-message"></span>
+</div>
 <div id="energy-rating-section" class="property-info qua_heading_title container" style="display: none">
 	<h1 class="property-title"></h1>
 	<div class="qua-separator"></div>
@@ -189,6 +194,41 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				</p>
 			</div>
 		</div>
+	</div>
+</div>
+<div id="recommended-property-container" class="container qua_heading_title" style="display: none">
+	<div class="row">
+		<div class="recommended qua_heading_title">
+			<h1 id="recommend-title">Some Nearby Properties</h1>
+			<div class="qua-separator"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-sm-6">
+			<div class="property-image">
+				<img id="house" src="http://localhost:8888/wp-content/uploads/2015/09/64-marshal-ave.jpg">
+			</div>
+			<div class="property-title">
+				144 Mills Street, Albert Park, 3206
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6">
+			<div class="property-image">
+				<img id="house" src="http://localhost:8888/wp-content/uploads/2015/09/64-marshal-ave.jpg">
+			</div>
+			<div class="property-title">
+				144 Mills Street, Albert Park, 3206
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6">
+			<div class="property-image">
+				<img id="house" src="http://localhost:8888/wp-content/uploads/2015/09/64-marshal-ave.jpg">
+			</div>
+			<div class="property-title">
+				144 Mills Street, Albert Park, 3206
+			</div>
+		</div>
+
 	</div>
 </div>
 <!-- /Quality Service Section ---->

@@ -336,8 +336,11 @@ section.row.profiles {
     background: url(../../../quality/images/nathers-grey.png) no-repeat center;
 }
 
+#energy-rating-section{
+    border-bottom: solid lightgrey 2px;
+}
+
 #community-container.container.qua_heading_title {
-    border-top: solid lightgrey 2px;
     height: auto;
 }
 .community.qua_heading_title {
@@ -443,4 +446,8 @@ section.row.profiles {
     border-top-right-radius: 15px !important;
     border-bottom-left-radius: 15px !important;
     border-bottom-right-radius: 15px !important;
+}
+
+.titanium-property-alert {
+    display: none;
 }

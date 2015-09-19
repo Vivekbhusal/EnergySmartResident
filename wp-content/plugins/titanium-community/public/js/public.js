@@ -89,19 +89,30 @@ jQuery(document).ready(function($){
             type: "post",
             data: data,
             success: function(response) {
-                console.log(response);
+                //if(response.success) {
+                //   $(".titanium-property-alert").hide();
+                //} else if (!response.success) {
+                //    $(".titanium-property-alert").show();
+                //    $(".titanium-alert-message").html(response.message);
+                //}
 
                 // Display house only if the query is for house
                 if(response.house_details)
                     $.Topic('display-property-info').publish(response.house_details);
+                else
+                    $(".property-info").hide();
 
                 // Display community details
                 if(response.community_details)
                     $.Topic('display-community-info').publish(response.community_details);
+                else
+                    $("#community-container").hide();
+
+                $("#recommended-property-container").show();
 
                 /**Scroll down to result, animate **/
                 $('html, body').animate({
-                    scrollTop: $("#energy-rating-section").offset().top
+                    scrollTop: $("#titanium-result-anchor").offset().top
                 }, 1000);
             }
 

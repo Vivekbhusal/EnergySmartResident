@@ -355,6 +355,7 @@ class TitaniumCommunityClass
                 $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName(get_post_meta($post_id, 'suburb', true));
             } else {
                 $response['success'] = false;
+                $response['message'] = "The information about this address is not available. We will try to get this information as soon as possible.";
 
                 // Get only community and near by house
                 $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName($address['locality']);
