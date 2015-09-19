@@ -499,4 +499,25 @@ section.row.profiles {
     margin-left: 50px;
 }
 
-
+    .website-feature-text {
+        float: left;
+        width: 200px;
+        margin-left:70px;
+}
+@media (max-width: 930px) {
+ .website-feature-text {
+     float: left;
+     width: 200px;
+     margin-left: 0px;
+ }
+}
+@media (max-width: 930px) {
+ .website-feature-content{
+     width:100%;
+ }
+ .website-feature-text {
+     margin-left: 50px;
+ }
+ .website-feature-title {
+     margin-left: 0px;
+}
