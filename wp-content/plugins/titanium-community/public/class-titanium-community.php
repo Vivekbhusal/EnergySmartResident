@@ -20,13 +20,6 @@ class TitaniumCommunityClass
     protected static $instance = null;
 
     /**
-     * Contains list of houses and id for autocomplete suggestion
-     * @var array|null
-     */
-    private static $allHouseSuggestion = null;
-
-
-    /**
      * Return an instance of this class.
      *
      * @since     1.0.0
@@ -49,7 +42,6 @@ class TitaniumCommunityClass
      */
     private function __construct()
     {
-        self::$allHouseSuggestion = $this->RetriveAllPostTitleOfHouse();
         add_action('wp_enqueue_scripts', array(__CLASS__, 'enqueueScripts'));
         add_action('admin_enqueue_scripts', array(__CLASS__, 'adminEnqueueScripts'));
         /**
@@ -74,7 +66,25 @@ class TitaniumCommunityClass
      */
     public static function adminEnqueueScripts()
     {
+        //Google Map Javascript Library
+        wp_enqueue_script(
+            'google-map-library',
+            'http://maps.google.com/maps/api/js?key=AIzaSyBzcAcA3wULxqdp6EUVkMb77fjSCXO70tA&signed_in=true&libraries=places&language=en-AU',
+            [],
+            self::VERSION
+        );
 
+        wp_enqueue_style(
+            'jquery-sweetalert',
+            'https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css'
+        );
+
+        wp_enqueue_script(
+            'jquery-sweetalert',
+            'https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js',
+            ['jquery'],
+            self::VERSION
+        );
     }
 
     /**
@@ -85,16 +95,6 @@ class TitaniumCommunityClass
      */
     public static function enqueueScripts()
     {
-//        wp_enqueue_style(
-//            'jquery-autocomplete',
-//            plugins_url('titanium-community/public/css/public.css')
-//        );
-//        wp_enqueue_script(
-//            'jQuery-autocomplete',
-//            plugins_url('titanium-community/public/js/jquery.autocomplete.min.js'),
-//            ['jquery'],
-//            self::VERSION
-//        );
         wp_enqueue_script(
             'jQuery-qtip',
             'http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js',
@@ -137,13 +137,6 @@ class TitaniumCommunityClass
             self::VERSION
         );
 
-        wp_enqueue_script(
-            'jquery-geocomplete',
-            plugins_url('titanium-community/public/js/jquery.geocomplete.min.js'),
-            ['jquery', 'google-map-library'],
-            self::VERSION
-        );
-
         wp_enqueue_style(
             'jquery-sweetalert',
             'https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css'
@@ -156,12 +149,11 @@ class TitaniumCommunityClass
             self::VERSION
         );
 
-
         //JS file of Titanium
         wp_register_script(
             'titanium-community',
             plugins_url('titanium-community/public/js/public.js'),
-            ['jQuery-autocomplete','jquery-topics', 'jQuery-qtip', 'google-map-library'],
+            ['jquery-topics', 'jQuery-qtip', 'google-map-library'],
             self::VERSION
         );
         wp_localize_script(
@@ -169,7 +161,6 @@ class TitaniumCommunityClass
             'titanium',
             array(
                 'ajaxurl' => admin_url('admin-ajax.php'),
-                'autocompleteHouseSuggestion' => self::$allHouseSuggestion,
                 'nonce' => wp_create_nonce( "community_nonce" ),
             )
         );
@@ -236,9 +227,9 @@ class TitaniumCommunityClass
     /**
      * Function to compute the information about
      * the requested suburb.
-     * @param $surburb_id
+     * @param $suburbName String name of the suburb
      */
-    private function ComputeCommunityDetails($postcode) {
+    private function ComputeCommunityDetailsBySuburbName($suburbName) {
         /**
          * Get the information from database related with
          * the suburb.
@@ -247,8 +238,9 @@ class TitaniumCommunityClass
         /**
          * Get surburb Information
          */
-        $suburb_info = $wpdb->get_row($wpdb->prepare("SELECT * from suburb where postcode = %d", $postcode));
+        $suburb_info = $wpdb->get_row($wpdb->prepare("SELECT * from suburb where suburb_name = %s", $suburbName));
         $surburb_id = $suburb_info->suburb_id;
+
         /**
          * Get information about hospital
          */
@@ -316,41 +308,6 @@ class TitaniumCommunityClass
     }
 
     /**
-     * Retrieve all the house titles and its Id for autocomplete suggestion
-     * @return array
-     * @since 2.0.0
-     */
-    private function RetriveAllPostTitleOfHouse() {
-        $args = array(
-            'posts_per_page'   => -1,
-            'offset'           => 0,
-            'category'         => '',
-            'category_name'    => '',
-            'orderby'          => 'date',
-            'order'            => 'DESC',
-            'include'          => '',
-            'exclude'          => '',
-            'meta_key'         => '',
-            'meta_value'       => '',
-            'post_type'        => 'house',
-            'post_mime_type'   => '',
-            'post_parent'      => '',
-            'author'	   => '',
-            'post_status'      => 'publish',
-            'suppress_filters' => true
-        );
-        $posts_array = get_posts( $args );
-
-        $suggestion = [];
-        foreach($posts_array as $key => $post) {
-            $suggestion[] = ['value' => $post->post_title, 'data'=>$post->ID];
-        }
-
-        return $suggestion;
-    }
-
-
-    /**
      * AJAX function to get all the details about house and community
      * @returns array
      * @since 2.0.0
@@ -361,16 +318,91 @@ class TitaniumCommunityClass
         if (!isset($_POST['query']))
             wp_send_json_error();
 
-        error_log($_POST['query']);
+        $address = $_POST['query'];
 
-//        $post_id = $_POST['query'];
-//
-//        $suburb_id = get_post_meta($post_id, 'post_code', true);
-//
-//        $community_details = $this->ComputeCommunityDetails($suburb_id);
-//        $house_details = $this->computePropertyDetails($post_id);
-//
-//        wp_send_json(['house_details'=>$house_details, 'community_details'=>$community_details]);
+        if($address['administrative_area_level_1'] != 'VIC') {
+            wp_send_json_error(
+                [
+                    'message'=> "Sorry to upend your adventure. We are very happy to see that you
+                                are enjoying our service and searching address all over Australia, but currently we
+                                 only operate for Victoria. "
+                ]
+            );
+        }
+
+        /**
+         * Parse address to decide whether the address is
+         * full house address or just suburb or locality
+         */
+        $house_details = null;
+        $community_details = null;
+        $recommended_house = null;
+        $response = [];
+
+        if ($this->is_full_house_search($address)) {
+            $response['search_type'] = "house";
+
+            /** Get house title on post */
+            $title = $this->buildHouseTitleByAddress($address);
+
+            $post = get_page_by_title($title, OBJECT, 'house');
+            if ($post != null && $post instanceof \WP_Post) {
+                $response['success'] = true;
+
+                // Get both house and community by post id
+                $post_id = $post->ID;
+                $response['house_details'] = $this->computePropertyDetailsByPostID($post_id);
+                $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName(get_post_meta($post_id, 'suburb', true));
+            } else {
+                $response['success'] = false;
+
+                // Get only community and near by house
+                $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName($address['locality']);
+            }
+        } else {
+            $response['search_type'] = "community";
+            $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName($address['locality']);
+        }
+
+        wp_send_json($response);
+    }
+
+    private function buildHouseTitleByAddress($address)
+    {
+        $title = "";
+
+        if (isset($address['subpremise'])) {
+           $title = $address['subpremise']."/".$address['street_number']." ";
+        } else {
+            $title = $address['street_number']." ";
+        }
+
+        if (isset($address['route'])) {
+            $title .= $address['route'].", ";
+        }
+
+        if(isset($address['locality'])) {
+            $title .= $address['locality'].", ";
+        }
+
+        if(isset($address['postal_code'])) {
+            $title .= $address['postal_code'];
+        }
+
+        return $title;
+    }
+    /**
+     * Helper function to decide whether the user sent address
+     * is full house address or suburb only
+     * @param $address
+     * @return bool
+     * @since 3.0.0
+     */
+    private function is_full_house_search($address)
+    {
+        return isset($address['street_number'])
+            ? true
+            : false;
     }
 
     /**
@@ -379,7 +411,7 @@ class TitaniumCommunityClass
      * @return array
      * @since 2.0.0
      */
-    private function computePropertyDetails($post_id) {
+    private function computePropertyDetailsByPostId($post_id) {
 
         /**Property Image**/
         $property_house = get_post_meta($post_id, 'house_picture', true);
@@ -502,13 +534,13 @@ class TitaniumCommunityClass
      */
     public static function getPropertyDetailsByPostID($postID)
     {
-        return self::getInstance()->computePropertyDetails($postID);
+        return self::getInstance()->computePropertyDetailsByPostId($postID);
     }
 
     public static function getCommunityDetailsByPostID($postID)
     {
-        $postCode = get_post_meta($postID, 'post_code', true);
-        return self::getInstance()->ComputeCommunityDetails($postCode);
+        $suburb = get_post_meta($postID, 'suburb', true);
+        return self::getInstance()->ComputeCommunityDetailsBySuburbName($suburb);
     }
 
     /**

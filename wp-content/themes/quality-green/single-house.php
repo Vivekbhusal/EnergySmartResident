@@ -6,8 +6,8 @@
 $post = get_post();
 $property = \titanium\TitaniumCommunityClass::getPropertyDetailsByPostID($post->ID);
 $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post->ID);
-var_dump(get_post_meta($post->ID));
-var_dump($community);
+//var_dump(get_post_meta($post->ID));
+//var_dump($community);
 ?>
 
 
@@ -235,7 +235,6 @@ var_dump($community);
       $community['crime']->crime_in_2013,
       $community['crime']->crime_in_2014
   );
-?>
 ?>
 
 <script>

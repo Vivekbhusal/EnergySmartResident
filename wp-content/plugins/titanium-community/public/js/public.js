@@ -32,7 +32,6 @@ jQuery(document).ready(function($){
     };
 
 
-
     var autocomplete = new google.maps.places.Autocomplete(
         document.getElementById("search-address-bar"),
         {
@@ -43,9 +42,8 @@ jQuery(document).ready(function($){
 
     google.maps.event.addListener(autocomplete, 'place_changed', function() {
         var place = autocomplete.getPlace();
-        //console.log(place.address_components);
         var value;
-        var addressDetails = [];
+        var addressDetails = {};
         if(place.address_components){
             for (var i = 0; i < place.address_components.length; i++) {
                 var addressType = place.address_components[i].types[0];
@@ -54,19 +52,21 @@ jQuery(document).ready(function($){
                     addressDetails[addressType] = value;
                 }
             }
+
+            if(!addressDetails.locality) {
+                swal("Dear User,", "Sorry we don't have information you are looking for. Please type house address or suburb", "warning");
+                return;
+            }
             if(addressDetails['administrative_area_level_1'] != "VIC") {
                 swal("Dear User,", "Sorry to upend your adventure. We are very happy to see that you are enjoying our service and searching address all over Australia, but currently we only operate for Victoria. ", "info");
+                return;
             }
-            console.log(addressDetails);
+
+            //console.log(addressDetails);
             $.Topic('get-house-community-information').publish(addressDetails);
         }
     });
 
-    //
-    //autocomplete.addListener('place_changed', function(){
-    //    var place = autocomplete.getPlace();
-    //    console.log(place);
-    //});
     /**
      * Callback function to get all the information about community
      * and the house
@@ -89,29 +89,22 @@ jQuery(document).ready(function($){
             type: "post",
             data: data,
             success: function(response) {
-                if(response.success){
-                    // Display house only if the query is for house
-                    if(response.type == 'house') {
-                        $.Topic('display-property-info').publish(response.house_details);
-                    }
+                console.log(response);
 
-                    // Displa
+                // Display house only if the query is for house
+                if(response.house_details)
+                    $.Topic('display-property-info').publish(response.house_details);
+
+                // Display community details
+                if(response.community_details)
                     $.Topic('display-community-info').publish(response.community_details);
 
-                    /**Display Property Info**/
-
-
-                    /**Display the container**/
-                    $("#community-container").show();
-
-                    /**Scroll down to result, animate **/
-                    $('html, body').animate({
-                        scrollTop: $("#energy-rating-section").offset().top
-                    }, 1000);
-                } else {
-                    // Show alert or some kind of message
-                }
+                /**Scroll down to result, animate **/
+                $('html, body').animate({
+                    scrollTop: $("#energy-rating-section").offset().top
+                }, 1000);
             }
+
         });
     });
 
@@ -320,6 +313,9 @@ jQuery(document).ready(function($){
             width: 200,
             height: 200
         });
+
+        /**Display the container**/
+        $("#community-container").show();
     });
 
     /**
