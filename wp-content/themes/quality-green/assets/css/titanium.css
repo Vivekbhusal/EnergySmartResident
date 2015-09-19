@@ -499,10 +499,11 @@ section.row.profiles {
     margin-left: 50px;
 }
 
-    .website-feature-text {
+.website-feature-text {
         float: left;
         width: 200px;
         margin-left:70px;
+    text-align: center;
 }
 @media (max-width: 930px) {
  .website-feature-text {
