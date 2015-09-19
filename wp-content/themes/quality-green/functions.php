@@ -120,6 +120,9 @@ function thisScreen() {
 function enqueue_style_for_add_house() {
     wp_enqueue_style( 'titanium-add-house', get_stylesheet_directory_uri() . '/assets/css/add-house.css' );
     wp_enqueue_script('titanium-add-house', get_stylesheet_directory_uri().'/assets/js/add-house.js', ['jquery']);
+    wp_localize_script('titanium-add-house', 'titanium', array('ajaxurl' => admin_url('admin-ajax.php')));
+//    wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
+//    wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', ['jQuery']);
 }
 
 

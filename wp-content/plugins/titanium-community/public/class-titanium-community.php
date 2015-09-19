@@ -51,15 +51,39 @@ class TitaniumCommunityClass
     {
         self::$allHouseSuggestion = $this->RetriveAllPostTitleOfHouse();
         add_action('wp_enqueue_scripts', array(__CLASS__, 'enqueueScripts'));
+        add_action('admin_enqueue_scripts', array(__CLASS__, 'adminEnqueueScripts'));
         /**
          * Ajax callback for loggedin users
          */
         add_action('wp_ajax_titanium_compute_house_community_details', array($this, 'ajaxComputeHouseAndCommunityDetails'));
 
         /**
+         * Ajax callback for add house section
+         */
+        add_action('wp_ajax_titanium_lookup_suburb_add_house', array($this, 'ajaxLookupSuburbsForAddHouse'));
+
+        /**
          * Ajax callback for non-logged users
          */
         add_action('wp_ajax_nopriv_titanium_compute_house_community_details', array($this, 'ajaxComputeHouseAndCommunityDetails'));
+    }
+
+    /**
+     * Enqueue styles and scripts for admin section
+     * @since 3.0.0
+     */
+    public static function adminEnqueueScripts()
+    {
+        wp_enqueue_style(
+            'jquery-autocomplete',
+            plugins_url('titanium-community/public/css/public.css')
+        );
+        wp_enqueue_script(
+            'jQuery-autocomplete',
+            plugins_url('titanium-community/public/js/jquery.autocomplete.min.js'),
+            ['jquery'],
+            self::VERSION
+        );
     }
 
     /**
@@ -87,11 +111,13 @@ class TitaniumCommunityClass
             self::VERSION
         );
 
+        //ChartList Library's style
         wp_enqueue_style(
             'chartist',
             '//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css'
         );
 
+        //ChartList Library's javascript
         wp_enqueue_script(
             'chartist',
             '//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js',
@@ -104,6 +130,7 @@ class TitaniumCommunityClass
             'http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css'
         );
 
+        //jQuery Topics library
         wp_enqueue_script(
             'jquery-topics',
             plugins_url('titanium-community/public/js/jquery.topic.min.js'),
@@ -111,7 +138,15 @@ class TitaniumCommunityClass
             self::VERSION
         );
 
+        //Google Map Javascript Library
+        wp_enqueue_script(
+            'gogle-map-library',
+            'http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU',
+            [],
+            self::VERSION
+        );
 
+        //JS file of Titanium
         wp_register_script(
             'titanium-community',
             plugins_url('titanium-community/public/js/public.js'),
@@ -132,7 +167,7 @@ class TitaniumCommunityClass
     }
 
     /**
-     * Ajax function to lookup surburb for auto complete
+     * function to lookup surburb for auto complete
      * @since 1.0.0
      */
     public function ajaxLookupSuburbs()
@@ -153,6 +188,35 @@ class TitaniumCommunityClass
         {
             foreach($results as $result) {
                 $suggestion[] = ['value'=> $result->suburb_name." (".$result->postcode.")", 'data'=> $result->suburb_id ];
+            }
+        }
+        wp_send_json(["suggestions"=>$suggestion]);
+    }
+
+    /**
+     * Admin function
+     * used in Add house form
+     * Ajax function to lookup surburb for auto complete
+     * @since 3.0.0
+     */
+    public function ajaxLookupSuburbsForAddHouse()
+    {
+        /**
+         * Send error message if nothing received
+         */
+        if (!isset($_POST['query']))
+            wp_send_json_error();
+
+        /**
+         * get the list of suburbs and its id.
+         */
+        global $wpdb;
+        $results = $wpdb->get_results("SELECT * from suburb where suburb_name like '%".$_POST['query']."%' or postcode like '".$_POST['query']."%'");
+        $suggestion = [];
+        if ($results)
+        {
+            foreach($results as $result) {
+                $suggestion[] = ['value'=> $result->suburb_name, 'postcode'=> $result->postcode ];
             }
         }
         wp_send_json(["suggestions"=>$suggestion]);

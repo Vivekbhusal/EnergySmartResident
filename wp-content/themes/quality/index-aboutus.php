@@ -6,7 +6,9 @@
  * Time: 3:59 PM
  */
 ?>
-<div class="container">
+<?php $quality_pro_options=theme_data_setup();
+$current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
+<div class="container about-us">
 
 	<div class="row">
 		<div class="qua_heading_title">

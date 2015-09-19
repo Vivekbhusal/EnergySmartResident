@@ -6,6 +6,8 @@
 $post = get_post();
 $property = \titanium\TitaniumCommunityClass::getPropertyDetailsByPostID($post->ID);
 $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post->ID);
+var_dump(get_post_meta($post->ID));
+var_dump($community);
 ?>
 
 
@@ -14,8 +16,11 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
   <div class="qua-separator"></div>
   <div class="address">
     <div class="property-photo">
-      <img id="verified" src="/wp-content/themes/quality/images/verified.png"/>
-      <img id="unverified" src="/wp-content/themes/quality/images/unverified.png"/>
+    <?php if($property['nathers']['has']== '1') : ?>
+      <img id="verified" src="/wp-content/themes/quality/images/verified.png" style="display: block"/>
+    <?php else: ?>
+      <img id="unverified" src="/wp-content/themes/quality/images/unverified.png" style="display: block"/>
+    <?php endif; ?>
       <img id="house" src="<?php echo $property['house_img']; ?>"/>
     </div>
     <div class="icon-row">
@@ -30,7 +35,7 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
       </div>
       <div class="property-icon titanium-property-popup-container">
         <div class="hexagon-box-small">
-          <span class="water-tank-icon"></span>
+          <span class="<?php echo ($property['water_tank']['has']=='0') ? 'water-tank-icon-grey' : 'water-tank-icon';  ?>"></span>
         </div>
         <h3 class="titanium-popup-class" title="Water Tank">Water Tank</h3>
         <div class="details" id="water-tank-details">
@@ -39,7 +44,7 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
       </div>
       <div class="property-icon titanium-property-popup-container">
         <div class="hexagon-box-small">
-          <span class="air-conditioner-icon"></span>
+          <span class="<?php echo ($property['air_conditioner']['has']=='0') ? 'air-conditioner-icon-grey' : 'air-conditioner-icon';  ?>"></span>
         </div>
         <h3 class="titanium-popup-class" title="Air Conditioner">Air Conditioner</h3>
         <div class="details" id="air-conditioner-details">
@@ -48,7 +53,7 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
       </div>
       <div class="property-icon titanium-property-popup-container">
         <div class="hexagon-box-small">
-          <span class="skylight-icon"></span>
+          <span class="<?php echo ($property['sky_light']['has']=='0') ? 'skylight-icon-grey' : 'skylight-icon';  ?>"></span>
         </div>
         <h3 class="titanium-popup-class" title="Skylight">Skylight</h3>
         <div class="details" id="skylight-details">
@@ -57,7 +62,7 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
       </div>
       <div class="property-icon titanium-property-popup-container">
         <div class="hexagon-box-small">
-          <span class="solar-water-heating-icon"></span>
+          <span class="<?php echo ($property['solar_water']['has']=='0') ? 'solar-water-heating-icon-grey' : 'solar-water-heating-icon';  ?>"></span>
         </div>
         <h3 class="titanium-popup-class" title="Solar Water Heating">Solar Water Heating</h3>
         <div class="details" id="solar-water-heating-details">
@@ -68,7 +73,7 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
     <div class="icon-row">
       <div class="property-icon titanium-property-popup-container">
         <div class="hexagon-box-small">
-          <span class="thermostats-icon"></span>
+          <span class="<?php echo ($property['thermostat']['has']=='0') ? 'thermostats-icon-grey' : 'thermostats-icon';  ?>"></span>
         </div>
         <h3 class="titanium-popup-class" title="Thermostats">Thermostats</h3>
         <div class="details" id="thermostats-details">
@@ -77,7 +82,7 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
       </div>
       <div class="property-icon titanium-property-popup-container">
         <div class="hexagon-box-small">
-          <span class="energy-saver-system-icon"></span>
+          <span class="<?php echo ($property['energy_saver']['has']=='0') ? 'energy-saver-system-icon-grey' : 'energy-saver-system-icon';  ?>"></span>
         </div>
         <h3 class="titanium-popup-class" title="Energy Saver System">Energy Saver System</h3>
         <div class="details" id="energy-saver-system-details">
@@ -86,7 +91,7 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
       </div>
       <div class="property-icon titanium-property-popup-container">
         <div class="hexagon-box-small">
-          <span class="external-shading-icon"></span>
+          <span class="<?php echo ($property['shading']['has']=='0') ? 'external-shading-icon-grey' : 'external-shading-icon';  ?>"></span>
         </div>
         <h3 class="titanium-popup-class" title="External Shading">External Shading</h3>
         <div class="details" id="external-shading-details">
@@ -95,7 +100,7 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
       </div>
       <div class="property-icon titanium-property-popup-container">
         <div class="hexagon-box-small">
-          <span class="heater-icon"></span>
+          <span class="<?php echo ($property['heater']['has']=='0') ? 'heater-icon-grey' : 'heater-icon';?>"></span>
         </div>
         <h3 class="titanium-popup-class" title="Heater">Heater</h3>
         <div class="details" id="heater-details">
@@ -107,7 +112,7 @@ $community = \titanium\TitaniumCommunityClass::getCommunityDetailsByPostID($post
           <?php if($property['nathers']['has']== '1') : ?>
             <a target="_blank" class='nather-file-attachment' href="<?php echo $property['nathers']['file'] ?>"><span class="nathers-icon"></span></a>
           <?php else: ?>
-          <span class="nathers-icon"></span>
+          <span class="nathers-icon-grey"></span>
           <?php endif; ?>
         </div>
         <h3 class="titanium-popup-class" title="Certification">Certification</h3>

@@ -1,7 +1,7 @@
 <!-- Quality Service Section ---->
 <?php $quality_pro_options=theme_data_setup();
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
-<div id="energy-rating-section" class="property-info qua_heading_title container" style="display: block">
+<div id="energy-rating-section" class="property-info qua_heading_title container" style="display: none">
 	<h1 class="property-title"></h1>
 	<div class="qua-separator"></div>
 	<div class="address">
@@ -22,8 +22,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
-					<span class="water-tank-icon"></span>
-					<span class="water-tank-icon-grey"></span>
+					<span class="titanium-water-tank water-tank-icon"></span>
 				</div>
 				<h3 class="titanium-popup-class" title="Water Tank">Water Tank</h3>
 				<div class="details" id="water-tank-details">
@@ -32,8 +31,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
-					<span class="air-conditioner-icon"></span>
-					<span class="air-conditioner-icon-grey"></span>
+					<span class="titanium-air-conditioner air-conditioner-icon"></span>
 				</div>
 				<h3 class="titanium-popup-class" title="Air Conditioner">Air Conditioner</h3>
 				<div class="details" id="air-conditioner-details">
@@ -42,8 +40,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
-					<span class="skylight-icon"></span>
-					<span class="skylight-icon-grey"></span>
+					<span class="titanium-skylight skylight-icon"></span>
 				</div>
 				<h3 class="titanium-popup-class" title="Skylight">Skylight</h3>
 				<div class="details" id="skylight-details">
@@ -52,8 +49,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
-					<span class="solar-water-heating-icon"></span>
-					<span class="solar-water-heating-icon-grey"></span>
+					<span class="titanium-solar-water-heating solar-water-heating-icon"></span>
 				</div>
 				<h3 class="titanium-popup-class" title="Solar Water Heating">Solar Water Heating</h3>
 				<div class="details" id="solar-water-heating-details">
@@ -64,8 +60,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 		<div class="icon-row">
 			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
-					<span class="thermostats-icon"></span>
-					<span class="thermostats-icon-grey"></span>
+					<span class="titanium-thermostats thermostats-icon"></span>
 				</div>
 				<h3 class="titanium-popup-class" title="Thermostats">Thermostats</h3>
 				<div class="details" id="thermostats-details">
@@ -74,8 +69,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
-					<span class="energy-saver-system-icon"></span>
-					<span class="energy-saver-system-icon-grey"></span>
+					<span class="titanium-energy-saver-system energy-saver-system-icon"></span>
 				</div>
 				<h3 class="titanium-popup-class" title="Energy Saver System">Energy Saver System</h3>
 				<div class="details" id="energy-saver-system-details">
@@ -84,24 +78,15 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
-					<span class="external-shading-icon"></span>
-					<span class="external-shading-icon-grey"></span>
+					<span class="titanium-external-shading external-shading-icon"></span>
 				</div>
 				<h3 class="titanium-popup-class" title="External Shading">External Shading</h3>
 				<div class="details" id="external-shading-details">
-					<p>
-						The house has <b>Evergreen Plants</b> for External Shading
-					</p>
-					<p>
-						Shading can block up to 90% of solar heat which helps in increasing efficiency. Evergreen plants are recommended for hot humid and some hot dry climates to reduce unwanted glare and heat gain.
-					</p>
-
 				</div>
 			</div>
 			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
-					<span class="heater-icon"></span>
-					<span class="heater-icon-grey"></span>
+					<span class="titanium-heater heater-icon"></span>
 				</div>
 				<h3 class="titanium-popup-class" title="Heater">Heater</h3>
 				<div class="details" id="heater-details">
@@ -110,12 +95,10 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 			</div>
 			<div class="property-icon titanium-property-popup-container">
 				<div class="hexagon-box-small">
-					<span class="nathers-icon"></span>
-					<span class="nathers-icon-grey"></span>
+					<span class="titanium-nather nathers-icon"></span>
 				</div>
 				<h3 class="titanium-popup-class" title="Certification">Certification</h3>
 				<div class="details" id="nathers-details">
-					He has certified the house from xyz company.
 				</div>
 			</div>
 		</div>
