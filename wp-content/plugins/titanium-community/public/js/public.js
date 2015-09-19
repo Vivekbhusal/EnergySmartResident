@@ -89,12 +89,12 @@ jQuery(document).ready(function($){
             type: "post",
             data: data,
             success: function(response) {
-                //if(response.success) {
-                //   $(".titanium-property-alert").hide();
-                //} else if (!response.success) {
-                //    $(".titanium-property-alert").show();
-                //    $(".titanium-alert-message").html(response.message);
-                //}
+                if(response.success == false) {
+                    $(".titanium-property-alert").show();
+                    $(".titanium-alert-message").html(response.message);
+                } else {
+                    $(".titanium-property-alert").hide();
+                }
 
                 // Display house only if the query is for house
                 if(response.house_details)
