@@ -14,6 +14,18 @@ img.img-responsive {
     height: 80px;
     margin-right: 150px;
 }
+.navbar.navbar-default.titanium-nav {
+    padding-bottom: 5px;
+}
+.carousel {
+    margin-bottom: 0 !important;
+}
+.qua_heading_title {
+    margin-bottom: 10px !important;
+}
+.container.container-blog {
+    margin-top: 0 !important;
+}
 .hospital-icon {
     background-size: 100% 100%;
     height: 100px;
@@ -227,7 +239,7 @@ section.row.profiles {
     height: 80px;
     width: 50%;
     margin-left: 25%;
-    display:none;
+    display:block;
     background: url(../../../quality/images/skylight.png) no-repeat center;
 }
 .thermostats-icon {
@@ -336,10 +348,6 @@ section.row.profiles {
     background: url(../../../quality/images/nathers-grey.png) no-repeat center;
 }
 
-#energy-rating-section{
-    border-bottom: solid lightgrey 2px;
-}
-
 #community-container.container.qua_heading_title {
     height: auto;
 }
@@ -350,7 +358,11 @@ section.row.profiles {
     z-index:10;
     position:relative;
 }
-
+.property-info.qua_heading_title.container{
+    height: 310px;
+    border-bottom: solid lightgrey 3px;
+    margin-bottom: 0 !important;
+}
 
 @media (max-width: 414px) {
     .address{
