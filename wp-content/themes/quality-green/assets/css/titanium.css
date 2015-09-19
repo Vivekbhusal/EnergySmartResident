@@ -474,12 +474,9 @@ section.row.profiles {
     text-align: center;
     float: left;
 }
-.container.about-us {
-    margin-top: 150px;
-}
 .website-features {
     margin-left: 70px;
-    height: auto;
+    height: 160px;
     width: 1138px;
     margin-top: -10px;
 }
