@@ -477,7 +477,7 @@ section.row.profiles {
 .website-features {
     margin-left: 70px;
     height: 160px;
-    width: 1138px;
+    width: 100%;
     margin-top: -10px;
 }
 .website-feature-content {
@@ -500,6 +500,6 @@ section.row.profiles {
 }
 .website-feature-text {
     float: left;
-    width: 200px;
-    margin-left: 75px;
+    width: 230px;
+    margin-left: 70px;
 }
