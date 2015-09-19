@@ -204,7 +204,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4 col-sm-6">
+		<div class="col-md-4 col-sm-6 suggest">
 			<div class="suggest-property-image">
 				<img id="house" src="http://localhost:8888/wp-content/uploads/2015/09/64-marshal-ave.jpg">
 			</div>
@@ -212,7 +212,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				144 Mills Street, Albert Park, 3206
 			</div>
 		</div>
-		<div class="col-md-4 col-sm-6">
+		<div class="col-md-4 col-sm-6 suggest">
 			<div class="suggest-property-image">
 				<img id="house" src="http://localhost:8888/wp-content/uploads/2015/09/64-marshal-ave.jpg">
 			</div>
@@ -220,7 +220,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 				144 Mills Street, Albert Park, 3206
 			</div>
 		</div>
-		<div class="col-md-4 col-sm-6">
+		<div class="col-md-4 col-sm-6 suggest">
 			<div class="suggest-property-image">
 				<img id="house" src="http://localhost:8888/wp-content/uploads/2015/09/64-marshal-ave.jpg">
 			</div>
