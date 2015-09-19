@@ -74,36 +74,27 @@ class TitaniumCommunityClass
      */
     public static function adminEnqueueScripts()
     {
-        wp_enqueue_style(
-            'jquery-autocomplete',
-            plugins_url('titanium-community/public/css/public.css')
-        );
-        wp_enqueue_script(
-            'jQuery-autocomplete',
-            plugins_url('titanium-community/public/js/jquery.autocomplete.min.js'),
-            ['jquery'],
-            self::VERSION
-        );
+
     }
 
     /**
      * Enqueue all the style
      * and scripts of the plugins
      * @since 1.0.0
-     * @edited 2.0.0
+     * @edited 2.0.0, 3.0.0
      */
     public static function enqueueScripts()
     {
-        wp_enqueue_style(
-            'jquery-autocomplete',
-            plugins_url('titanium-community/public/css/public.css')
-        );
-        wp_enqueue_script(
-            'jQuery-autocomplete',
-            plugins_url('titanium-community/public/js/jquery.autocomplete.min.js'),
-            ['jquery'],
-            self::VERSION
-        );
+//        wp_enqueue_style(
+//            'jquery-autocomplete',
+//            plugins_url('titanium-community/public/css/public.css')
+//        );
+//        wp_enqueue_script(
+//            'jQuery-autocomplete',
+//            plugins_url('titanium-community/public/js/jquery.autocomplete.min.js'),
+//            ['jquery'],
+//            self::VERSION
+//        );
         wp_enqueue_script(
             'jQuery-qtip',
             'http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js',
@@ -140,17 +131,37 @@ class TitaniumCommunityClass
 
         //Google Map Javascript Library
         wp_enqueue_script(
-            'gogle-map-library',
-            'http://maps.google.com/maps/api/js?sensor=false&libraries=places&language=en-AU',
+            'google-map-library',
+            'http://maps.google.com/maps/api/js?key=AIzaSyBzcAcA3wULxqdp6EUVkMb77fjSCXO70tA&signed_in=true&libraries=places&language=en-AU',
             [],
             self::VERSION
         );
+
+        wp_enqueue_script(
+            'jquery-geocomplete',
+            plugins_url('titanium-community/public/js/jquery.geocomplete.min.js'),
+            ['jquery', 'google-map-library'],
+            self::VERSION
+        );
+
+        wp_enqueue_style(
+            'jquery-sweetalert',
+            'https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.css'
+        );
+
+        wp_enqueue_script(
+            'jquery-sweetalert',
+            'https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js',
+            ['jquery'],
+            self::VERSION
+        );
+
 
         //JS file of Titanium
         wp_register_script(
             'titanium-community',
             plugins_url('titanium-community/public/js/public.js'),
-            ['jQuery-autocomplete','jquery-topics', 'jQuery-qtip'],
+            ['jQuery-autocomplete','jquery-topics', 'jQuery-qtip', 'google-map-library'],
             self::VERSION
         );
         wp_localize_script(
@@ -350,14 +361,16 @@ class TitaniumCommunityClass
         if (!isset($_POST['query']))
             wp_send_json_error();
 
-        $post_id = $_POST['query'];
+        error_log($_POST['query']);
 
-        $suburb_id = get_post_meta($post_id, 'post_code', true);
-
-        $community_details = $this->ComputeCommunityDetails($suburb_id);
-        $house_details = $this->computePropertyDetails($post_id);
-
-        wp_send_json(['house_details'=>$house_details, 'community_details'=>$community_details]);
+//        $post_id = $_POST['query'];
+//
+//        $suburb_id = get_post_meta($post_id, 'post_code', true);
+//
+//        $community_details = $this->ComputeCommunityDetails($suburb_id);
+//        $house_details = $this->computePropertyDetails($post_id);
+//
+//        wp_send_json(['house_details'=>$house_details, 'community_details'=>$community_details]);
     }
 
     /**

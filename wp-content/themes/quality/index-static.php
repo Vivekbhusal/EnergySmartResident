@@ -9,7 +9,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 
 <div class="flex-slider-center">
 	<div class="input-group center-block search-suburb">
-		<input type="text" class="form-control" placeholder="Please enter the house address... (eg. 9/30 Maroo street, Hughesdale, 3166)"/>
+		<input id="search-address-bar" type="text" class="form-control" placeholder="Please enter the house address... (eg. 9/30 Maroo street, Hughesdale, 3166)"/>
 	</div>
 </div>
 </div>

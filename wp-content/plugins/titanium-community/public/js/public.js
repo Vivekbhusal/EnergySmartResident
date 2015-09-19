@@ -12,27 +12,73 @@ jQuery(document).ready(function($){
      * The autocomplete functionality at home page to select the suburbs
      * @since 1.0.0
      */
-    $('.search-suburb > input').autocomplete({
-        showNoSuggestionNotice : true,
-        noSuggestionNotice: "No result found. Please check address again.",
-        lookup: titanium.autocompleteHouseSuggestion,
-        onSelect: function(suggestion){
-            $.Topic('get-house-community-information').publish(suggestion.data);
+    //$('.search-suburb > input').autocomplete({
+    //    showNoSuggestionNotice : true,
+    //    noSuggestionNotice: "No result found. Please check address again.",
+    //    lookup: titanium.autocompleteHouseSuggestion,
+    //    onSelect: function(suggestion){
+    //        $.Topic('get-house-community-information').publish(suggestion.data);
+    //    }
+    //});
+
+    var componentForm = {
+        subpremise: 'short_name',
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+    };
+
+
+
+    var autocomplete = new google.maps.places.Autocomplete(
+        document.getElementById("search-address-bar"),
+        {
+            types: ['geocode'],
+            componentRestrictions: {country: "au"}
+        }
+    );
+
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        var place = autocomplete.getPlace();
+        //console.log(place.address_components);
+        var value;
+        var addressDetails = [];
+        if(place.address_components){
+            for (var i = 0; i < place.address_components.length; i++) {
+                var addressType = place.address_components[i].types[0];
+                if (componentForm[addressType]) {
+                    value = place.address_components[i][componentForm[addressType]];
+                    addressDetails[addressType] = value;
+                }
+            }
+            if(addressDetails['administrative_area_level_1'] != "VIC") {
+                swal("Dear User,", "Sorry to upend your adventure. We are very happy to see that you are enjoying our service and searching address all over Australia, but currently we only operate for Victoria. ", "info");
+            }
+            console.log(addressDetails);
+            $.Topic('get-house-community-information').publish(addressDetails);
         }
     });
 
+    //
+    //autocomplete.addListener('place_changed', function(){
+    //    var place = autocomplete.getPlace();
+    //    console.log(place);
+    //});
     /**
      * Callback function to get all the information about community
      * and the house
      * @var $id Id of house
      * @since 2.0.0
      */
-    $.Topic('get-house-community-information').subscribe(function($id){
+    $.Topic('get-house-community-information').subscribe(function(addressDetails){
 
         var data = {
             action : 'titanium_compute_house_community_details',
             nonce : titanium.nonce,
-            query : $id
+            query : addressDetails
         };
 
         /**
@@ -43,19 +89,28 @@ jQuery(document).ready(function($){
             type: "post",
             data: data,
             success: function(response) {
-                $.Topic('display-property-info').publish(response.house_details);
-                $.Topic('display-community-info').publish(response.community_details);
+                if(response.success){
+                    // Display house only if the query is for house
+                    if(response.type == 'house') {
+                        $.Topic('display-property-info').publish(response.house_details);
+                    }
 
-                /**Display Property Info**/
-                $(".property-info").show();
+                    // Displa
+                    $.Topic('display-community-info').publish(response.community_details);
 
-                /**Display the container**/
-                $("#community-container").show();
+                    /**Display Property Info**/
 
-                /**Scroll down to result, animate **/
-                $('html, body').animate({
-                    scrollTop: $("#energy-rating-section").offset().top
-                }, 1000);
+
+                    /**Display the container**/
+                    $("#community-container").show();
+
+                    /**Scroll down to result, animate **/
+                    $('html, body').animate({
+                        scrollTop: $("#energy-rating-section").offset().top
+                    }, 1000);
+                } else {
+                    // Show alert or some kind of message
+                }
             }
         });
     });
@@ -175,6 +230,8 @@ jQuery(document).ready(function($){
             $("#unverified").show();
             $(".titanium-nather").removeClass("nathers-icon").addClass("nathers-icon-grey");
         }
+
+        $(".property-info").show();
 
 
     });
