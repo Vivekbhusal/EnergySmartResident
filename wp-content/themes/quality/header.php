@@ -19,7 +19,8 @@
 	wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-    <!--Header Logo & Menus-->
+
+  <!--Header Logo & Menus-->
     <div class="container">
       <nav class="navbar navbar-default titanium-nav" role="navigation">
         <div class="container-fluid">

@@ -11,7 +11,7 @@ img.img-responsive {
 }
 .logo.pull-left > a > img{
     width: auto;
-    height: 100px;
+    height: 80px;
     margin-right: 150px;
 }
 .hospital-icon {
@@ -227,7 +227,7 @@ section.row.profiles {
     height: 80px;
     width: 50%;
     margin-left: 25%;
-    display:block;
+    display:none;
     background: url(../../../quality/images/skylight.png) no-repeat center;
 }
 .thermostats-icon {
