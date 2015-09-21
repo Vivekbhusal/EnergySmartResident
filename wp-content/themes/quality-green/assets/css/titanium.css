@@ -359,7 +359,7 @@ section.row.profiles {
     position:relative;
 }
 .property-info.qua_heading_title.container{
-    height: 310px;
+    height: 330px;
     border-bottom: solid lightgrey 3px;
     margin-bottom: 0 !important;
 }
@@ -462,50 +462,42 @@ section.row.profiles {
 
 .titanium-property-alert {
     display: none;
-}
-.suggest-property-image {
-    margin-left: 80px;
+    width: 810px !important;
+    text-align: center;
 }
 .suggest-property-title {
-    margin-left: 30px;
     margin-top: 5px;
     font-family: "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
     font-size: 18px;
     text-align: center;
-    float: left;
 }
 .website-features {
-    margin-left: 70px;
-    height: 160px;
-    width: 100%;
+    height: 200px;
+    width: 90%;
     margin-top: -10px;
+    margin-left: 5%;
 }
 .website-feature-content {
     width: 33.3333333%;
     float: left;
 }
-.website-feature-title {
-    margin-left: 20px;
-}
+
 .website-feature-title > h4 {
-    float: left;
-    width: 200px;
-    margin-left: 5px;
+    width: 100%;
+    text-align: center;
     font-size: large;
     color: #19A347;
 }
-.website-feature-title-img {
-    float: left;
-    margin-left: 50px;
+.website-feature-title >img{
+    margin-left:39%;
 }
-
 .website-feature-text {
         float: left;
-        width: 200px;
-        margin-left:70px;
+        width: 80%;
+    margin-left: 10%;
     text-align: center;
 }
-@media (max-width: 930px) {
+/*@media (max-width: 930px) {
  .website-feature-text {
      float: left;
      width: 200px;
@@ -513,12 +505,312 @@ section.row.profiles {
  }
 }
 @media (max-width: 930px) {
- .website-feature-content{
-     width:100%;
+    .website-feature-content {
+        width: 100%;
+    }
+
+    .website-feature-text {
+        margin-left: 50px;
+    }
+
+    .website-feature-title {
+        margin-left: 0px;
+    }
+}*/
+/*
+.suggested-house {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+.col-md-4.col-sm-6.suggest {
+     display: block;
+     position: relative;
+     height: 250px;
+     float: left;
+     overflow: hidden;
+     padding-left:2px;
+     padding-right:2px;
+
  }
- .website-feature-text {
-     margin-left: 50px;
- }
- .website-feature-title {
-     margin-left: 0px;
+.suggested-property-item-link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.suggested-property-item-link:hover {
+    background: rgba(0,0,0,0);
+}
+
+.suggested-property-address{
+    color: #ffffff;
+}*/
+
+
+.suggested-house {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+.col-md-4.col-sm-6.suggest {
+    display: block;
+    position: relative;
+    height: 250px;
+    float: left;
+    overflow: hidden;
+    padding-left:2px;
+    padding-right:2px;
+
+}
+.suggested-property-item-link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+.suggested-property-info {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.suggested-property-item-link:hover {
+    background: rgba(0,0,0,0);
+}
+
+.suggested-property-address{
+    font-family: "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    position: relative;
+}
+.suggested-property-air-conditioner-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-air-conditioner-green.png) no-repeat center;
+}
+.suggested-property-heater-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-heater-green.png) no-repeat center;
+}
+.suggested-property-water-tank-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-water-tank-green.png) no-repeat center;
+}
+.suggested-property-certification-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-certification-green.png) no-repeat center;
+}
+.suggested-property-air-conditioner-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-air-conditioner-gray.png) no-repeat center;
+}
+.suggested-property-heater-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-heater-gray.png) no-repeat center;
+}
+.suggested-property-water-tank-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-water-tank-gray.png) no-repeat center;
+}
+.suggested-property-certification-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-certification-gray.png) no-repeat center;
+}
+.suggested-property-row {
+    width: 100%;
+    margin-top: 30px;
+}
+.suggested-property-row-item {
+    
+    width: 25% !important;
+    margin-left: 0 !important;
+    float: left;
+}
+
+
+#latest {
+    height: 260px;
+}
+
+.latest-house {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+
+.col-md-4.col-sm-6.latest-property {
+    display: block;
+    height: 250px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    padding-left:2px;
+    padding-right:2px;
+
+}
+.latest-property-item-link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+.latest-property-info {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.latest-property-item-link:hover {
+    background: rgba(0,0,0,0);
+}
+
+.latest-property-address{
+    font-family: "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    position: relative;
+}
+.latest-property-air-conditioner-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-air-conditioner-green.png) no-repeat center;
+}
+.latest-property-heater-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-heater-green.png) no-repeat center;
+}
+.latest-property-water-tank-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-water-tank-green.png) no-repeat center;
+}
+.latest-property-certification-icon {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-certification-green.png) no-repeat center;
+}
+.latest-property-air-conditioner-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-air-conditioner-gray.png) no-repeat center;
+}
+.latest-property-heater-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-heater-gray.png) no-repeat center;
+}
+.latest-property-water-tank-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-water-tank-gray.png) no-repeat center;
+}
+.latest-property-certification-icon-grey {
+    background-size: 100% 100%;
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+    display:block;
+    background: url(../../../quality/images/small-certification-gray.png) no-repeat center;
+}
+.latest-property-row {
+    width: 100%;
+    margin-top: 30px;
+}
+.latest-property-row-item {
+    margin: 0 0 0 0;
+    width: 25%;
+    float: left;
+}
+
+.container.container-blog.titanium-blog-container{
+    padding-top:15px;
+    position: relative;
+}
+.blog-image {
+    border-bottom: none!important;
+    height: 150px!important;
+    width: 200px!important;
+    float: left!important;
+    margin-left:0!important;
+    padding-right:5px!important;
+}
+.titanium-blog {
+    width: 50% !important;
+    float: left;
+}
+.energy-blog-area {
+    margin-bottom: 20px;
+    height:250px;
+}
+.energy-blog-area > .qua-blog-info > h2 {
+    width: 95%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

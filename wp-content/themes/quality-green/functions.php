@@ -25,6 +25,12 @@ function new_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
+
+function reduce_expert_word_limit($length) {
+    return 20;
+}
+add_filter('excerpt_length', 'reduce_expert_word_limit', 999);
+
 /**
  * Redirect Logouts to home page
  */

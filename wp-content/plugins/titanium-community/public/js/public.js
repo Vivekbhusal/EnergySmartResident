@@ -89,6 +89,7 @@ jQuery(document).ready(function($){
             type: "post",
             data: data,
             success: function(response) {
+                console.log(response);
                 if(response.success == false) {
                     $(".titanium-property-alert").show();
                     $(".titanium-alert-message").html(response.message);
@@ -108,7 +109,13 @@ jQuery(document).ready(function($){
                 else
                     $("#community-container").hide();
 
-                $("#recommended-property-container").show();
+                if(response.recommended_houses)
+                    $.Topic('display-recommended-info').publish(response.recommended_houses);
+                else
+                    $("#recommended-property-container").hide();
+
+                $("#latest").hide();
+                $(".website-features").hide();
 
                 /**Scroll down to result, animate **/
                 $('html, body').animate({
@@ -119,6 +126,51 @@ jQuery(document).ready(function($){
         });
     });
 
+
+    function getRecommendedHouseElement(house) {
+        airConditionClass = (house.air_conditioner.has == '0')
+            ? 'latest-property-air-conditioner-icon-grey'
+            : 'latest-property-air-conditioner-icon';
+
+        heaterClass = (house.heater.has == '0')
+            ? 'latest-property-heater-icon-grey'
+            : 'latest-property-heater-icon';
+
+        waterTankClass = (house.water_tank.has =='0')
+            ? 'latest-property-water-tank-icon-grey'
+            : 'latest-property-water-tank-icon';
+
+        certificationClass = (house.nathers.has == '1')
+            ? 'latest-property-certification-icon'
+            : 'latest-property-certification-icon-grey';
+
+        element = '<div class="col-md-4 col-sm-6 suggest">'+
+                        '<a href="'+house.permalink+'" class="suggested-property-item-link">'+
+                            '<div class="suggested-property-info">'+
+                                '<span class="suggested-property-address">'+house.address+'</span>'+
+                                '<div class="suggested-property-row">'+
+                                    '<span class="suggested-property-row-item '+airConditionClass+'"></span>'+
+                                    '<span class="suggested-property-row-item '+heaterClass+'"></span>'+
+                                    '<span class="suggested-property-row-item '+waterTankClass+'"></span>'+
+                                    '<span class="suggested-property-row-item '+certificationClass+'"></span>'+
+                                '</div>'+
+                            '</div>'+
+                        '</a>'+
+                        '<img class="suggested-house" src="'+house.image+'">'+
+                       '</div>';
+
+        return element;
+    }
+
+    $.Topic('display-recommended-info').subscribe(function(response){
+        element = "";
+        for (i=0; i<3; i++) {
+            element += getRecommendedHouseElement(response[i]);
+        }
+
+        $(".suggested-house-list").html(element);
+        $("#recommended-property-container").show();
+    });
     /**
      * Callback function to display the property info
      * @var response information about the property

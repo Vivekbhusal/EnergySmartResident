@@ -355,7 +355,7 @@ class TitaniumCommunityClass
                 $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName(get_post_meta($post_id, 'suburb', true));
             } else {
                 $response['success'] = false;
-                $response['message'] = "The information about this address is not available. We will try to get this information as soon as possible.";
+                $response['message'] = "The information about this address <b>".$title."</b> is not available.<br/>We will try to get the information as soon as possible, meanwhile you can view the<br/>information related to that suburb. ";
 
                 // Get only community and near by house
                 $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName($address['locality']);
@@ -365,9 +365,181 @@ class TitaniumCommunityClass
             $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName($address['locality']);
         }
 
+        $response['recommended_houses'] = $this->computeRecommendedHouses($address['locality'], $address['postal_code'], isset($post_id)?$post_id: false);
+
         wp_send_json($response);
     }
 
+    /**
+     * Compute the recommended houses for the search
+     * First look for houses of same suburb
+     * second look for houses in same postal code
+     * Third houses with certification
+     * Fourth random houses
+     * @param $suburbName String Name of the suburb
+     * @param $postCode String postal code
+     * @return array
+     */
+    private  function computeRecommendedHouses($suburbName, $postCode, $currentPostId)
+    {
+        $recommendedHouses = [];
+        $sameSuburbHouses = $this->getHousesInSameSuburb($suburbName, 3);
+        $recommendedHouses = $this->helperRecommendedHouse($recommendedHouses, $sameSuburbHouses, $currentPostId);
+
+        $totalHouse = count($recommendedHouses);
+        /** If enough houses, we return */
+        if ($totalHouse >= 3) {
+            return $recommendedHouses;
+        }
+
+        /** Get the house of same post code */
+        $housesInSamePostCode = $this->getHousesInSamePostalCode($postCode, 3 - $totalHouse);
+        $recommendedHouses = $this->helperRecommendedHouse($recommendedHouses, $housesInSamePostCode, $currentPostId);
+
+        $totalHouse = count($recommendedHouses);
+        /** If enough houses, we return */
+        if ($totalHouse >= 3) {
+            return $recommendedHouses;
+        }
+
+        /**Get houses with Nathers certificate */
+        $housesWithNatherCertificate = $this->getHousesWithNatherCertified(3 - $totalHouse);
+        $recommendedHouses = $this->helperRecommendedHouse($recommendedHouses, $housesWithNatherCertificate, $currentPostId);
+
+        $totalHouse = count($recommendedHouses);
+        /** If enough houses, we return */
+        if ($totalHouse >= 3) {
+            return $recommendedHouses;
+        }
+
+        /**Get houses with Nathers certificate */
+        $randomHouses = $this->getLatestPublishedHouses(3 - $totalHouse);
+        $recommendedHouses = $this->helperRecommendedHouse($recommendedHouses, $randomHouses, $currentPostId);
+
+        return $recommendedHouses;
+    }
+
+    private function helperRecommendedHouse($recommendedHouses, $houses, $currentPostId)
+    {
+        foreach ($houses as $house) {
+            if($currentPostId && $currentPostId == $house->ID) {
+                continue;
+            }
+                $temp_house = $this->computePropertyDetailsByPostId($house->ID);
+                $temp_array = array();
+                $temp_array['permalink'] = get_post_permalink($house->ID);
+                $temp_array['address'] = $temp_house['address'];
+                $temp_array['image'] = $temp_house['house_img'];
+                $temp_array['air_conditioner'] = $temp_house['air_conditioner'];
+                $temp_array['heater'] = $temp_house['heater'];
+                $temp_array['water_tank'] = $temp_house['water_tank'];
+                $temp_array['nathers'] = $temp_house['nathers'];
+                $recommendedHouses[] = $temp_array;
+        }
+        return $recommendedHouses;
+    }
+
+
+    /**
+     * Get the latest published houses
+     * @param $number Integer Number of post needed
+     * @return array
+     */
+    private function getLatestPublishedHouses($number)
+    {
+        $args = array(
+            'posts_per_page'   => $number,
+            'offset'           => 0,
+            'category'         => '',
+            'category_name'    => '',
+            'orderby'          => 'date',
+            'order'            => 'DESC',
+            'include'          => '',
+            'exclude'          => '',
+            'meta_key'         => '',
+            'meta_value'       => '',
+            'post_type'        => 'house',
+            'post_mime_type'   => '',
+            'post_parent'      => '',
+            'author'	   => '',
+            'post_status'      => 'publish',
+            'suppress_filters' => true
+        );
+        return get_posts( $args );
+    }
+
+    /**
+     * Get the house with Nathers Certified
+     * @param $number Integer Number of post needed
+     * @return array
+     */
+    private function getHousesWithNatherCertified($number)
+    {
+        $args = array(
+            'posts_per_page'   => $number,
+            'offset'           => 0,
+            'category'         => '',
+            'category_name'    => '',
+            'orderby'          => 'date',
+            'order'            => 'DESC',
+            'post_type'        => 'house',
+            'post_status'      => 'publish',
+            'suppress_filters' => true,
+            'meta_key'   => 'is_property_inspection',
+            'meta_value' => '1'
+        );
+        return get_posts( $args );
+    }
+
+    /**
+     * Get the houses in same suburb
+     * @param $suburbName String Name of the suburb
+     * @param $number Integer Number of post needed
+     * @return array
+     */
+    private function getHousesInSameSuburb($suburbName, $number)
+    {
+        $args = array(
+            'posts_per_page'   => $number,
+            'offset'           => 0,
+            'category'         => '',
+            'category_name'    => '',
+            'orderby'          => 'date',
+            'order'            => 'DESC',
+            'post_type'        => 'house',
+            'post_status'      => 'publish',
+            'suppress_filters' => true,
+            'meta_key'   => 'suburb',
+            'meta_value' => $suburbName
+        );
+        return get_posts( $args );
+    }
+
+    private function getHousesInSamePostalCode($postCode, $number)
+    {
+        $args = array(
+            'posts_per_page'   => $number,
+            'offset'           => 0,
+            'category'         => '',
+            'category_name'    => '',
+            'orderby'          => 'date',
+            'order'            => 'DESC',
+            'post_type'        => 'house',
+            'post_status'      => 'publish',
+            'suppress_filters' => true,
+            'meta_key'   => 'post_code',
+            'meta_value' => $postCode
+        );
+        return get_posts( $args );
+    }
+
+
+    /**
+     * Make the title of house to seach from address provide by google
+     * This title is same to title of post
+     * @param $address
+     * @return string
+     */
     private function buildHouseTitleByAddress($address)
     {
         $title = "";
