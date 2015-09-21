@@ -661,8 +661,9 @@ section.row.profiles {
     margin-top: 30px;
 }
 .suggested-property-row-item {
-    margin: 0 0 0 0;
-    width: 25%;
+    
+    width: 25% !important;
+    margin-left: 0 !important;
     float: left;
 }
 
