@@ -18,7 +18,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
                         <span class="latest-property-row-item latest-property-air-conditioner-icon"></span>
                         <span class="latest-property-row-item latest-property-heater-icon"></span>
                         <span class="latest-property-row-item latest-property-water-tank-icon" ></span>
-                        <span class="latest-property-row-item latest-property-certification-icon-grey"></span>
+                        <span class="latest-property-row-item latest-property-certification-icon"></span>
                     </div>
                 </div>
             </a>
