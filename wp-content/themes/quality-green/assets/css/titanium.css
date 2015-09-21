@@ -481,20 +481,14 @@ section.row.profiles {
     width: 33.3333333%;
     float: left;
 }
-.website-feature-title {
-    margin-left: 20px;
-}
+
 .website-feature-title > h4 {
-    float: left;
     width: 200px;
-    margin-left: 5px;
+    text-align: center;
     font-size: large;
     color: #19A347;
 }
-.website-feature-title-img {
-    float: left;
-    margin-left: 50px;
-}
+
 
 .website-feature-text {
         float: left;
@@ -604,7 +598,7 @@ section.row.profiles {
     width: 50%;
     margin-left: 25%;
     display:block;
-    background: url(../../../quality/images/small-air-conditioner-white.png) no-repeat center;
+    background: url(../../../quality/images/small-air-conditioner-green.png) no-repeat center;
 }
 .suggested-property-heater-icon {
     background-size: 100% 100%;
@@ -612,7 +606,7 @@ section.row.profiles {
     width: 50%;
     margin-left: 25%;
     display:block;
-    background: url(../../../quality/images/small-heater-white.png) no-repeat center;
+    background: url(../../../quality/images/small-heater-green.png) no-repeat center;
 }
 .suggested-property-water-tank-icon {
     background-size: 100% 100%;
@@ -620,7 +614,7 @@ section.row.profiles {
     width: 50%;
     margin-left: 25%;
     display:block;
-    background: url(../../../quality/images/small-water-tank-white.png) no-repeat center;
+    background: url(../../../quality/images/small-water-tank-green.png) no-repeat center;
 }
 .suggested-property-certification-icon {
     background-size: 100% 100%;
@@ -628,7 +622,7 @@ section.row.profiles {
     width: 50%;
     margin-left: 25%;
     display:block;
-    background: url(../../../quality/images/small-certification-white.png) no-repeat center;
+    background: url(../../../quality/images/small-certification-green.png) no-repeat center;
 }
 .suggested-property-air-conditioner-icon-grey {
     background-size: 100% 100%;
@@ -724,7 +718,7 @@ section.row.profiles {
     width: 50%;
     margin-left: 25%;
     display:block;
-    background: url(../../../quality/images/small-air-conditioner-white.png) no-repeat center;
+    background: url(../../../quality/images/small-air-conditioner-green.png) no-repeat center;
 }
 .latest-property-heater-icon {
     background-size: 100% 100%;
@@ -732,7 +726,7 @@ section.row.profiles {
     width: 50%;
     margin-left: 25%;
     display:block;
-    background: url(../../../quality/images/small-heater-white.png) no-repeat center;
+    background: url(../../../quality/images/small-heater-green.png) no-repeat center;
 }
 .latest-property-water-tank-icon {
     background-size: 100% 100%;
@@ -740,7 +734,7 @@ section.row.profiles {
     width: 50%;
     margin-left: 25%;
     display:block;
-    background: url(../../../quality/images/small-water-tank-white.png) no-repeat center;
+    background: url(../../../quality/images/small-water-tank-green.png) no-repeat center;
 }
 .latest-property-certification-icon {
     background-size: 100% 100%;
@@ -748,7 +742,7 @@ section.row.profiles {
     width: 50%;
     margin-left: 25%;
     display:block;
-    background: url(../../../quality/images/small-certification-white.png) no-repeat center;
+    background: url(../../../quality/images/small-certification-green.png) no-repeat center;
 }
 .latest-property-air-conditioner-icon-grey {
     background-size: 100% 100%;
