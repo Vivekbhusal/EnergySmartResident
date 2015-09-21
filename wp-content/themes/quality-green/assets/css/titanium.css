@@ -673,7 +673,9 @@ section.row.profiles {
 }
 
 
-
+.latest {
+    height: 260px;
+}
 
 .latest-house {
     width: 100%;
@@ -685,9 +687,9 @@ section.row.profiles {
 
 .col-md-4.col-sm-6.latest-property {
     display: block;
-    position: relative;
     height: 250px;
     float: left;
+    position: relative;
     overflow: hidden;
     padding-left:2px;
     padding-right:2px;
@@ -790,6 +792,7 @@ section.row.profiles {
     float: left;
 }
 
-.titanium-blog-container{
-    margin-top:15px;
+.container.container-blog.titanium-blog-container{
+    padding-top:15px;
+    position: relative;
 }
