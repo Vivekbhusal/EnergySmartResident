@@ -797,7 +797,8 @@ section.row.profiles {
     height: 150px!important;
     width: 200px!important;
     float: left!important;
-    margin-left:0px!important;
+    margin-left:0!important;
+    padding-right:5px!important;
 }
 .titanium-blog {
     width: 50% !important;
