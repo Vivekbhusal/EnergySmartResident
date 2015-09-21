@@ -110,6 +110,9 @@ jQuery(document).ready(function($){
 
                 $("#recommended-property-container").show();
 
+                $("#latest").hide();
+                $(".website-features").hide();
+
                 /**Scroll down to result, animate **/
                 $('html, body').animate({
                     scrollTop: $("#titanium-result-anchor").offset().top
