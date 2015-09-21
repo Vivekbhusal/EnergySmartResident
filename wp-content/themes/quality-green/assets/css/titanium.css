@@ -462,6 +462,8 @@ section.row.profiles {
 
 .titanium-property-alert {
     display: none;
+    width: 810px !important;
+    text-align: center;
 }
 .suggest-property-image {
     margin-left: 80px;
