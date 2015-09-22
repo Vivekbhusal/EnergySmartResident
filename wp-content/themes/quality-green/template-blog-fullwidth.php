@@ -23,14 +23,14 @@
                 $more = 0; 
         ?>
       <div class="qua_blog_section" id="post-<?php the_ID(); ?>" >
-        <div class="qua_blog_post_img">
-          <?php $defalt_arg =array('class' => "img-responsive"); ?>
-          <?php if(has_post_thumbnail()): ?>
-          <a  href="<?php the_permalink(); ?>">
-          <?php the_post_thumbnail('', $defalt_arg); ?>
-          </a>
-          <?php endif; ?>	
-        </div>
+<!--        <div class="qua_blog_post_img">-->
+<!--          --><?php //$defalt_arg =array('class' => "img-responsive"); ?>
+<!--          --><?php //if(has_post_thumbnail()): ?>
+<!--          <a  href="--><?php //the_permalink(); ?><!--">-->
+<!--          --><?php //the_post_thumbnail('', $defalt_arg); ?>
+<!--          </a>-->
+<!--          --><?php //endif; ?><!--	-->
+<!--        </div>-->
         <div class="qua_post_date">
           <span class="date"><?php echo get_the_date('j'); ?></span>
           <h6><?php echo the_time('M'); ?></h6>
