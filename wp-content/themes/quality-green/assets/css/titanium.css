@@ -884,3 +884,11 @@ section.row.profiles {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.titanium-about-title{
+    font-size:40px;
+    text-align:center;
+}
+.titanium-about-text{
+    text-align:justify;
+    margin-bottom:40px;
+}
