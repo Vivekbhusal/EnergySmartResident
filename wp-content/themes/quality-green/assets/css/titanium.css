@@ -841,3 +841,28 @@ section.row.profiles {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+.titanium-footer-copyright{
+    color: #ffffff;
+}
+.titanium-footer-menu{
+    text-align: center;
+}
+
+.titanium-footer-mernu-list{
+    list-style-type: none;
+    /*color: #19A347;*/
+    font-size: 17px;
+}
+
+.titanium-social-media-list li{
+    display: inline;
+}
+.titanium-footer-socialmedia{
+    text-align: right;
+    margin-top: 28px;
+}
+
+.titanium-social-media-list img{
+    height: 46px;
+}

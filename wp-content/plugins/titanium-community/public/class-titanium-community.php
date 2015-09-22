@@ -240,6 +240,7 @@ class TitaniumCommunityClass
          */
         $suburb_info = $wpdb->get_row($wpdb->prepare("SELECT * from suburb where suburb_name = %s", $suburbName));
         $surburb_id = $suburb_info->suburb_id;
+        unset($suburb_info->suburb_id);
 
         /**
          * Get information about hospital
@@ -713,6 +714,11 @@ class TitaniumCommunityClass
     public static function getCommunityDetailsByPostID($postID)
     {
         $suburb = get_post_meta($postID, 'suburb', true);
+        return self::getInstance()->ComputeCommunityDetailsBySuburbName($suburb);
+    }
+
+    public static function getCommunityDetailsBySuburb($suburb)
+    {
         return self::getInstance()->ComputeCommunityDetailsBySuburbName($suburb);
     }
 
