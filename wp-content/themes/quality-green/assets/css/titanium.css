@@ -496,15 +496,19 @@ section.row.profiles {
         width: 80%;
     margin-left: 10%;
     text-align: center;
+    padding-left:40px;
+    padding-right:40px;
 }
-/*@media (max-width: 930px) {
+
+@media (max-width: 930px) {
  .website-feature-text {
      float: left;
      width: 200px;
      margin-left: 0px;
  }
 }
-@media (max-width: 930px) {
+/*
+@media (max-width: 414px) {
     .website-feature-content {
         width: 100%;
     }
@@ -515,8 +519,8 @@ section.row.profiles {
 
     .website-feature-title {
         margin-left: 0px;
-    }
-}*/
+    }*/
+
 /*
 .suggested-house {
     width: 100%;
@@ -787,6 +791,28 @@ section.row.profiles {
     width: 25%;
     float: left;
 }
+@media (max-width: 414px) {
+    .latest-property{
+        width:100%!important;
+        margin-left:0 !important;
+        padding-left: 0 !important;
+    }
+    .col-md-4.col-sm-6.titanium-blog {
+        width: 100% !important;
+        float: left;
+        height: auto;
+    }
+}
+@media (max-width: 998px) {
+    .latest-property{
+        width:60%;
+        margin-left: 20%;
+        margin-bottom: 5px;
+    }
+    #latest {
+        height: 900px !important;
+    }
+}
 
 .container.container-blog.titanium-blog-container{
     padding-top:15px;
@@ -805,8 +831,9 @@ section.row.profiles {
     float: left;
 }
 .energy-blog-area {
+    padding-bottom: 20px;
+    height:auto;
     margin-bottom: 20px;
-    height:250px;
 }
 .energy-blog-area > .qua-blog-info > h2 {
     width: 95%;
