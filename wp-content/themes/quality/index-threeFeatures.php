@@ -10,7 +10,7 @@
 $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ), $quality_pro_options ); ?>
 <div class="website-features">
     <div class="website-feature-content">
-        <a href="/?page_id=449">
+        <a href="/green-energy">
         <div class="website-feature-title">
             <img class="website-feature-title-img" src="/wp-content/themes/quality/images/green-energy.png">
             <h4>Green Energy</h4>
@@ -22,7 +22,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
         </div>
     </div>
     <div class="website-feature-content">
-        <a href="/?page_id=452">
+        <a href="/liveable-community">
         <div class="website-feature-title">
             <img class="website-feature-title-img" src="/wp-content/themes/quality/images/livable-community.png">
             <h4>Livable Community</h4>
@@ -34,7 +34,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
         </div>
     </div>
     <div class="website-feature-content">
-        <a href="/?page_id=455">
+        <a href="/energy-measurement">
         <div class="website-feature-title">
             <img class="website-feature-title-img" src="/wp-content/themes/quality/images/energy-measurement.png">
             <h4>Energy Measurement</h4>

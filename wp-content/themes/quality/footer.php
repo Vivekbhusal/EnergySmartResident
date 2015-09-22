@@ -8,7 +8,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
     </div>
     <div class="col-md-4 titanium-footer-menu">
       <ul class="titanium-footer-mernu-list">
-        <li><a href="/api_document">Developers</a></li>
+        <li><a href="/api-documentation">Developers</a></li>
         <li><a href="/blog">Blogs</a></li>
         <li><a href="/future">Futures</a></li>
       </ul>
