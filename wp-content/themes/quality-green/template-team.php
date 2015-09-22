@@ -9,13 +9,24 @@
  * Template Name: Team
  */
 
-get_header(); ?>
+get_header();
+
+the_post();
+?>
 <div class="page-seperator"></div>
+<div class="titanium-about-title">
+    About Us
+</div>
+
+<div class="container titanium-about-text">
+    <?php the_content(); ?>
+</div>
+
 <div id="team" class="">
     <div class="container">
 
         <?php
-        the_post();
+
 
         // Get 'team' posts
         $team_posts = get_posts( array(

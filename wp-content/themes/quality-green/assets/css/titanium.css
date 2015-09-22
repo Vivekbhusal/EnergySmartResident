@@ -480,6 +480,7 @@ section.row.profiles {
 .website-feature-content {
     width: 33.3333333%;
     float: left;
+
 }
 
 .website-feature-title > h4 {
@@ -500,26 +501,51 @@ section.row.profiles {
     padding-right:40px;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 1024px) {
  .website-feature-text {
      float: left;
      width: 200px;
-     margin-left: 0px;
+     padding:0 0 0 0;
+     margin-left:20%;
  }
-}
-/*
-@media (max-width: 414px) {
-    .website-feature-content {
+    .website-feature-title > h4 {
         width: 100%;
+        text-align: center;
+        margin-left:10px;
+
+}}
+@media (max-width: 768px)
+{
+        .website-feature-text {
+            font-size:12px;
+            width:150px;
+        }
+        .website-feature-title > h4 {
+            font-size:14px;
+
+        }
+}
+
+    @media (max-width: 500px) {
+        .website-feature-content {
+            width: 100%;
+
+        }
+
+        .website-feature-text {
+            padding: 0 0 0 0;
+            width:200px;
+            margin-left:25%;
+        }
+
+        .website-feature-title > h4 {
+            width: 100%;
+            text-align: center;
+            margin-left: 10px;
+
+        }
     }
 
-    .website-feature-text {
-        margin-left: 50px;
-    }
-
-    .website-feature-title {
-        margin-left: 0px;
-    }*/
 
 /*
 .suggested-house {
@@ -671,10 +697,28 @@ section.row.profiles {
     margin-left: 0 !important;
     float: left;
 }
+@media (max-width: 414px) {
+    .suggest{
+        width:100%!important;
+        margin-left:0 !important;
+        padding-left: 0 !important;
+    }
+
+}
+@media (max-width: 998px) {
+    .suggest{
+        width:60%;
+        margin-left: 20%;
+        margin-bottom: 5px;
+    }
+    .suggested-house{
+        height: 900px !important;
+    }
+}
 
 
 #latest {
-    height: 260px;
+    height: 300px;
 }
 
 .latest-house {
@@ -865,4 +909,12 @@ section.row.profiles {
 
 .titanium-social-media-list img{
     height: 46px;
+}
+.titanium-about-title{
+    font-size:40px;
+    text-align:center;
+}
+.titanium-about-text{
+    text-align:justify;
+    margin-bottom:40px;
 }
