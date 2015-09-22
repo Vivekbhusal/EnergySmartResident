@@ -920,5 +920,5 @@ section.row.profiles {
 }
 
 .titnium-menu-nav{
-    float: right;
+    float: right !important;
 }
