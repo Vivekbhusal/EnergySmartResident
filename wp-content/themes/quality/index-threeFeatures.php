@@ -17,7 +17,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
         </div>
         <div class="website-feature-text">
             <p class="website-feature-p">
-                We provide information about environmental friendly choices in houses and try to help users live in a greener life
+                Choose your green energy house and save your expenses
             </p>
         </div>
     </div>
@@ -29,7 +29,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
         </div>
         <div class="website-feature-text">
             <p class="website-feature-p">
-                Users can find out a community that is most suitable for them based on the broad community information provided by us
+                Check whether the community is suitable or livable with your standards.
             </p>
         </div>
     </div>
@@ -41,7 +41,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
         </div>
         <div class="website-feature-text">
             <p class="website-feature-p">
-                User can know the efficiency of different products in the house so that they can choose the proper one for reducing energy consumption
+                Check the energy factors of resident and make an informed decision.
             </p>
         </div>
     </div>
