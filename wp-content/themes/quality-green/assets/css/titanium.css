@@ -753,7 +753,7 @@ section.row.profiles {
 }
 
 .latest-property-item-link:hover {
-    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,0.2);
 }
 
 .latest-property-address{
