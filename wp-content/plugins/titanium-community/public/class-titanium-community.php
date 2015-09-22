@@ -347,7 +347,7 @@ class TitaniumCommunityClass
             $title = $this->buildHouseTitleByAddress($address);
 
             $post = get_page_by_title($title, OBJECT, 'house');
-            if ($post != null && $post instanceof \WP_Post) {
+            if ($post != null && $post instanceof \WP_Post && $post->post_status == "publish") {
                 $response['success'] = true;
 
                 // Get both house and community by post id
