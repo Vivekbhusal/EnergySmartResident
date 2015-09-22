@@ -142,7 +142,14 @@ add_filter( 'wp_insert_post_data' , 'modify_post_title' , '99', 2 );
 
 function modify_post_title( $data , $postarr )
 {
-    if($data['post_type'] == 'house') {
+    if($data['post_type'] == 'house'
+        & isset(
+            $postarr['pods_meta_house_number'],
+            $postarr['pods_meta_street_name'],
+            $postarr['pods_meta_post_code'],
+            $postarr['pods_meta_suburb']
+        )
+    ) {
         $house_number = isset($postarr['pods_meta_house_number']) ? $postarr['pods_meta_house_number'] : null;
         $street_name = isset($postarr['pods_meta_street_name']) ? $postarr['pods_meta_street_name'] :null;
         $post_code = isset($postarr['pods_meta_post_code']) ? $postarr['pods_meta_post_code'] : null;
