@@ -18,21 +18,21 @@
  * @package WordPress
  */
 
-define('WP_HOME', 'http://test.energysmartresident.tk');
-define('WP_SITEURL', 'http://test.energysmartresident.tk');
+//define('WP_HOME', 'http://test.energysmartresident.tk');
+//define('WP_SITEURL', 'http://test.energysmartresident.tk');
 
-//define('WP_HOME', 'http://localhost:8888');
-//define('WP_SITEURL', 'http://localhost:8888');
+define('WP_HOME', 'http://localhost:8888');
+define('WP_SITEURL', 'http://localhost:8888');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'titanium_wp_db_test');
+define('DB_NAME', 'titanium_wp_db');
 
 /** MySQL database username */
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
