@@ -16,8 +16,8 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 
     <div class="col-md-4 titanium-footer-socialmedia">
       <ul class="titanium-social-media-list">
-        <li><a target="_blank" href="https://www.facebook.com/energysmartresident"><img src="/wp-content/themes/quality-green/images/facebook-titanium.png"/></a></li>
-        <li><a target="_blank" href="https://twitter.com/EengySR"><img src="/wp-content/themes/quality-green/images/twitter-titanium.png"/></a></li>
+        <li><a target="_blank" href="https://www.facebook.com/energysmartresident"><img src="/wp-content/themes/quality-green/images/twitter-titanium.png"/></a></li>
+        <li><a target="_blank" href="https://twitter.com/EengySR"><img src="/wp-content/themes/quality-green/images/facebook-titanium.png"/></a></li>
       </ul>
     </div>
 
