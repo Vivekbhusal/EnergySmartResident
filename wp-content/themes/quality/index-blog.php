@@ -35,7 +35,7 @@ $current_options = wp_parse_args(  get_option( 'quality_pro_options', array() ),
 					<?php the_excerpt(); ?>
 						
 						<div class="qua-blog-date-cm">
-							<span class="left"><?php echo get_the_date('M j,Y'); ?></span><span class="right"><a href="#"><?php comments_number( 'No Comments', 'one comments', '% comments' ); ?></a></span>
+							<span class="left"><?php echo get_the_date('M j, Y'); ?></span><span class="right"><a href="#"><?php comments_number( 'No Comments', 'one comment', '% comments' ); ?></a></span>
 						</div>
 				</div>
 				</div>

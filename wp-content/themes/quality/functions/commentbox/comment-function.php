@@ -6,7 +6,6 @@ function quality_comment( $comment, $args, $depth )
 	$GLOBALS['comment'] = $comment;
 	//get theme data
 	global $comment_data;
-
 	//translations
 	$leave_reply = $comment_data['translation_reply_to_coment'] ? $comment_data['translation_reply_to_coment'] : 
 	__('Reply','quality');?>
@@ -17,7 +16,7 @@ function quality_comment( $comment, $args, $depth )
             </a>
            <div class="media-body">
 			   <div class="qua_comment_detail">
-				<h4 class="qua_comment_detail_title"><?php the_author();?></h4>
+				<h4 class="qua_comment_detail_title"><?php comment_author($comment);?></h4>
 				<span class="qua_comment_date"><?php comment_date('F j, Y');?>&nbsp;<?php _e('at','quality');?>&nbsp;<?php comment_time('g:i a'); ?></span>
 				<?php comment_text() ;?>
 				

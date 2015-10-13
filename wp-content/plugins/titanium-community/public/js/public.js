@@ -89,6 +89,7 @@ jQuery(document).ready(function($){
             type: "post",
             data: data,
             success: function(response) {
+                console.log(response);
 
                 if(response.success == false) {
                     $(".titanium-property-alert").show();
@@ -104,10 +105,13 @@ jQuery(document).ready(function($){
                     $(".property-info").hide();
 
                 // Display community details
-                if(response.community_details)
+                if(response.community_details){
                     $.Topic('display-community-info').publish(response.community_details);
-                else
+                } else {
                     $("#community-container").hide();
+                    $(".titanium-alert-message").html("Sorry we couldn't find any information about this location. Please let us know about this problem and we will solve it asap. <a href='mailto:vivekbhusal@gmail.com?Subject=Location%20error'>Send Email</a> ");
+                }
+
 
                 if(response.recommended_houses)
                     $.Topic('display-recommended-info').publish(response.recommended_houses);

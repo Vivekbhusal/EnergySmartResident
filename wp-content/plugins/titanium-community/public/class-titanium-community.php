@@ -239,6 +239,10 @@ class TitaniumCommunityClass
          * Get surburb Information
          */
         $suburb_info = $wpdb->get_row($wpdb->prepare("SELECT * from suburb where suburb_name = %s", $suburbName));
+
+        if($suburb_info == null) {
+            return false;
+        }
         $surburb_id = $suburb_info->suburb_id;
         unset($suburb_info->suburb_id);
 
@@ -356,7 +360,7 @@ class TitaniumCommunityClass
                 $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName(get_post_meta($post_id, 'suburb', true));
             } else {
                 $response['success'] = false;
-                $response['message'] = "The information about this address <b>".$title."</b> is not available.<br/>We will try to get the information as soon as possible, meanwhile you can view the<br/>information related to that suburb. ";
+                $response['message'] = "The information about this address <b>".$title."</b> is not available.<br/>We will try to get the information as soon as possible, meanwhile you can view the<br/>information related to that suburb.</br> If you want to add this house, please ".$this->checkCallToAction();
 
                 // Get only community and near by house
                 $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName($address['locality']);
@@ -366,9 +370,25 @@ class TitaniumCommunityClass
             $response['community_details'] = $this->ComputeCommunityDetailsBySuburbName($address['locality']);
         }
 
-        $response['recommended_houses'] = $this->computeRecommendedHouses($address['locality'], $address['postal_code'], isset($post_id)?$post_id: false);
+        //If we dont have community info
+        // It means something is wrong and display the error message
+        if($response['community_details'] === false){
+            $response['recommended_houses'] = false;
+            $response['success'] = false;
+            $response['message'] = "Sorry we couldn't find any information about this location. Please let us know about this problem and we will solve it asap. <a href='mailto:vivekbhusal@gmail.com?Subject=Location%20error' target='_blank'>Send Email</a>";
+        } else
+            $response['recommended_houses'] = $this->computeRecommendedHouses($address['locality'], $address['postal_code'], isset($post_id)?$post_id: false);
 
         wp_send_json($response);
+    }
+
+    function checkCallToAction()
+    {
+        if(is_user_logged_in()) {
+            return "<a href='/wp-admin/post-new.php?post_type=house'> Add House</a>";
+        } else{
+            return do_shortcode('[apsl-login-lite]');
+        }
     }
 
     /**

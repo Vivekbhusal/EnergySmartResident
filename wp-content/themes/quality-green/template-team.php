@@ -9,7 +9,9 @@
  * Template Name: Team
  */
 
-get_header();
+    get_header(); ?>
+
+<?php
 
 the_post();
 ?>
@@ -81,3 +83,4 @@ the_post();
         <?php endif; ?>
     </div>
 </div>
+<?php get_footer(); ?>

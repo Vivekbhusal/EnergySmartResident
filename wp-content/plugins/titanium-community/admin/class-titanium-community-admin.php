@@ -49,23 +49,31 @@ class TitaniumCommunityClassAdmin
      */
     private function __construct()
     {
-        add_action('admin_head-post.php','ep_publish_admin_hook');
-        add_action('admin_head-post-new.php','ep_publish_admin_hook');
+        add_action('admin_head-post.php',array($this, 'ep_publish_admin_hook'));
+        add_action('admin_head-post-new.php', array($this, 'ep_publish_admin_hook'));
     }
 
     function ep_publish_admin_hook()
     {
         global $post;
-        if ( is_admin() && $post->post_type == 'houses' ){
-        ?>
+        if ( is_admin() && $post->post_type == 'house' ) {
+            ?>
             <script language="javascript" type="text/javascript">
-                (function($) {
+                (function ($) {
                     jQuery(document).ready(function () {
-                        alert("vivek");
+                        //Form
+//                        var form = $("#post");
+//                        $("#publish").click(function(){
+//                            form.element
+//                           console.log(form.serializeArray());
+//                            return false;
+//                        });
+
                     });
                 })(jQuery);
-                </script>
-<?
+            </script>
+            <?php
+        }
 
 
     }
