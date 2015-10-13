@@ -89,7 +89,7 @@ jQuery(document).ready(function($){
             type: "post",
             data: data,
             success: function(response) {
-                console.log(response);
+
                 if(response.success == false) {
                     $(".titanium-property-alert").show();
                     $(".titanium-alert-message").html(response.message);
